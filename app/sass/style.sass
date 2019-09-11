@@ -1,0 +1,39 @@
+// ============================
+// IMPORTS
+// ============================
+@import "options"
+@import "default"
+
+// ============================
+// MAIN STYLES
+// ============================
+
+.container
+	width: 100%
+	max-width: nth($mediaBp, 1)
+	margin-left: auto
+	margin-right: auto
+	padding-left: 10px
+	padding-right: 10px
+
+
+
+// ============================
+// MEDIA
+// ============================
+@for $i from 1 to length($mediaBp)
+	@media (max-width: nth($mediaBp, $i))
+		.container
+			max-width: nth($mediaBp, $i + 1)
+
+// @media (max-width: nth($mediaBp, 1))
+//
+//
+//@media (max-width: nth($mediaBp, 2))
+//
+//
+//@media (max-width: nth($mediaBp, 3))
+//
+//
+//@media (max-width: nth($mediaBp, 4))
+//
