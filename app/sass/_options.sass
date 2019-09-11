@@ -13,15 +13,6 @@ $mainC3: blue
 $mediaBp: (1199.98px, 991.98px, 767.98px, 575.98px)
 
 // ============================
-// FUNCTIONS
-// ============================
-@function col-width ($n)
-	@if $n == auto
-		@return auto
-	@else
-		@return calc(100% / #{$n})
-
-// ============================
 // MIXINS
 // ============================
 
@@ -35,11 +26,3 @@ $mediaBp: (1199.98px, 991.98px, 767.98px, 575.98px)
 		align-items: $ai
 	@if ( $fd != 0 )
 		flex-direction: $fd
-
-@mixin grid ($s: 5px, $c: auto, $w: nowrap, $v: stretch, $h: flex-start)
-	&-grid
-		@include flex($fw: $w, $ai: $v, $jc: $h)
-		margin: -$s
-		&__col
-			width: col-width($c)
-			padding: $s
