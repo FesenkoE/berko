@@ -3,6 +3,7 @@
 // ============================
 @import "options"
 @import "default"
+@import "slick"
 
 // ============================
 // MAIN STYLES
@@ -13,10 +14,215 @@
 	max-width: nth($mediaBp, 1)
 	margin-left: auto
 	margin-right: auto
-	padding-left: 10px
-	padding-right: 10px
+	padding-left: 15px
+	padding-right: 15px
 
+.full-container
+	width: 100%
+	max-width: 100%
 
+// body
+// 	position: relative
+// 	background-color: #eeee
+// 	&::after
+// 		position: absolute
+// 		content: ''
+// 		height: 100vh
+// 		width: 1px
+// 		top: 0
+// 		left: 50%
+// 		background-color: red
+
+// ============================
+// home
+// ============================
+
+.banner
+	background-color: $mainC1
+	font-family: "FuturaLight"
+	&__label
+		text-align: center
+		padding: 20px 0
+		font-size: 30px
+		color: #000
+
+.header
+	border-bottom: 1px solid #030303
+	&__row
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 1fr
+		padding: 25px 0
+	&__navigation
+		@include flex($jc: flex-start, $ai: center)
+		li + li
+			margin-left: 50px
+		li
+			color: #0a0a0a
+			font-family: "FuturaBook"
+			font-size: 35px
+			&:hover
+				cursor: pointer
+	&__logo
+		@include flex($jc: center, $ai: center)
+		& img
+			width: 100%
+	&__tools
+		@include flex($jc: space-between, $ai: center)
+	&__search input
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid #0a0a0a
+		font-size: 30px
+		margin-left: 30px
+		font-family: "FuturaBook"
+	&__like
+		position: relative
+		&::before
+			content: '1'
+			position: absolute
+			top: 5px
+			left: 13px
+			font-size: 20px
+			font-weight: 800
+	&__cart
+		position: relative
+		&::before
+			content: '1'
+			position: absolute
+			top: 12px
+			left: 11px
+			font-size: 20px
+			font-weight: 800
+
+.main
+	position: relative
+	padding-bottom: 1014px
+	background: url(../img/main/main-bg.png) no-repeat
+	background-size: contain
+	&__arrow
+		position: absolute
+		bottom: -30px
+		left: calc( 50% - 40px )
+		width: 80px
+		border-radius: 50%
+		height: 80px
+		background-color: #ffffff
+		box-shadow: 0 3px 38px 8px rgba(0, 0, 0, 0.17)
+		z-index: 100
+		&::before
+			position: absolute
+			content: ""
+			height: 40px
+			width: 5px
+			background-color: #000000
+			transform: rotate(-45deg)
+			left: 25px
+			top: calc( 55% - 20px )
+		&::after
+			position: absolute
+			content: ""
+			height: 40px
+			width: 5px
+			background-color: #000000
+			transform: rotate(45deg)
+			right: 25px
+			top: calc( 55% - 20px )
+
+.about-us
+	padding: 125px 0
+	&__title
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+		@include flex($jc: center)
+	&__description
+		padding-top: 70px
+		padding: 70px 400px 0
+		text-align: center
+		font-size: 22px
+		color: #000
+		p + p
+			padding-top: 30px
+	&__button
+		margin-top: 120px
+		@include flex($jc: center, $ai: center)
+		a
+			padding: 25px 75px
+			background-color: $mainC1
+			color: #070909
+			font-family: "FuturaMedium"
+			font-size: 26px
+			font-weight: 500
+			text-transform: uppercase
+
+.categories
+
+.new-collection
+	background-color: $mainC1
+	& img
+		width: 100%
+
+.help
+	padding: 60px 0
+	background-color: $mainC1
+	color: #050000
+	&__title
+		font-size: 40px
+		text-align: center
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			background-color: #0b0b0b
+			height: 1px
+			width: 13%
+			top: 50%
+			left: 0
+		&::after
+			position: absolute
+			content: ''
+			background-color: #0b0b0b
+			height: 1px
+			width: 13%
+			top: 50%
+			right: 0
+	&__description
+		padding-top: 20px
+		font-size: 30px
+		text-align: center
+
+.featured
+	padding: 120px 0
+	&__title
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 36px
+		text-transform: uppercase
+		text-align: center
+		&_sub
+			color: #000000
+			font-size: 50px
+			text-align: center
+			padding-top: 75px
+	&__slider
+		margin: 140px 185px 0
+		& div + div
+			//margin-right: 30px
+		&-item
+			@include flex($jc: center)
+			margin: 0 15px
+		&-img
+			padding: 40px 20px 60px
+			border: 1px solid #2c2c2c
+			& img
+				width: 100%
+		&-name
+			color: #000000
+			font-size: 22px
+			margin-top: 30px
+			margin-left: 20px
 
 // ============================
 // MEDIA
