@@ -467,7 +467,114 @@
 			color: #494949
 			font-family: "FuturaBook"
 			font-size: 20px
+	&__categories
+		margin-top: 135px
+		&-item
+			& p
+				color: #000000
+				font-family: "FuturaMedium"
+				font-size: 20px
+				text-transform: uppercase
+			& ul
+				margin-top: 40px
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 20px
+			& li + li
+				padding-top: 20px
+	&__search
+		& input
+			border: none
+			background-color: transparent
+			border-bottom: 1px solid #dddddd
+			color: #a7a4a4
+			font-size: 18px
+			font-family: "FuturaBook"
+			width: 95%
+			&::placeholder
+				color: #a7a4a4
+				font-size: 18px
+				font-family: "FuturaBook"
+	&__posts
+		margin-top: 35px
+		& p
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 20px
+			text-transform: uppercase
+		& li
+			padding-top: 20px
+		& li div
+			padding-top: 10px
+			padding-left: 35px
+			color: #dddddd
+			font-family: "FuturaBook"
+			font-size: 14px
+			text-transform: uppercase
+		& a
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+		& i
+			color: #e7dfd2
 
+// ============================
+// faq
+// ============================
+
+.faq
+	&__title
+		margin-top: 90px
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+		text-align: center
+	&__grid
+		margin-top: 120px
+		display: grid
+		grid-template-columns: 2fr 3fr 1fr
+	&__popular
+		margin-left: 80px
+		&-label
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+			font-weight: 300
+			text-decoration: underline
+			text-transform: uppercase
+		&-list
+			& li
+				margin-top: 40px
+	&__info
+		&-list
+			list-style-type: decimal-leading-zero
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 25px
+		&-label
+			margin-top: 135px
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 25px
+			text-transform: uppercase
+	&__answer
+		&-list
+			list-style-type: decimal-leading-zero
+			margin-top: 70px
+			& li + li
+				padding-top: 40px
+			& li
+				color: #dedede
+				font-family: "FuturaDemi"
+				font-size: 25px
+				& p
+					padding-top: 45px
+					color: #000000
+					font-family: "FuturaBook"
+					font-size: 20px
 
 // ============================
 // MEDIA
