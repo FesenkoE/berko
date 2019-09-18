@@ -24,4 +24,40 @@ $(document).ready(function () {
 		nextArrow: '<div class="follow__slider-controls_next"><i class="fas fa-chevron-right"></i></div>'
 	});
 
+
+	$('#shop-label').on('click', function () {
+
+		if ($('#main-menu').hasClass('active-shop')) {
+			$('#main-menu').removeClass('active');
+			$('#main-menu').removeClass('active-shop');
+			$('#main-menu').css('background-color', '#fff');
+			$(this).parent().parent().parent().parent().find('.shop').slideUp();
+		} else {
+			$('#main-menu').addClass('active');
+			$('#main-menu').addClass('active-shop');
+			$('#main-menu').css('background-color', '#fff');
+			$(this).parent().parent().parent().parent().find('.shop').slideDown();
+		}
+
+	});
+
 });
+
+window.onscroll = function () { fixMyMenu() };
+
+var header = $("#main-menu");
+var shop = $("#shop");
+var sticky = $(header).offset().top;
+
+function fixMyMenu() {
+	if (window.pageYOffset) {
+		header.addClass("fix");
+		header.css('background-color', '#fff');
+	} else {
+		header.removeClass("fix");
+		header.css('background-color', 'transparent');
+		header.removeClass('active');
+		header.removeClass('active-shop');
+		shop.slideUp();
+	}
+}
