@@ -8,7 +8,16 @@ jQuery(() => {
         } else {
             likeFilled.delay("fast").fadeOut('fast');
             likeEmpty.delay("fast").fadeIn('fast');
-
         }
    });
+
+   $('body').on('click', '.shop__filter_btn', function () {
+       let show = $('.sort__list').css('display');
+
+       if (show === 'none') {
+           $('.sort__list').fadeIn();
+       } else {
+           $('.sort__list').fadeOut();
+       }
+   })
 });
