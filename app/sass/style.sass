@@ -755,6 +755,211 @@
 					color: #000000
 					font-family: "FuturaBook"
 					font-size: 20px
+.navbar
+	min-height: 203px
+	background-color: #ccc
+
+.shop
+	display: flex
+
+.shop__goods__title
+	text-align: center
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 38px
+	padding: 65px 0
+
+.shop__menu
+	width: 249px
+	padding-left: 55px
+	p
+		font-family: "FuturaBook", "Arial", "sans-serif"
+		font-size: 26px
+		text-transform: uppercase
+
+.shop__menu__list
+	margin-top: 20px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 20px
+
+.shop__menu__list__item
+	margin-bottom: 10px
+
+.shop__menu__list__item_active
+	margin-left: 15px
+	position: relative
+	font-weight: bold
+	&:after
+		display: block
+		content: ""
+		width: 4px
+		height: 4px
+		border-radius: 50%
+		background-color: #000000
+		position: absolute
+		top: 8px
+		left: -12px
+
+.wrap
+	margin-left: -20px
+	margin-right: -20px
+
+.shop__goods__list
+	width: 1600px
+	display: flex
+	flex-wrap: wrap
+
+.shop__goods__card
+	margin-left: 20px
+	margin-right: 20px
+	width: 360px
+	height: 590px
+	margin-bottom: 55px
+	cursor: pointer
+	&:hover .shop__goods__item__img__icon__view,
+	&:hover .shop__goods__item__price,
+	&:hover .shop__goods__item__name__like
+		transition: 0.3s ease-in-out
+		opacity: 1
+	img
+		width: 360px
+		height: 520px
+
+.shop__goods__item__img
+	position: relative
+
+.shop__goods__item__img__icon__view
+	position: absolute
+	top: 20px
+	right: 15px
+	width: 25px
+	height: 14px
+	opacity: 0
+	img
+		width: 100%
+		height: 100%
+
+.shop__goods__item__name
+	padding: 10px 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.shop__goods__item__name__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 20px
+
+.shop__goods__item__price
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 14px
+	opacity: 0
+
+.shop__goods__item__name__like
+	padding: 0 25px
+	position: relative
+	opacity: 0
+
+.like-empty
+	position: absolute
+	top: -5px
+	right: 25px
+	display: block
+	width: 17px
+	height: 15px
+	&:hover
+		cursor: pointer
+	img
+		width: 100%
+		height: 100%
+
+.like-filled
+	position: absolute
+	top: -5px
+	right: 25px
+	width: 17px
+	height: 15px
+	display: none
+	&:hover
+		cursor: pointer
+	img
+		width: 100%
+		height: 100%
+
+.navigation
+	display: flex
+	justify-content: center
+	max-width: 630px
+	height: 60px
+	margin: 0 auto 70px
+	border-bottom: 1px solid #cccccc
+
+.navigation__arrow
+	width: 35px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 26px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	color: #000000
+
+.navigation__pages
+	width: 70px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 26px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	color: #909090
+
+.navigation__pages_active
+	border-bottom: 2px solid #cccccc
+
+.shop__filter
+	height: 60px
+	display: flex
+	justify-content: flex-end
+	border: 1px solid #cccccc
+
+.shop__filter_btn
+	position: relative
+	width: 175px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 18px
+	text-transform: uppercase
+	border-left: 1px solid #cccccc
+	&:hover
+		cursor: pointer
+
+.arrow_down
+	width: 12px
+	height: 12px
+	border-left: 1px solid #909090
+	border-bottom: 1px solid #909090
+	transform: rotate(-45deg)
+	display: block
+	margin-left: 10px
+	margin-bottom: 10px
+
+.sort__list
+	display: none
+	position: absolute
+	width: 270px
+	height: 320px
+	padding: 50px 40px
+	box-shadow: 0 0 15px 0 #cccccc
+	top: -350px
+	right: 0
+	background: #ffffff
+	box-sizing: border-box
+	&::before, &::after
+		content: ''
+		position: absolute
+		right: 20px
+		bottom: -20px
+		border: 10px solid transparent
+		border-top: 10px solid #ffffff
 
 // ============================
 // MEDIA
