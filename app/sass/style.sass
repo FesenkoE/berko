@@ -3,6 +3,7 @@
 // ============================
 @import "options"
 @import "default"
+@import "slick"
 
 // ============================
 // MAIN STYLES
@@ -16,6 +17,744 @@
 	padding-left: 15px
 	padding-right: 15px
 
+.full-container
+	width: 100%
+	max-width: 100%
+
+// ============================
+// home
+// ============================
+
+.banner
+	background-color: $mainC1
+	font-family: "FuturaLight"
+	&__label
+		text-align: center
+		padding: 20px 0
+		font-size: 30px
+		color: #000
+
+.header
+	border-bottom: 1px solid #030303
+	&__row
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 1fr
+		padding: 25px 0
+	&__navigation
+		@include flex($jc: flex-start, $ai: center)
+		li + li
+			margin-left: 50px
+		li
+			color: #0a0a0a
+			font-family: "FuturaBook"
+			font-size: 35px
+			&:hover
+				cursor: pointer
+	&__logo
+		@include flex($jc: center, $ai: center)
+		& img
+			//width: 100%
+	&__tools
+		@include flex($jc: space-between, $ai: center)
+	&__search input
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid #0a0a0a
+		font-size: 25px
+		margin-left: 75px
+		font-family: "FuturaBook"
+	&__like
+		position: relative
+		&::before
+			content: '1'
+			position: absolute
+			top: 5px
+			left: 13px
+			font-size: 20px
+			font-weight: 800
+	&__cart
+		position: relative
+		&::before
+			content: '1'
+			position: absolute
+			top: 12px
+			left: 11px
+			font-size: 20px
+			font-weight: 800
+
+.header .active
+	background-color: #fff
+
+// ============================
+// menu
+
+#main-menu
+	transition: .2s
+
+.fix
+	@include flex($jc: space-between, $ai: center)
+	position: fixed
+	z-index: 9999
+	width: 100%
+	background-color: #fff
+	top: 0
+	box-shadow: 0 3px 5px -2px #000
+
+.shop
+	display: none
+	&__wrap
+		padding: 35px 85px
+	&__grid
+		display: grid
+		grid-template-columns: 1fr 1fr
+	&__categories
+		@include flex($jc: flex-start)
+		&-item
+		&-title
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 26px
+			text-transform: uppercase
+		&-list
+			padding-top: 45px
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 20px
+			& li + li
+				padding-top: 15px
+	&__img
+		@include flex($jc: flex-end, $ai: center)
+
+.shop__categories-item + .shop__categories-item
+	margin-left: 110px
+
+// ============================
+
+.menu-about-us
+	display: none
+	&__wrap
+		padding: 35px 85px
+	&__grid
+		display: grid
+		grid-template-columns: 1fr 3fr
+	&__categories
+		@include flex($jc: flex-start)
+		&-item
+		&-title
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 26px
+			text-transform: uppercase
+		&-list
+			padding-top: 45px
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 20px
+			& li + li
+				padding-top: 15px
+	&__img
+		@include flex($jc: space-between, $ai: center)
+		&-item
+			& img
+				//width: 100%
+
+// ============================
+// cart
+
+#cart
+	position: fixed
+	transform: translateX(100%)
+	right: 0
+	z-index: 999
+	display: block
+	transition: .5s
+	width: 28%
+	background-color: #ffffff
+
+#cart__close
+	transition: .5s
+
+.cart
+	&__wrap
+		opacity: 0
+		width: 100%
+		transition: .5s
+	&__header
+		height: 10vh
+		&-wrap
+			@include flex($jc: space-between)
+			padding: 40px 50px 0
+	&__title
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+	&__close
+		color: #959594
+		font-size: 40px
+	&__body
+		overflow-y: scroll
+		height: 72vh
+		border-top: 1px solid $mainC1
+		border-bottom: 1px solid $mainC1
+		@include flex($jc: space-between, $fd: column)
+		padding: 60px 50px 0
+	&__items
+		&-elem
+			padding-top: 50px
+			@include flex($jc: flex-start)
+	&__item
+		&-img
+		&-info
+			padding-left: 20px
+			width: 100%
+		&-title
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 25px
+		&-color
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 18px
+		&-size
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+			&_number
+		&-amount
+			margin: 40px 0 20px
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+			@include flex($ai: center)
+			&_minus
+			&_number
+				margin: 0 10px
+			&_plus
+		&-actions
+			@include flex($jc: space-between)
+		&-amount-x-price
+		&-remove
+			border-bottom: 1px solid #000
+		&-change
+			border-bottom: 1px solid #000
+	&__footer
+		padding: 20px 50px 40px
+		height: 18vh
+	&__order
+		&-note
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 18px
+		&-calc
+			padding-top: 15px
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 18px
+	&__button
+		width: 100%
+		background-color: $mainC1
+		margin-top: 15px
+		padding: 15px 0
+		@include flex($ai: center, $jc: center)
+		&-title
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 25px
+			text-transform: uppercase
+		&-dot
+			font-size: 10px
+			margin: 0 10px
+		&-price
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 25px
+
+// ============================
+
+.main
+	position: relative
+	background: url(../img/main/main-bg.png) no-repeat
+	background-size: cover
+	height: 100vh
+	&__arrow
+		position: absolute
+		bottom: -40px
+		left: calc( 50% - 40px )
+		width: 80px
+		border-radius: 50%
+		height: 80px
+		background-color: #ffffff
+		box-shadow: 0 3px 38px 8px rgba(0, 0, 0, 0.17)
+		z-index: 100
+		&::before
+			position: absolute
+			content: ""
+			height: 40px
+			width: 5px
+			background-color: #000000
+			transform: rotate(-45deg)
+			left: 25px
+			top: calc( 55% - 20px )
+		&::after
+			position: absolute
+			content: ""
+			height: 40px
+			width: 5px
+			background-color: #000000
+			transform: rotate(45deg)
+			right: 25px
+			top: calc( 55% - 20px )
+
+.about-us
+	padding: 125px 0
+	&__title
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+		@include flex($jc: center)
+	&__description
+		padding-top: 70px
+		padding: 70px 400px 0
+		text-align: center
+		font-size: 22px
+		color: #000
+		p + p
+			padding-top: 30px
+	&__button
+		margin-top: 120px
+		@include flex($jc: center, $ai: center)
+		a
+			padding: 25px 75px
+			background-color: $mainC1
+			color: #070909
+			font-family: "FuturaMedium"
+			font-size: 26px
+			font-weight: 500
+			text-transform: uppercase
+
+.categories
+	@include flex($jc: space-between, $ai: center)
+	&__item
+		&_accessories
+			position: relative
+		&_collection
+			position: relative
+		&-block
+			position: absolute
+			top: 45%
+			width: 100%
+			text-align: center
+		&-title
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 40px
+			padding-bottom: 50px
+		&-link
+			padding: 25px 35px
+			background-color: $mainC1
+			color: #070909
+			font-family: "FuturaMedium"
+			font-size: 26px
+
+.new-collection
+	margin-top: 200px
+	background-color: $mainC1
+	& img
+		width: 100%
+
+.help
+	padding: 60px 0
+	background-color: $mainC1
+	color: #050000
+	&__title
+		font-size: 40px
+		text-align: center
+		position: relative
+		&::before
+			position: absolute
+			content: ''
+			background-color: #0b0b0b
+			height: 1px
+			width: 13%
+			top: 50%
+			left: 0
+		&::after
+			position: absolute
+			content: ''
+			background-color: #0b0b0b
+			height: 1px
+			width: 13%
+			top: 50%
+			right: 0
+	&__description
+		padding-top: 20px
+		font-size: 30px
+		text-align: center
+
+.featured
+	padding: 120px 0
+	&__title
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 36px
+		text-transform: uppercase
+		text-align: center
+		&_sub
+			color: #000000
+			font-size: 50px
+			text-align: center
+			padding-top: 75px
+	&__slider
+		position: relative
+		margin: 140px 185px 0
+		&-item
+			@include flex($jc: center)
+			margin: 0 15px
+		&-img
+			padding: 40px 20px 60px
+			border: 1px solid #2c2c2c
+			& img
+				width: 100%
+		&-name
+			color: #000000
+			font-size: 22px
+			margin-top: 30px
+			margin-left: 20px
+		&-controls
+			&_prev
+				position: absolute
+				top: calc( 50% - 63px )
+				left: -5%
+				font-size: 55px
+			&_next
+				position: absolute
+				top: calc( 50% - 63px )
+				right: -5%
+				font-size: 55px
+	&__button
+		padding-top: 110px
+		@include flex($jc: center, $ai: center)
+		a
+			background-color: $mainC1
+			padding: 25px 100px
+			color: #070909
+			font-family: "FuturaMedium"
+			font-size: 26px
+
+.follow
+	padding: 120px 0
+	&__mail
+		text-align: center
+		color: #000000
+		font-size: 36px
+	&__title
+		text-align: center
+		color: #000000
+		padding-top: 75px
+		font-size: 50px
+	&__slider
+		margin-top: 165px
+		position: relative
+		height: 100%
+		&-controls
+			&_prev
+				@include flex($ai: center, $jc: center)
+				width: 82px
+				height: 82px
+				border-radius: 50%
+				text-align: center
+				vertical-align: middle
+				background-color: rgba(255,255,255, 0.2)
+				position: absolute
+				top: calc( 50% - 63px )
+				left: 2%
+				z-index: 200
+				font-size: 55px
+			&_next
+				@include flex($ai: center, $jc: center)
+				width: 82px
+				height: 82px
+				border-radius: 50%
+				text-align: center
+				vertical-align: middle
+				background-color: rgba(255,255,255, 0.2)
+				position: absolute
+				top: calc( 50% - 63px )
+				right: 2%
+				z-index: 200
+				font-size: 55px
+		&-item
+			margin: 0 20px
+			position: relative
+			& div + div
+
+			&:hover .follow__slider-block
+				opacity: 1
+			& img
+				width: 100%
+		&-block
+			opacity: 0
+			background-color: rgba(0, 0, 0, 0.8)
+			height: 100%
+			width: 100%
+			padding: 30px 35px
+			position: absolute
+			top: 0
+			color: #fff
+			font-family: "FuturaBook"
+			font-size: 22px
+			transition: .4s
+		&-label
+			text-transform: uppercase
+			padding-bottom: 10px
+			border-bottom: 1px solid #fff
+		&-text
+			padding-top: 10px
+
+.subscribe
+	&__wrap
+		padding: 0 30%
+		@include flex($jc: center, $fd: column)
+	&__title
+		text-align: center
+		color: #000
+		font-size: 40px
+		text-transform: uppercase
+		font-family: "FuturaMedium"
+	&__input
+		& input
+			margin-top: 160px
+			padding-top: 15px
+			width: 100%
+			border: none
+			color: #000
+			font-size: 22px
+			font-family: "FuturaMedium"
+			border-bottom: 1px solid #000
+			&::placeholder
+				color: #000
+				font-size: 22px
+				font-family: "FuturaMedium"
+	&__button
+		margin-top: 160px
+		@include flex($jc: center)
+		& button
+			padding: 25px 100px
+			background-color: $mainC1
+			color: #070909
+			font-family: "FuturaMedium"
+			font-size: 26px
+			text-transform: uppercase
+
+.footer
+	margin-top: 140px
+	background-color: #dddddd
+	&__icons
+		@include flex($jc: space-between, $ai: center)
+		border-bottom: 1px solid #fff
+		padding: 40px 0
+		&-contact
+			& a
+				margin: 0 20px 0 45px
+		&-links
+			& a
+				margin: 0 20px 0 45px
+	&__info
+		padding: 40px 0 55px
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 1fr
+	&__help
+		color: #050000
+		font-family: "FuturaBook"
+		font-size: 26px
+		&-label
+			padding-top: 70px
+	&__faq
+		padding: 0 15%
+		font-family: "FuturaBook"
+		font-size: 22px
+		&-title
+			color: #000000
+			text-transform: uppercase
+		&-list
+			padding-top: 25px
+			& li + li
+				padding-top: 25px
+			& li a
+				color: #000000
+	&__news
+		@include flex($ai: flex-end, $fd: column)
+		&-title
+			color: #050000
+			font-family: "FuturaBook"
+			font-size: 36px
+		&-text
+			padding-top: 50px
+			text-align: right
+			font-size: 22px
+		&-input
+			padding-top: 50px
+			& input
+				position: relative
+				background-color: transparent
+				border: none
+				border-bottom: 1px solid #fff
+				width: 100%
+				&::placeholder
+					color: #000
+					font-size: 16px
+					font-family: "FuturaMedium"
+			&-icon
+				position: absolute
+
+// ============================
+// blog
+// ============================
+
+.blog
+	&__wrap
+		padding: 160px
+	&__title
+		text-align: center
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+	&__grid
+		margin-top: 60px
+		display: grid
+		grid-template-columns: 2fr 1fr
+		grid-column-gap: 70px
+	&__article
+		&-item
+			margin-top: 110px
+		&-img
+			& img
+				width: 100%
+		&-title
+			margin-top: 110px
+			color: #0b0b0b
+			font-family: "FuturaMedium"
+			font-size: 40px
+		&-description
+			margin-top: 60px
+			color: #494949
+			font-family: "FuturaBook"
+			font-size: 20px
+	&__categories
+		margin-top: 135px
+		&-item
+			& p
+				color: #000000
+				font-family: "FuturaMedium"
+				font-size: 20px
+				text-transform: uppercase
+			& ul
+				margin-top: 40px
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 20px
+			& li + li
+				padding-top: 20px
+	&__search
+		& input
+			border: none
+			background-color: transparent
+			border-bottom: 1px solid #dddddd
+			color: #a7a4a4
+			font-size: 18px
+			font-family: "FuturaBook"
+			width: 95%
+			&::placeholder
+				color: #a7a4a4
+				font-size: 18px
+				font-family: "FuturaBook"
+	&__posts
+		margin-top: 35px
+		& p
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 20px
+			text-transform: uppercase
+		& li
+			padding-top: 20px
+		& li div
+			padding-top: 10px
+			padding-left: 35px
+			color: #dddddd
+			font-family: "FuturaBook"
+			font-size: 14px
+			text-transform: uppercase
+		& a
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+		& i
+			color: #e7dfd2
+
+// ============================
+// faq
+// ============================
+
+.faq
+	&__title
+		margin-top: 90px
+		color: #000000
+		font-family: "FuturaBook"
+		font-size: 40px
+		text-transform: uppercase
+		text-align: center
+	&__grid
+		margin-top: 120px
+		display: grid
+		grid-template-columns: 2fr 3fr 1fr
+	&__popular
+		margin-left: 80px
+		&-label
+			color: #000000
+			font-family: "FuturaBook"
+			font-size: 20px
+			font-weight: 300
+			text-decoration: underline
+			text-transform: uppercase
+		&-list
+			& li
+				margin-top: 40px
+	&__info
+		&-list
+			list-style-type: decimal-leading-zero
+			& li
+				color: #000000
+				font-family: "FuturaBook"
+				font-size: 25px
+		&-label
+			margin-top: 135px
+			color: #000000
+			font-family: "FuturaMedium"
+			font-size: 25px
+			text-transform: uppercase
+	&__answer
+		&-list
+			list-style-type: decimal-leading-zero
+			margin-top: 70px
+			& li + li
+				padding-top: 40px
+			& li
+				color: #dedede
+				font-family: "FuturaDemi"
+				font-size: 25px
+				& p
+					padding-top: 45px
+					color: #000000
+					font-family: "FuturaBook"
+					font-size: 20px
 .navbar
 	min-height: 203px
 	background-color: #ccc
