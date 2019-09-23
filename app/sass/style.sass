@@ -95,7 +95,7 @@
 .fix
 	@include flex($jc: space-between, $ai: center)
 	position: fixed
-	z-index: 9999
+	z-index: 99
 	width: 100%
 	background-color: #fff
 	top: 0
@@ -119,9 +119,10 @@
 		&-list
 			padding-top: 45px
 			& li
-				color: #000000
-				font-family: "FuturaBook"
-				font-size: 20px
+				& a
+					color: #000000
+					font-family: "FuturaBook"
+					font-size: 20px
 			& li + li
 				padding-top: 15px
 	&__img
@@ -150,9 +151,10 @@
 		&-list
 			padding-top: 45px
 			& li
-				color: #000000
-				font-family: "FuturaBook"
-				font-size: 20px
+				& a
+					color: #000000
+					font-family: "FuturaBook"
+					font-size: 20px
 			& li + li
 				padding-top: 15px
 	&__img
