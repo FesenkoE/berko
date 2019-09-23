@@ -33,14 +33,14 @@ $(document).ready(function () {
       $(this).parent().parent().parent().parent().find('.menu-about-us').slideUp();
       $('#main-menu').removeClass('active-shop');
       $('#main-menu').css('background-color', '#fff');
-      $(this).parent().parent().parent().parent().find('.shop').slideUp();
+      $(this).parent().parent().parent().parent().find('.menu-shop').slideUp();
     } else {
 
       $('#main-menu').addClass('active-shop');
       $('#main-menu').removeClass('active-about');
       $('#main-menu').css('background-color', '#fff');
       $(this).parent().parent().parent().parent().find('.menu-about-us').slideUp();
-      $(this).parent().parent().parent().parent().find('.shop').slideDown();
+      $(this).parent().parent().parent().parent().find('.menu-shop').slideDown();
     }
 
   });
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     if ($('#main-menu').hasClass('active-about')) {
       $('#main-menu').removeClass('active-shop');
-      $(this).parent().parent().parent().parent().find('.shop').slideUp();
+      $(this).parent().parent().parent().parent().find('.menu-shop').slideUp();
       $('#main-menu').removeClass('active-about');
       $('#main-menu').css('background-color', '#fff');
       $(this).parent().parent().parent().parent().find('.menu-about-us').slideUp();
@@ -58,7 +58,7 @@ $(document).ready(function () {
       $('#main-menu').addClass('active-about');
       $('#main-menu').removeClass('active-shop');
       $('#main-menu').css('background-color', '#fff');
-      $(this).parent().parent().parent().parent().find('.shop').slideUp();
+      $(this).parent().parent().parent().parent().find('.menu-shop').slideUp();
       $(this).parent().parent().parent().parent().find('.menu-about-us').slideDown();
     }
 
