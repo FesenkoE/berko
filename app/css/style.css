@@ -238,20 +238,20 @@ html {
           box-shadow: 0 3px 5px -2px #000;
 }
 
-.shop {
+.menu-shop {
   display: none;
 }
 
-.shop__wrap {
+.menu-shop__wrap {
   padding: 35px 85px;
 }
 
-.shop__grid {
+.menu-shop__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.shop__categories {
+.menu-shop__categories {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,28 +262,28 @@ html {
           justify-content: flex-start;
 }
 
-.shop__categories-title {
+.menu-shop__categories-title {
   color: #000000;
   font-family: "FuturaBook";
   font-size: 26px;
   text-transform: uppercase;
 }
 
-.shop__categories-list {
+.menu-shop__categories-list {
   padding-top: 45px;
 }
 
-.shop__categories-list li {
+.menu-shop__categories-list li {
   color: #000000;
   font-family: "FuturaBook";
   font-size: 20px;
 }
 
-.shop__categories-list li + li {
+.menu-shop__categories-list li + li {
   padding-top: 15px;
 }
 
-.shop__img {
+.menu-shop__img {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -298,7 +298,7 @@ html {
           align-items: center;
 }
 
-.shop__categories-item + .shop__categories-item {
+.menu-shop__categories-item + .menu-shop__categories-item {
   margin-left: 110px;
 }
 
