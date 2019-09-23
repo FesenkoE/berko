@@ -948,18 +948,13 @@
 	width: 270px
 	height: 320px
 	padding: 50px 40px
-	box-shadow: 0 0 15px 0 #cccccc
-	top: -350px
-	right: 0
+	clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
+	top: -362px
+	right: -56px
 	background: #ffffff
-	box-sizing: border-box
-	&::before, &::after
-		content: ''
-		position: absolute
-		right: 20px
-		bottom: -20px
-		border: 10px solid transparent
-		border-top: 10px solid #ffffff
+
+.content
+	filter: drop-shadow(0 0 15px rgba(204, 204, 204, 1))
 
 // ============================
 // MEDIA
