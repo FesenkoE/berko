@@ -67,7 +67,6 @@ $(document).ready(function () {
   var cart = $('#cart'),
     cartWrap = $('.cart__wrap');
 
-
   $('#header__cart-label').click(function () {
 
     if (cart.hasClass('active-cart')) {
@@ -87,6 +86,33 @@ $(document).ready(function () {
     cart.css('transform', 'translateX(100%)');
     cartWrap.delay(100).animate({ "opacity": '0' }, 100);
   });
+
+///////////////////////////////////////////////
+
+var wrap = $('#wrapper'),
+     btn = $('.open-modal-btn'),
+     modal = $('.cover, .modal, .modal-content');
+
+btn.on('click', function() {
+  modal.fadeIn();
+});
+
+// close modal
+$('.modal').click(function() {
+  wrap.on('click', function(event) {
+    var select = $('.modal-content');
+    if ($(event.target).closest(select).length)
+      return;
+    modal.fadeOut();
+    wrap.unbind('click');
+  });
+});
+
+$('.modal-size__close').click(function() {
+  modal.fadeOut();
+});
+
+  ////////////////////////////////////////////////
 
   $('.shop__goods__item__name__like').on('click', function () {
     let likeEmpty = $(this).find('.like-empty');
