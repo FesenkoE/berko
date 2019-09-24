@@ -907,7 +907,7 @@
 	text-align: center
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 38px
-	padding: 65px 0
+	padding: 40px 0
 
 .shop__menu
 	width: 249px
@@ -1055,10 +1055,14 @@
 	border-bottom: 2px solid #cccccc
 
 .shop__filter
+	width: 100%
 	height: 60px
 	display: flex
 	justify-content: flex-end
 	border: 1px solid #cccccc
+	position: fixed
+	bottom: 0
+	background: #ffffff
 
 .shop__filter_btn
 	position: relative
@@ -1096,6 +1100,24 @@
 
 .content
 	filter: drop-shadow(0 0 15px rgba(204, 204, 204, 1))
+
+.sort__list__title
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 20px
+	text-transform: uppercase
+	color: #000000
+	line-height: 42px
+
+.sort__list__item
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 20px
+	text-transform: uppercase
+	color: #767474
+	line-height: 42px
+	transition: all 0.2s ease-in-out
+	&:hover
+		color: #000000
+		text-shadow: 0 0 1px #767474
 
 // ============================
 // MEDIA
