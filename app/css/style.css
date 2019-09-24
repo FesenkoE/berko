@@ -1263,7 +1263,6 @@ html {
 }
 
 .footer {
-  margin-top: 140px;
   background-color: #dddddd;
 }
 
@@ -1871,7 +1870,8 @@ html {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border: 1px solid #cccccc;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   background: #ffffff;
 }
