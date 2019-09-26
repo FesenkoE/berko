@@ -1121,10 +1121,13 @@
 
 .goods-card
 	display: flex
+	justify-content: space-between
+	margin-top: 120px
+	padding: 0 110px
 
 .goods-card__slider
 	display: flex
-	width: 940px
+	width: 1030px
 	justify-content: space-between
 	align-items: center
 
@@ -1132,18 +1135,99 @@
 	div
 		width: 760px
 		height: 940px
-		border: 1px solid black
+		img
+			width: 100%
+			height: 100%
 
 .slider-nav
 	width: 160px
-	height: 675px
+	margin-bottom: 0!important
+	.slick-list
+		padding: 30px 0!important
+		height: 740px !important
 
 .slider-nav__item
 	width: 160px!important
-	height: 250px!important
-	border: 1px solid black!important
+	height: 200px!important
+	margin-bottom: 40px
 
+.goods-card__characters
+	width: 500px
 
+.characters__name
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 100px
+	border-bottom: 1px solid #cccccc
+
+.characters__name__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 50px
+
+.characters__like-filled
+	display: none
+
+.characters__name__like
+	display: flex
+	position: relative
+	width: 28px
+	height: 26px
+	img
+		position: absolute
+		width: 100%
+		height: 100%
+
+.characters__price
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 100px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 50px
+
+.characters__description
+	margin-top: 15px
+
+.characters__description__title
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+	position: relative
+
+.characters__description__text
+	margin-top: 15px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 18px
+
+.card__arrow_down
+	position: absolute
+	display: block
+	width: 10px
+	height: 10px
+	border-bottom: 1px solid #767474
+	border-left: 1px solid #767474
+	transform: rotate(-45deg)
+	margin-left: 20px
+	top: 7px
+	left: 110px
+
+.characters__more-details
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+	position: relative
+
+.card__arrow_right
+	position: absolute
+	display: block
+	width: 10px
+	height: 10px
+	border-bottom: 1px solid #767474
+	border-left: 1px solid #767474
+	transform: rotate(-135deg)
+	margin-left: 20px
+	top: 7px
+	left: 110px
 // ============================
 // MEDIA
 // ============================

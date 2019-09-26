@@ -145,6 +145,18 @@ $(document).ready(function () {
         }
     });
 
+    $('.characters__name__like').on('click', function () {
+        let likeEmpty = $(this).find('.characters__like-empty');
+        let likeFilled = $(this).find('.characters__like-filled');
+        if (likeEmpty.css('display') === 'block') {
+            likeEmpty.delay("fast").fadeOut('fast');
+            likeFilled.delay("fast").fadeIn('fast');
+        } else {
+            likeFilled.delay("fast").fadeOut('fast');
+            likeEmpty.delay("fast").fadeIn('fast');
+        }
+    });
+
     let sortList = $('.sort__list');
 
     $('.shop__filter_btn').on('click', function () {
