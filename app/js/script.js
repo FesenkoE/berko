@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    $('.viewed__recently__slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dot: true,
+        speed: 400,
+        customPaging: 30,
+        draggable: true,
+        infinite: true,
+        prevArrow: '<div class="featured__slider-controls_prev viewed__recently__left"><i class="fas fa-chevron-left"></i></div>',
+        nextArrow: '<div class="featured__slider-controls_next viewed__recently__right"><i class="fas fa-chevron-right"></i></div>'
+    });
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
