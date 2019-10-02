@@ -1587,8 +1587,112 @@
 	a
 		color: #000000
 
+.wish__list
+	min-height: calc(100vh - 662px)
+	padding: 150px 0
 
+.wish__list__title
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-align: center
+	text-transform: uppercase
 
+.wish__list__labels
+	margin-top: 120px
+
+.wish__lists__items
+	width: 1565px
+	margin: 0 auto
+
+.wish__lists__item
+	display: flex
+	height: 230px
+	align-items: center
+	border-bottom: 1px solid #cccccc
+
+.wish__lists__item__delete
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100px
+	height: 230px
+
+.wish__lists__item__img
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 160px
+	height: 230px
+
+.wish__lists__item__name
+	display: flex
+	align-items: center
+	width: 480px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__price
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 250px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__status
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 250px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__checkout
+	display: flex
+	width: 322px
+	justify-content: center
+	align-items: center
+	height: 230px
+
+.wish__lists__item__checkout__btn
+	display: flex
+	align-items: center
+	justify-content: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+	text-transform: uppercase
+	width: 225px
+	height: 50px
+	&:hover
+		cursor: pointer
+
+.wish__lists__item__delete__cross
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	border: 1px solid #cccccc
+	position: relative
+	&:hover
+		cursor: pointer
+	&:before
+		content: ''
+		width: 20px
+		border: 1px solid #cccccc
+		top: 13px
+		right: 4px
+		position: absolute
+		transform: rotate(-45deg)
+	&:after
+		content: ''
+		width: 20px
+		border: 1px solid #cccccc
+		top: 13px
+		right: 4px
+		position: absolute
+		transform: rotate(45deg)
 
 // ============================
 // MEDIA
