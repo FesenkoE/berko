@@ -25,6 +25,13 @@
 // home
 // ============================
 
+.main-row
+	height: 1px
+	width: 100%
+	background-color: $mainC1
+	margin: 30px 0
+	display: none
+
 .banner
 	background-color: $mainC1
 	font-family: "FuturaLight"
@@ -51,19 +58,25 @@
 			font-size: 2.188em
 			&:hover
 				cursor: pointer
+		&-button
+			display: none
+			align-items: center
+			font-size: 1.5em
 	&__logo
 		@include flex($jc: center, $ai: center)
 		& img
 			//width: 100%
 	&__tools
 		@include flex($jc: space-between, $ai: center)
-	&__search input
-		background-color: transparent
-		border: none
-		border-bottom: 1px solid #0a0a0a
-		font-size: 1.563em
-		margin-left: 75px
-		font-family: "FuturaBook"
+	&__search
+		@include flex()
+		& input
+			background-color: transparent
+			border: none
+			border-bottom: 1px solid #0a0a0a
+			font-size: 1.563em
+			margin-left: 75px
+			font-family: "FuturaBook"
 	&__like
 		position: relative
 		&::before
@@ -166,6 +179,71 @@
 				width: 100%
 
 // ============================
+// mobile-menu
+
+#mobile-menu
+	position: fixed
+	transform: translateX(-100%)
+	left: 0
+	z-index: 999
+	display: block
+	transition: .5s
+	width: 60%
+	height: 100vh
+	background-color: #ffffff
+
+#mobile-menu__close
+	transition: .5s
+
+#mobile-menu-overlay
+	z-index: 78
+	background-color: rgba(0, 0, 0, .6)
+	width: 100%
+	height: 100%
+	opacity: 0
+	top: 0
+	left: 0
+	transition: .2s
+
+.mobile-menu
+	&__wrap
+		height: 100vh
+		padding: 15px
+		@include flex($fd: column, $jc: space-between)
+	&__header
+		@include flex($jc: space-between, $ai: center)
+		text-transform: uppercase
+		font-size: 1.375em
+		padding-bottom: 10px
+		border-bottom: 1px solid $mainC1
+	&__body
+		@include flex($fd: column)
+		padding: 15px 0
+	&__elem
+		color: #000
+		padding-top: 10px
+		&-link
+			& a
+				color: #000
+				border-bottom: 1px solid #000
+				width: auto
+		&-name
+			font-size: 1em
+			font-family: "FuturaMedium"
+			@include flex($ai: center)
+			& i
+				padding-left: 10px
+	&__list
+		color: #000
+		& li
+			padding-top: 10px
+		& a
+			color: #000
+	&__links
+		@include flex($jc: space-between, $ai: center)
+
+
+// ============================
 // cart
 
 #cart
@@ -177,6 +255,7 @@
 	transition: .5s
 	width: 28%
 	background-color: #ffffff
+	height: 100vh
 
 #cart__close
 	transition: .5s
@@ -193,11 +272,12 @@
 
 .cart
 	&__wrap
+		@include flex($jc: space-between, $fd: column)
 		opacity: 0
 		width: 100%
 		transition: .5s
+		height: 100vh
 	&__header
-		height: 10vh
 		&-wrap
 			@include flex($jc: space-between)
 			padding: 40px 50px 0
@@ -211,7 +291,6 @@
 		font-size: 2.500em
 	&__body
 		overflow-y: scroll
-		height: 72vh
 		border-top: 1px solid $mainC1
 		border-bottom: 1px solid $mainC1
 		@include flex($jc: space-between, $fd: column)
@@ -257,7 +336,6 @@
 			border-bottom: 1px solid #000
 	&__footer
 		padding: 20px 50px 40px
-		height: 18vh
 	&__order
 		&-note
 			color: #000000
@@ -330,6 +408,7 @@
 	cursor: pointer
 
 .modal-size
+	padding: 0 80px
 	&__close
 		position: absolute
 		top: 0
@@ -371,46 +450,48 @@
 					&:hover
 						border-bottom: 1px solid #000
 	&__img
-		position: relative
+		padding: 0 100px
+		
 		&_letter
 			text-transform: uppercase
 		&-item
+			position: relative
 		&_a
 			position: absolute
-			bottom: -10px
-			left: 40px
+			bottom: -18px
+			left: 60px
 		&_c
 			position: absolute
 			top: 190px
-			left: 10px
+			left: -50px
 		&_d
 			position: absolute
 			top: 240px
-			left: 10px
+			left: -50px
 		&_e
 			position: absolute
-			bottom: -10px
-			left: 125px
+			bottom: -18px
+			right: -30px
 		&_f
 			position: absolute
 			top: 120px
-			left: 10px
+			left: -50px
 		&_ff
 			position: absolute
 			top: 140px
-			left: 10px
+			left: -50px
 		&_g
 			position: absolute
-			top: 160px
-			left: 10px
+			top: 155px
+			left: -50px
 		&_h
 			position: absolute
-			bottom: -10px
-			right: 35px
+			bottom: -18px
+			right: 37px
 		&_i
 			position: absolute
-			bottom: -10px
-			right: 95px
+			bottom: -18px
+			left: -12px
 	&__description
 		text-align: left
 		&-label
@@ -425,7 +506,7 @@
 		padding: 15px 0
 		margin: 15px 10px
 		text-transform: uppercase
-	
+
 // ============================
 
 .main
@@ -473,7 +554,7 @@
 		@include flex($jc: center)
 	&__description
 		padding-top: 70px
-		padding: 70px 400px 0
+		padding: 70px 25% 0
 		text-align: center
 		font-size: 1.375em
 		color: #000
@@ -511,7 +592,7 @@
 			color: #000000
 			font-family: "FuturaMedium"
 			font-size: 2.500em
-			padding-bottom: 50px
+			margin-bottom: 50px
 		&-link
 			padding: 25px 35px
 			background-color: $mainC1
@@ -569,7 +650,7 @@
 			padding-top: 75px
 	&__slider
 		position: relative
-		margin: 140px 185px 0
+		margin: 140px 15% 0
 		&-item
 			@include flex($jc: center)
 			margin: 0 15px
@@ -675,6 +756,7 @@
 			padding-top: 10px
 
 .subscribe
+	margin-bottom: 140px
 	&__wrap
 		padding: 0 30%
 		@include flex($jc: center, $fd: column)
@@ -702,6 +784,7 @@
 		margin-top: 160px
 		@include flex($jc: center)
 		& button
+			cursor: pointer
 			padding: 25px 100px
 			background-color: $mainC1
 			color: #070909
@@ -710,7 +793,6 @@
 			text-transform: uppercase
 
 .footer
-	margin-top: 140px
 	background-color: #dddddd
 	&__wrap
 		padding: 0 10%
@@ -735,6 +817,9 @@
 		font-size: 1.625em
 		&-label
 			padding-top: 70px
+			&_mob
+				margin-top: 50px
+				display: none
 	&__faq
 		padding: 0 15%
 		font-family: "FuturaBook"
@@ -748,6 +833,15 @@
 				padding-top: 25px
 			& li a
 				color: #000000
+	&__button
+		font-size: 0.8em
+		&_mob
+			margin-top: 50px
+			padding: 15px 110px
+			text-transform: uppercase
+			background-color: #fff
+			text-align: center
+			display: none
 	&__news
 		@include flex($ai: flex-end, $fd: column)
 		&-title
@@ -759,6 +853,7 @@
 			text-align: right
 			font-size: 1.375em
 		&-input
+			@include flex()
 			padding-top: 50px
 			& input
 				position: relative
@@ -915,6 +1010,7 @@
 					color: #000000
 					font-family: "FuturaBook"
 					font-size: 1.250em
+
 .navbar
 	min-height: 203px
 	background-color: #ccc
@@ -1146,13 +1242,312 @@
 		.container
 			max-width: nth($mediaBp, $i + 1)
 
-
 @media (max-width: nth($mediaBp, 2))
 
+	.header__user img, .header__like img, .header__cart img
+		width: 80%
+
+	.header__search img
+		width: 50%
+
 	.header__search input
-		font-size: 1.250em
+		font-size: 1em
+
+	.header__like::before
+		top: 14%
+		left: 28%
+		font-size: 1.1em
+
+	.header__cart::before
+		top: 20%
+		left: 25%
+		font-size: 1.1em
+
+
+	.modal-size__img
+		padding: 0 40px 0px 100px
+	
+	.modal-content
+		padding: 60px
+
+	#cart
+		width: 34%
 
 @media (max-width: nth($mediaBp, 3))
 
 	.header__navigation li
 		font-size: 1.563em
+
+	.modal-size__wrap
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 1fr
+
+	.modal-size__description
+		padding-top: 35px
+		grid-column-start: 1
+		grid-column-end: 3
+		grid-row-start: 2
+		grid-row-end: 2
+
+@media (max-width: nth($mediaBp, 4))
+
+	.modal-size__wrap
+		grid-template-columns: 1fr
+		grid-template-rows: 0.5fr 1fr 1fr
+
+	.modal-size__img
+		grid-column-start: 1
+		grid-column-end: 3
+		grid-row-start: 2
+		grid-row-end: 2
+		margin: 0 18%
+
+	.modal-size__description
+		padding-top: 35px
+		grid-column-start: 1
+		grid-column-end: 3
+		grid-row-start: 3
+		grid-row-end: 3
+
+	html
+		font-size: 14px
+
+	.header__search img
+		height: 30px
+		width: 30px
+
+	.header__logo img
+		width: 80%
+
+	.header__navigation li + li
+		margin-left: 25px
+
+	.header__navigation li
+		font-size: 1.4em
+
+	.follow__slider-item
+		margin: 0 15px
+
+	.follow__slider-controls_next, .follow__slider-controls_prev
+		height: 40px
+		width: 40px
+		font-size: 2em
+
+	.header__search input
+		margin-left: 5px
+		width: 80px
+
+	.main
+		&__arrow
+			position: absolute
+			bottom: -20px
+			left: calc( 50% - 20px )
+			width: 40px
+			height: 40px
+			&::before
+				position: absolute
+				content: ""
+				height: 20px
+				width: 5px
+				background-color: #000000
+				transform: rotate(45deg)
+				left: 23px
+				top: calc( 55% - 10px )
+			&::after
+				position: absolute
+				content: ""
+				height: 20px
+				width: 5px
+				background-color: #000000
+				transform: rotate(-45deg)
+				right: 23px
+				top: calc( 55% - 10px )
+
+	.follow__slider-block
+		padding: 15px 20px
+		font-size: 1.1em
+
+	#cart
+		width: 65%
+
+@media (max-width: nth($mediaBp, 5))
+	
+	.modal-content
+		margin: 5% 3%
+
+	.modal-size__img
+		margin: 0px 30%
+
+	.modal-size__img
+		padding: 0 20px 0px 20px
+
+	.header__navigation
+		display: none
+
+	.header__navigation-button
+		display: flex
+
+
+	.subscribe__wrap
+		padding: 0 15%
+
+	.subscribe__button
+		margin-top: 80px
+
+	.about-us
+		padding: 50px 0
+
+	.about-us__button
+		margin-top: 60px
+
+	.follow
+		padding: 60px 0
+
+	.follow__slider
+		margin-top: 80px
+
+	.featured
+		padding: 60px 0
+
+	.subscribe__input input
+		margin-top: 80px
+
+	#cart
+		width: 90%
+
+	.footer__icons-contact, .footer__icons-links
+		@include flex($jc: space-around)
+		width: 50%
+
+@media (max-width: nth($mediaBp, 6))
+
+	.modal-size__img
+		margin: 0px 15%
+		padding: 0px 35px 0px 35px
+
+	.header__search input
+		display: none
+
+	.header__user
+		display: none
+
+	.header__like
+		display: none
+
+	.header__tools
+		justify-content: flex-end
+
+	.header__cart
+		margin-left: 20px
+
+	.header__cart::before
+		top: 27%
+
+	.categories
+		flex-direction: column
+		margin-right: 10px
+		margin-left: 10px
+
+	.categories__item-title
+		padding: 0 30px
+
+	.main-row
+		display: block
+
+	.new-collection
+		margin-top: 0
+
+	.new-collection img
+		content: url("../img/main/new-mob.png")
+
+	.help__title
+		padding-bottom: 10px
+		&::before
+			height: 0
+		&::after
+			height: 0
+
+	.help__description
+		border-top: 1px solid #000
+
+	.featured__slider
+		margin: 50px 15% 0
+
+	.featured__button
+		padding-top: 50px
+
+	.subscribe__wrap
+		padding: 0 10%
+
+	.about-us__description
+		padding: 70px 15% 0
+
+	.subscribe__input input
+		margin-top: 80px
+
+	.footer__wrap
+		padding: 0 10%
+
+	.footer__info
+		grid-template-columns:  1fr
+		grid-template-rows: repeat(3, 1fr)
+
+	.footer__help-label
+		display: none
+
+	.footer__info
+		padding: 20px 0 20px
+
+	.footer__faq
+		padding: 0 0
+	
+	.footer__faq-list
+		padding-top: 20px
+
+	.footer__news-title
+		padding-top: 20px
+
+	.footer__news
+		align-items: flex-start
+
+	.footer__news-text
+		text-align: left
+		padding-top: 20px
+		width: 100%
+
+	.footer__news-input input
+		font-size: 0.7em
+
+	.footer__button
+		display: none
+
+	.footer__button_mob
+		display: block
+	
+	.footer__help-label_mob
+		display: block
+
+
+	.cart__body
+		padding: 20px 20px 0
+
+	.cart__items-elem
+		padding-top: 10px
+
+	.cart__header-wrap
+		padding-top: 15px
+
+@media (max-width: nth($mediaBp, 7))
+
+	.footer__wrap
+		padding: 0 0
+
+	.footer__icons-contact a
+		margin: 0 10px 0 10px
+	
+	.footer__icons-links a
+		margin: 0 10px 0 10px
+
+	.modal-size__img
+		margin: 0px 10%
+		padding: 0px 10px 0px 10px
