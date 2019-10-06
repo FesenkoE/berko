@@ -224,69 +224,93 @@
         </div>
         <div class="checkout__form">
             <div class="checkout__form__blank">
-
                 <form class="checkout__form__blank__form" action="" method="post">
-                    <div class="checkout__form__blank__form__fio">
-                        <input type="text" id="first-name" name="first_name" placeholder="first name">
-                        <input type="text" id="last-name" name="last_name" placeholder="last name">
+                    <div class="checkout__form__blank__form__for__input">
+                        <div class="checkout__form__blank__form__fio">
+                            <input type="text" id="first-name" name="first_name" placeholder="first name">
+                            <input type="text" id="last-name" name="last_name" placeholder="last name">
+                        </div>
+                        <div class="checkout__form__blank__form__other">
+                            <input type="text" name="country" placeholder="country">
+                            <input type="text" name="address" placeholder="house number and street name">
+                            <input type="text" name="city" placeholder="town/city">
+                            <input type="text" name="country" placeholder="state/country">
+                            <input type="text" name="postcode" placeholder="postcode">
+                            <input type="text" name="phone" placeholder="phone">
+                            <input type="email" name="email" placeholder="email address">
+                        </div>
+                        <div class="checkout__form__blank__form__create__account">
+                            <label for="create-account">
+                                <input type="checkbox" name="create_account" id="create-account"
+                                       placeholder="create account">
+                                <i></i>
+                                create account
+                            </label>
+                        </div>
+                        <div class="checkout__form__blank__form__create__additional_information">
+                            <input type="email" name="last_name" placeholder="additional information">
+                        </div>
                     </div>
-                    <div class="checkout__form__blank__form__other">
-                        <input type="text" name="country" placeholder="country">
-                        <input type="text" name="address" placeholder="house number and street name">
-                        <input type="text" name="city" placeholder="town/city">
-                        <input type="text" name="country" placeholder="state/country">
-                        <input type="text" name="postcode" placeholder="postcode">
-                        <input type="text" name="phone" placeholder="phone">
-                        <input type="email" name="email" placeholder="email address">
-                    </div>
-                    <div class="checkout__form__blank__form__create__account">
-                        <label for="create-account">
-                            <input type="checkbox" name="create_account" id="create-account" placeholder="create account">
-                            <i></i>
-                            create account
-                        </label>
-                    </div>
-                    <div class="checkout__form__blank__form__create__additional_information">
-                        <input type="email" name="last_name" placeholder="additional information">
+                    <div class="checkout__form__view">
+                        <div class="checkout__form__view__label">
+                            <div class="checkout__form__view__label__product">
+                                product
+                            </div>
+                            <div class="checkout__form__view__label__total">
+                                total
+                            </div>
+                        </div>
+
+                        <!-- start FOREACH -->
+                        <div class="checkout__form__view__items">
+                            <div class="checkout__form__view__item">
+                                <div class="checkout__form__view__item__name">
+                                    <p>out from under stardust slip dress</p>
+                                </div>
+                                <div class="checkout__form__view__item__price">
+                                    500.00 $
+                                </div>
+                            </div>
+                            <div class="checkout__form__view__item">
+                                <div class="checkout__form__view__item__name">
+                                    <p>out from under stardust slip dress</p>
+                                    <p>size: m</p>
+                                </div>
+                                <div class="checkout__form__view__item__price">
+                                    500.00 $
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- end FOREACH -->
+                        <div class="checkout__form__view__label checkout__form__view__subtotal">
+                            <div class="checkout__form__view__label__product">
+                                subtotal
+                            </div>
+                            <div class="checkout__form__view__label__total">
+                                1000.00 $
+                            </div>
+                        </div>
+                        <div class="checkout__form__view__coupon">
+                            <a href="#">have a coupon? click here to enter your code</a>
+                        </div>
+                        <div class="checkout__form__view__total">
+                            total 1 000.00 $
+                        </div>
+                        <div class="checkout__form__view__check__payment">
+                            <label for="check-payments">
+                                <input type="checkbox" id="check-payments">
+                                <i></i>
+                                check payments
+                            </label>
+                        </div>
+                        <div class="checkout__form__view__check__tooltip">
+                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store
+                                Postcode.</p>
+                        </div>
+                        <button type="submit" class="checkout__form__view__btn__submit">place order</button>
                     </div>
                 </form>
-            </div>
-            <div class="checkout__form__view">
-                <div class="checkout__form__view__label">
-                    <div class="checkout__form__view__label__product">
-                        product
-                    </div>
-                    <div class="checkout__form__view__label__total">
-                        total
-                    </div>
-                </div>
-                <div class="checkout__form__view__items">
-                    <div class="checkout__form__view__item">
-                        <div class="checkout__form__view__item__name">
-                            <p>out from under stardust slip dress</p>
-                        </div>
-                        <div class="checkout__form__view__item__price">
-                            500.00 $
-                        </div>
-                    </div>
-                    <div class="checkout__form__view__item">
-                        <div class="checkout__form__view__item__name">
-                            <p>out from under stardust slip dress</p>
-                            <p>size: m</p>
-                        </div>
-                        <div class="checkout__form__view__item__price">
-                            500.00 $
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout__form__view__label checkout__form__view__subtotal">
-                    <div class="checkout__form__view__label__product">
-                        subtotal
-                    </div>
-                    <div class="checkout__form__view__label__total">
-                        1000.00 $
-                    </div>
-                </div>
             </div>
         </div>
     </div>

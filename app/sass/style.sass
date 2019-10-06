@@ -1780,7 +1780,6 @@
 
 .checkout__form__blank
 	margin-top: 30px
-	width: 58%
 	min-height: 200px
 	input
 		color: #9A9898
@@ -1798,6 +1797,8 @@
 	text-transform: uppercase
 
 .checkout__form__blank__form
+	display: flex
+	justify-content: space-between
 	input
 		font-family: "FuturaMedium", "Arial", "sans-serif"
 		font-size: 1.25em
@@ -1807,6 +1808,9 @@
 		border-bottom: 2px solid #9A9898
 		&::placeholder
 			color: #9A9898
+
+.checkout__form__blank__form__for__input
+	width: 58%
 
 .checkout__form__blank__form__create__additional_information
 	margin-top: 50px
@@ -1858,7 +1862,7 @@
 			transition: all 0.2s ease-in-out
 
 .checkout__form__view
-	padding: 30px 50px
+	padding: 30px 65px
 
 .checkout__form__view__label
 	display: flex
@@ -1890,6 +1894,75 @@
 
 .checkout__form__view__subtotal
 	border-bottom: none
+
+.checkout__form__view__coupon
+	margin-top: 60px
+	a
+		color: #DEDEDE
+		font-family: "FuturaDemi", "Arial", "sans-serif"
+		font-size: 1.25em
+		text-transform: uppercase
+		text-decoration: underline
+
+.checkout__form__view__total
+	margin-top: 70px
+	text-align: right
+	font-family: "FuturaDemi", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+	text-transform: uppercase
+
+.checkout__form__view__check__payment
+	margin-top: 30px
+	label
+		font-family: "FuturaMedium", "Arial", "sans-serif"
+		font-size: 1.25em
+		text-transform: uppercase
+		color: #000000
+		display: flex
+		align-items: center
+	input
+		display: none
+		&:checked + i:before
+			transform: rotate(45deg) scale(1)
+			transition: all 0.2s ease-in-out
+	i
+		display: inline-block
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		border: 2px solid #9A9898
+		margin-right: 10px
+		position: relative
+		padding: 2px
+		&:before
+			content: ''
+			position: absolute
+			border-radius: 50%
+			width: 12px
+			height: 12px
+			background: #9A9898
+			transform:  rotate(45deg) scale(0)
+			transition: all 0.2s ease-in-out
+
+.checkout__form__view__check__tooltip
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+
+.checkout__form__view__btn__submit
+	width: 230px
+	height: 55px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+	text-transform: uppercase
+	margin-top: 70px
+	&:hover
+		cursor: pointer
+
+
 
 
 
