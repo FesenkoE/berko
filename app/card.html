@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Berko</title>
+</head>
+<body>
+
+<div class="cart" id="cart">
+    <div class="cart__wrap">
+        <div class="cart__header">
+            <div class="cart__header-wrap">
+                <div class="cart__title">cart</div>
+                <div id="cart__close" class="cart__close"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+        <div class="cart__body">
+            <div class="cart__body-wrap">
+                <div class="cart__items">
+                    <div class="cart__items-elem">
+                        <div class="cart__item-img">
+                            <img src="./img/cart/elem.png" alt="">
+                        </div>
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Fashion shoes</div>
+                            <div class="cart__item-color">White colour</div>
+                            <div class="cart__item-size">size: <span class="cart__item-size_number">38</span></div>
+                            <div class="cart__item-amount">
+                                <div class="cart__item-amount_minus">-</div>
+                                <div class="cart__item-amount_number">1</div>
+                                <div class="cart__item-amount_plus">+</div>
+                            </div>
+                            <div class="cart__item-actions">
+                                <div class="cart__item-amount-x-price">1x <span>800$</span></div>
+                                <div class="cart__item-remove">remove</div>
+                                <div class="cart__item-change">change</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__items-elem">
+                        <div class="cart__item-img">
+                            <img src="./img/cart/elem.png" alt="">
+                        </div>
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Fashion shoes</div>
+                            <div class="cart__item-color">White colour</div>
+                            <div class="cart__item-size">size: <span class="cart__item-size_number">38</span></div>
+                            <div class="cart__item-amount">
+                                <div class="cart__item-amount_minus">-</div>
+                                <div class="cart__item-amount_number">1</div>
+                                <div class="cart__item-amount_plus">+</div>
+                            </div>
+                            <div class="cart__item-actions">
+                                <div class="cart__item-amount-x-price">1x <span>800$</span></div>
+                                <div class="cart__item-remove">remove</div>
+                                <div class="cart__item-change">change</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__items-elem">
+                        <div class="cart__item-img">
+                            <img src="./img/cart/elem.png" alt="">
+                        </div>
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Fashion shoes</div>
+                            <div class="cart__item-color">White colour</div>
+                            <div class="cart__item-size">size: <span class="cart__item-size_number">38</span></div>
+                            <div class="cart__item-amount">
+                                <div class="cart__item-amount_minus">-</div>
+                                <div class="cart__item-amount_number">1</div>
+                                <div class="cart__item-amount_plus">+</div>
+                            </div>
+                            <div class="cart__item-actions">
+                                <div class="cart__item-amount-x-price">1x <span>800$</span></div>
+                                <div class="cart__item-remove">remove</div>
+                                <div class="cart__item-change">change</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart__footer">
+            <div class="cart__footer-wrap">
+                <div class="cart__order">
+                    <div class="cart__order-note">Add Order Note</div>
+                    <div class="cart__order-calc">shipping & taxes calculated at checkout</div>
+                </div>
+                <div class="cart__button">
+                    <div class="cart__button-title">Checkout</div>
+                    <div class="cart__button-dot"><i class="fas fa-circle"></i></div>
+                    <div class="cart__button-price">1 600</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+    <div class="container">
+        <p class="banner__label">
+            Make It Yours \\ Free Shipping Over 200$
+        </p>
+    </div>
+</div>
+
+<!--<main class="main">-->
+<header class="header" id="main-menu">
+    <div class="container">
+        <div class="header__row">
+            <ul class="header__navigation">
+                <li id="shop-label">shop</li>
+                <li id="about-us-label">about us</li>
+                <li>real brides</li>
+            </ul>
+            <div class="header__logo">
+                <img src="./img/main/logo.png" alt="logo">
+            </div>
+            <div class="header__tools">
+                <div class="header__search">
+                    <input type="text">
+                    <img src="./img/main/search.png" alt="">
+                </div>
+                <div class="header__user">
+                    <img src="./img/main/log_in.png" alt="">
+                </div>
+                <div class="header__like">
+                    <img src="./img/main/like.png" alt="">
+                </div>
+                <div id="header__cart-label" class="header__cart">
+                    <img src="./img/main/cart.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="menu-shop" id="shop">
+            <div class="container">
+                <div class="menu-shop__wrap">
+                    <div class="menu-shop__grid">
+                        <div class="menu-shop__categories">
+                            <div class="menu-shop__categories-item">
+                                <div class="menu-shop__categories-title">BRIDAL ATTIRE</div>
+                                <ul class="menu-shop__categories-list">
+                                    <li><a href="">All</a></li>
+                                    <li><a href="">Dresses</a></li>
+                                    <li><a href="">Headwear</a></li>
+                                    <li><a href="">Swimsuit</a></li>
+                                    <li><a href="">Jewelry</a></li>
+                                    <li><a href="">lingerie</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-shop__categories-item">
+                                <div class="menu-shop__categories-title">COLLECTIONS</div>
+                                <ul class="menu-shop__categories-list">
+                                    <li><a href="">D day</a></li>
+                                    <li><a href="">Bachelorette</a></li>
+                                    <li><a href="">HoneyMoon</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-shop__categories-item">
+                                <div class="menu-shop__categories-title">GIFTING ESSETIALS</div>
+                                <ul class="menu-shop__categories-list">
+                                    <li><a href="">Box Sets</a></li>
+                                    <li><a href="">Bachelorette</a></li>
+                                    <li><a href="">Paper Goods</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="menu-shop__img">
+                            <img src="./img/menu/menu-shop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-about-us" id="menu-about-us">
+            <div class="container">
+                <div class="menu-about-us__wrap">
+                    <div class="menu-about-us__grid">
+                        <div class="menu-about-us__categories">
+                            <div class="menu-about-us__categories-item">
+                                <div class="menu-about-us__categories-title">BRIDAL ATTIRE</div>
+                                <ul class="menu-about-us__categories-list">
+                                    <li><a href="">About us</a></li>
+                                    <li><a href="">Press</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="">Jewelry</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="menu-about-us__img">
+                            <div class="menu-about-us__img-item"><img src="./img/menu/menu-about-us (1).png"
+                                                                      alt=""></div>
+                            <div class="menu-about-us__img-item"><img src="./img/menu/menu-about-us (2).png"
+                                                                      alt=""></div>
+                            <div class="menu-about-us__img-item"><img src="./img/menu/menu-about-us (3).png"
+                                                                      alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="goods-card">
+        <div class="goods-card__slider">
+            <div class="slider-nav">
+                <div class="slider-nav__item"><img src="img/card/card-min-1.png" alt=""></div>
+                <div class="slider-nav__item"><img src="img/card/card-min-2.png" alt=""></div>
+                <div class="slider-nav__item"><img src="img/card/card-min-3.png" alt=""></div>
+                <div class="slider-nav__item"><img src="img/card/card-min-1.png" alt=""></div>
+                <div class="slider-nav__item"><img src="img/card/card-min-2.png" alt=""></div>
+                <div class="slider-nav__item"><img src="img/card/card-min-3.png" alt=""></div>
+            </div>
+
+            <div class="slider-for">
+                <div class="slider-for__item"><img src="img/card/card1.png" alt=""></div>
+                <div class="slider-for__item"><img src="img/shopCard4.png" alt=""></div>
+                <div class="slider-for__item"><img src="img/shopCard2.png" alt=""></div>
+                <div class="slider-for__item"><img src="img/card/card1.png" alt=""></div>
+                <div class="slider-for__item"><img src="img/shopCard4.png" alt=""></div>
+                <div class="slider-for__item"><img src="img/shopCard2.png" alt=""></div>
+            </div>
+        </div>
+        <div class="goods-card__characters">
+            <div class="characters__name">
+                <div class="characters__name__text">
+                    Berko Dress
+                </div>
+                <div class="characters__name__like">
+                    <span class="characters__like-empty">
+                        <img src="img/likeEmpty.png" alt="">
+                    </span>
+                    <span class="characters__like-filled">
+                        <img src="img/likeFilled.png" alt="">
+                    </span>
+                </div>
+            </div>
+            <div class="characters__price">
+                2 500 $
+            </div>
+            <div class="characters__description">
+                <div class="characters__description__title">
+                    Descriptions <span class="card__arrow_down"></span>
+                </div>
+                <div class="characters__description__text">
+                    Inspired by the effortless style of the '90s, this dress is reminiscent of Carolyn
+                    Bessette-Kennedy's iconic wedding dress.
+                </div>
+                <div class="characters__more-details">
+                    More Details <span class="card__arrow_right"></span>
+                </div>
+                <div class="characters__size">
+                    <div class="characters__size__title">
+                        Size <span class="card__arrow_right"></span>
+                    </div>
+                    <div class="characters__size__chart">
+                        Size chart
+                    </div>
+                </div>
+                <div class="characters__buy__amount">
+                    <div class="characters__buy__amount__minus">
+                        -
+                    </div>
+                    <div class="characters__buy__amount__number">
+                        1
+                    </div>
+                    <div class="characters__buy__amount__plus">
+                        +
+                    </div>
+                </div>
+                <div class="characters__share">
+                    Share
+                    <span class="characters__share__instagram">
+                        <a href=""><img src="img/card/share-instagram.png" alt=""></a>
+                    </span>
+                    <span class="characters__share__facebook">
+                        <a href=""><img src="img/card/share-facebook.png" alt=""></a>
+                    </span>
+                </div>
+                <div class="characters__size__unavailable">
+                    <p>Size Unavailable</p>
+                    <p>Contact Us And We Will Help You Find What You Are Looking For</p>
+                    <div class="characters__size__contact__us">
+                        <span><a href="#"><img src="img/card/card-icon-call.png" alt=""></a></span>
+                        <span><a href="#"><img src="img/card/card-icon-email.png" alt=""></a></span>
+                    </div>
+                </div>
+                <div class="characters__btn">
+                    <button class="btn-add-to-bag">add to bag</button>
+                    <button class="btn-checkout">checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card__to__complete">
+        <div class="card__to__complete__title">
+            to complete the silhouette
+        </div>
+        <div class="card__to__complete__items">
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <img src="img/card/to-complete-1.png" alt="">
+                </div>
+                <div class="card__to__complete__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__to__complete__item__price">
+                    236.00 $
+                </div>
+            </div>
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <img src="img/card/to-complete-2.png" alt="">
+                </div>
+                <div class="card__to__complete__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__to__complete__item__price">
+                    236.00 $
+                </div>
+            </div>
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <img src="img/card/to-complete-3.png" alt="">
+                </div>
+                <div class="card__to__complete__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__to__complete__item__price">
+                    236.00 $
+                </div>
+            </div>
+        </div>
+        <div class="view__more">
+            <button class="btn__view__more">
+                view more
+            </button>
+        </div>
+    </div>
+    <div class="card__also__like">
+        <div class="card__also__like__title">
+            you may also like
+        </div>
+        <div class="card__also__like__items">
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <img src="img/card/also-like-1.png" alt="">
+                </div>
+                <div class="card__also__like__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__also__like__item__price">
+                    236.00 $
+                </div>
+            </div>
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <img src="img/card/also-like-2.png" alt="">
+                </div>
+                <div class="card__also__like__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__also__like__item__price">
+                    236.00 $
+                </div>
+            </div>
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <img src="img/card/also-like-3.png" alt="">
+                </div>
+                <div class="card__also__like__item__name">
+                    Hollywood Bridal Dress
+                </div>
+                <div class="card__also__like__item__price">
+                    236.00 $
+                </div>
+            </div>
+        </div>
+        <div class="view__more">
+            <button class="btn__view__more">
+                view more
+            </button>
+        </div>
+    </div>
+    <div class="viewed__recently">
+        <div class="viewed__recently__title">
+            recently viewed
+        </div>
+        <div class="viewed__recently__slider">
+            <div class="viewed__recently__slider__item">
+                <img src="img/card/recently-slider-1.png" alt="">
+                <div class="viewed__recently__slider__name">
+                    Hollywood Bridal Dress
+                </div>
+            </div>
+            <div class="viewed__recently__slider__item">
+                <img src="img/card/recently-slider-2.png" alt="">
+                <div class="viewed__recently__slider__name">
+                    Hollywood Bridal Dress
+                </div>
+            </div>
+            <div class="viewed__recently__slider__item">
+                <img src="img/card/recently-slider-3.png" alt="">
+                <div class="viewed__recently__slider__name">
+                    Hollywood Bridal Dress
+                </div>
+            </div>
+            <div class="viewed__recently__slider__item">
+                <img src="img/card/recently-slider-4.png" alt="">
+                <div class="viewed__recently__slider__name">
+                    Hollywood Bridal Dress
+                </div>
+            </div>
+            <div class="viewed__recently__slider__item">
+                <img src="img/card/recently-slider-1.png" alt="">
+                <div class="viewed__recently__slider__name">
+                    Hollywood Bridal Dress
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--</main>-->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__icons">
+            <div class="footer__icons-contact">
+                <a href="#">
+                    <img src="./img/main/call.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/main/email.png" alt="">
+                </a>
+            </div>
+            <div class="footer__icons-links">
+                <a href="#">
+                    <img src="./img/main/inst.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/main/fb.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__help">
+                <div class="footer__help-title">
+                    <p>
+                        Need Help? We Are At Your Service
+                    </p>
+                    <br>
+                    <p>
+                        Leave your details and our fashion consultant will get back to you as soon as possible
+                    </p>
+                </div>
+                <div class="footer__help-label">
+                    <img src="./img/main/footer-logo.png" alt="">
+                </div>
+            </div>
+            <div class="footer__faq">
+                <div class="footer__faq-title">faq</div>
+                <ul class="footer__faq-list">
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__news">
+                <div class="footer__news-title">Join Our Newsletter</div>
+                <div class="footer__news-text">
+                    <p>Subscribe To Receive Updates, Access</p>
+                    <br>
+                    <p>To Exclusive Deals & More</p>
+                    <div class="footer__news-input">
+                        <input type="text" placeholder="Please enter Your Email Here">
+                        <i class="footer__news-input-icon fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
