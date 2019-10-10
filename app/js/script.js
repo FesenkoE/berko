@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    $('.main__arrow').click(function(){
+        $('html').animate({scrollTop:$('#about_us').position().top}, 1000, 'linear');
+    });
+
+
+    $('.main-slider__slider').slick({
+        fade: true,
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 1,
+        autoplaySpeed: 5000,
+    });
+
     $('.viewed__recently__slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -287,16 +300,18 @@ $(document).ready(function () {
 
 });
 
+
 window.onscroll = function () {
     fixMyMenu()
 };
 
-var header = $("#main-menu");
-var shop = $("#shop");
-var aboutUs = $("#menu-about-us");
-var sticky = $(header).offset().top;
+let header = $("#main-menu");
+let shop = $("#shop");
+let aboutUs = $("#menu-about-us");
+let sticky = $(header).offset().top;
 
 function fixMyMenu() {
+    console.log(window.pageYOffset);
     if (window.pageYOffset) {
         header.addClass("fix");
         header.css('background-color', '#fff');

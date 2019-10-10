@@ -115,6 +115,12 @@
 // ============================
 // menu
 
+.sticky
+	position: fixed
+	top: 0
+	width: 100%
+
+
 #main-menu
 	transition: .2s
 
@@ -522,15 +528,32 @@
 
 // ============================
 
+.main-slider
+	height: calc(100vh - 193px)
+	position: relative
+	max-width: 1920px
+	margin: 0 auto
+
+.search__in__slider
+	position: absolute
+	top: 50px
+	right: 50px
+	margin: 0!important
+	z-index: 1
+
+.main-slider__slider__item
+	max-width: 1920px
+	height: calc(100vh - 193px)
+
 .main
 	position: relative
-	background: url(../img/main/main-bg.png) no-repeat
+	//background: url(../img/main/main-bg.png) no-repeat
 	background-size: cover
 	background-position-x: center
-	height: 100vh
+	//height: 100vh
 	&__arrow
 		position: absolute
-		bottom: -40px
+		bottom: 0
 		left: calc( 50% - 40px )
 		width: 80px
 		border-radius: 50%
