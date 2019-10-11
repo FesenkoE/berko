@@ -296,32 +296,60 @@ $(document).ready(function () {
         } else {
             sortList.fadeOut();
         }
+    });
+
+    // let menuTop = $('#main-menu').offset().top;
+    //
+    // $(window).scroll(function(){
+    //     if( $(window).scrollTop() > menuTop ) {
+    //         $('#main-menu').addClass('fix');
+    //     } else {
+    //         $('#main-menu').removeClass('fix');
+    //     }
+    // });
+
+    function toggleHeader(){
+        var scroll_status = $(document).scrollTop();
+        if (scroll_status > 74) {
+            $("#main-menu").addClass('fix');
+            $(".main-slider").css('margin-top', '120px');
+        } else {
+            $("#main-menu").removeClass('fix');
+            $('.main-slider').css('margin-top', '0');
+        }
+    }
+
+    toggleHeader();
+
+    $(document).scroll(function(){
+        toggleHeader();
     })
 
 });
 
 
-window.onscroll = function () {
-    fixMyMenu()
-};
 
-let header = $("#main-menu");
-let shop = $("#shop");
-let aboutUs = $("#menu-about-us");
-let sticky = $(header).offset().top;
-
-function fixMyMenu() {
-    console.log(window.pageYOffset);
-    if (window.pageYOffset) {
-        header.addClass("fix");
-        header.css('background-color', '#fff');
-    } else {
-        header.removeClass("fix");
-        header.css('background-color', 'transparent');
-        aboutUs.removeClass('active-about');
-        header.removeClass('active-shop');
-        shop.slideUp();
-        aboutUs.slideUp();
-    }
-}
+// window.onscroll = function () {
+//     fixMyMenu()
+// };
+//
+// let header = $("#main-menu");
+// let shop = $("#shop");
+// let aboutUs = $("#menu-about-us");
+// let sticky = $(header).offset().top;
+//
+// function fixMyMenu() {
+//     let sticky = $(header).offset().top;
+//     if (window.pageYOffset) {
+//         header.addClass("fix");
+//         header.css('background-color', '#fff');
+//     } else {
+//         header.removeClass("fix");
+//         header.css('background-color', 'transparent');
+//         aboutUs.removeClass('active-about');
+//         header.removeClass('active-shop');
+//         shop.slideUp();
+//         aboutUs.slideUp();
+//     }
+// }
 
