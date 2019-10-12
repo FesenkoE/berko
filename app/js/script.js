@@ -4,6 +4,8 @@ $(document).ready(function () {
         $('html').animate({scrollTop:$('#about_us').position().top}, 1000, 'linear');
     });
 
+    $('.slider-for__item').zoom();
+
 
     $('.main-slider__slider').slick({
         fade: true,
@@ -298,16 +300,6 @@ $(document).ready(function () {
         }
     });
 
-    // let menuTop = $('#main-menu').offset().top;
-    //
-    // $(window).scroll(function(){
-    //     if( $(window).scrollTop() > menuTop ) {
-    //         $('#main-menu').addClass('fix');
-    //     } else {
-    //         $('#main-menu').removeClass('fix');
-    //     }
-    // });
-
     function toggleHeader(){
         var scroll_status = $(document).scrollTop();
         if (scroll_status > 74) {
@@ -323,33 +315,35 @@ $(document).ready(function () {
 
     $(document).scroll(function(){
         toggleHeader();
-    })
+    });
+
+
+    $('.characters__description__title').click(function () {
+       $('.characters__description__text').slideToggle();
+       $(this).find('.card__arrow_down').toggleClass('rotate-90');
+    });
+
+    $('.characters__more-details').click(function () {
+        $('.characters__more-details__text').slideToggle();
+        $(this).find('.card__arrow_down').toggleClass('rotate-90');
+    });
+
+
+
+    $('.characters__buy__amount__plus').click(function() {
+        let amount = $('.characters__buy__amount__number').html();
+        amount = parseInt(amount);
+        amount += 1;
+        $('.characters__buy__amount__number').html(amount);
+    });
+
+    $('.characters__buy__amount__minus').click(function() {
+        let amount = $('.characters__buy__amount__number').html();
+        amount = parseInt(amount);
+        if (amount > 0) {
+            amount -= 1;
+        }
+        $('.characters__buy__amount__number').html(amount);
+    });
 
 });
-
-
-
-// window.onscroll = function () {
-//     fixMyMenu()
-// };
-//
-// let header = $("#main-menu");
-// let shop = $("#shop");
-// let aboutUs = $("#menu-about-us");
-// let sticky = $(header).offset().top;
-//
-// function fixMyMenu() {
-//     let sticky = $(header).offset().top;
-//     if (window.pageYOffset) {
-//         header.addClass("fix");
-//         header.css('background-color', '#fff');
-//     } else {
-//         header.removeClass("fix");
-//         header.css('background-color', 'transparent');
-//         aboutUs.removeClass('active-about');
-//         header.removeClass('active-shop');
-//         shop.slideUp();
-//         aboutUs.slideUp();
-//     }
-// }
-

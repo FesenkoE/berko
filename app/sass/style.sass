@@ -699,8 +699,6 @@
 		&-name
 			color: #000000
 			font-size: 1.375em
-			margin-top: 30px
-			margin-left: 20px
 		&-controls
 			&_prev
 				position: absolute
@@ -750,7 +748,7 @@
 		width: 100%
 		height: 100%
 
-.featured__slider-img
+.featured__slider-item
 	&:hover .featured__slider-img-hover__view
 		transition: 0.3s ease-in-out
 		opacity: 1
@@ -758,6 +756,24 @@
 		cursor: pointer
 	&:hover .featured__slider-img-hover
 		opacity: 1
+	&:hover .featured__slider__price
+		opacity: 1
+	&:hover .featured__slider__bag
+		opacity: 1
+
+.featured__slider__options
+	display: flex
+	justify-content: space-between
+	height: 90px
+	align-items: center
+	padding: 0 20px
+
+.featured__slider__price
+	margin-top: 20px
+	opacity: 0
+
+.featured__slider__bag
+	opacity: 0
 
 .follow
 	padding: 120px 0
@@ -1319,6 +1335,7 @@
 .goods-card__slider
 	display: flex
 	width: 1030px
+	min-height: 994px
 	justify-content: space-between
 	align-items: center
 
@@ -1384,11 +1401,24 @@
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 24px
 	position: relative
+	transition: all 0.2s ease-in-out
+	&:hover
+		cursor: pointer
 
 .characters__description__text
-	margin-top: 15px
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 18px
+	margin-top: 15px
+
+.characters__more-details__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 18px
+	margin-top: 15px
+
+.rotate-90
+	transform: rotate(-135deg)!important
+	transition: all 0.2s ease-in-out
+
 
 .card__arrow_down
 	position: absolute
@@ -1397,6 +1427,7 @@
 	height: 10px
 	border-bottom: 1px solid #767474
 	border-left: 1px solid #767474
+	transition: all 0.2s ease-in-out
 	transform: rotate(-45deg)
 	margin-left: 20px
 	top: 7px
@@ -1502,6 +1533,8 @@
 	text-transform: uppercase
 	font-family: "FuturaBook", "Arial", "sans-serif"
 	font-size: 1.625em
+	&:hover
+		cursor: pointer
 
 .btn-checkout
 	display: block
@@ -1511,9 +1544,11 @@
 	text-transform: uppercase
 	font-family: "FuturaBook", "Arial", "sans-serif"
 	font-size: 1.625em
+	&:hover
+		cursor: pointer
 
 .characters__btn
-	margin-top: 85px
+	margin-top: 57px
 
 .card__to__complete, .card__also__like, .viewed__recently
 	margin-top: 130px
