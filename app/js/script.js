@@ -45,7 +45,7 @@ $(document).ready(function () {
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        rtl: dir,
+        // rtl: dir,
         asNavFor: '.slider-for',
         arrows: true,
         centerMode: true,
