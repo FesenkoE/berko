@@ -9,6 +9,16 @@
 // MAIN STYLES
 // ============================
 
+.display-flex
+	display: flex!important
+
+.register__width
+	width: 600px
+	margin: 12% auto!important
+
+.no__margin
+	margin: 0!important
+
 .container
 	width: 100%
 	max-width: nth($mediaBp, 1)
@@ -67,7 +77,10 @@
 		& img
 			//width: 100%
 	&__tools
-		@include flex($jc: space-between, $ai: center)
+		a
+			color: #000000
+			margin-left: 50px
+		@include flex($jc: flex-end, $ai: center)
 	&__search
 		@include flex()
 		& input
@@ -79,34 +92,40 @@
 			font-family: "FuturaBook"
 	&__like
 		position: relative
-		&::before
-			content: '1'
-			position: absolute
-			top: 16%
-			left: 32%
-			font-size: 1.250em
-			font-weight: 800
 	&__cart
 		position: relative
-		&::before
-			content: '1'
-			position: absolute
-			top: 30%
-			left: 32%
-			font-size: 1.250em
-			font-weight: 800
+
+.header__like__count
+	position: absolute
+	top: 8px
+	left: 14px
+
+.header__cart__count
+	position: absolute
+	top: 13px
+	left: 12px
 
 .header .active
 	background-color: #fff
 
+.display-flex
+	display: flex
+
+
 // ============================
 // menu
+
+.sticky
+	position: fixed
+	top: 0
+	width: 100%
+
 
 #main-menu
 	transition: .2s
 
 .fix
-	@include flex($jc: space-between, $ai: center)
+	//@include flex($jc: space-between, $ai: center)
 	position: fixed
 	z-index: 99
 	width: 100%
@@ -509,15 +528,32 @@
 
 // ============================
 
+.main-slider
+	height: calc(100vh - 193px)
+	position: relative
+	max-width: 1920px
+	margin: 0 auto
+
+.search__in__slider
+	position: absolute
+	top: 50px
+	right: 50px
+	margin: 0!important
+	z-index: 1
+
+.main-slider__slider__item
+	max-width: 1920px
+	height: calc(100vh - 193px)
+
 .main
 	position: relative
-	background: url(../img/main/main-bg.png) no-repeat
+	//background: url(../img/main/main-bg.png) no-repeat
 	background-size: cover
 	background-position-x: center
-	height: 100vh
+	//height: 100vh
 	&__arrow
 		position: absolute
-		bottom: -40px
+		bottom: 0
 		left: calc( 50% - 40px )
 		width: 80px
 		border-radius: 50%
@@ -655,6 +691,7 @@
 			@include flex($jc: center)
 			margin: 0 15px
 		&-img
+			position: relative
 			padding: 40px 20px 60px
 			border: 1px solid #2c2c2c
 			& img
@@ -662,8 +699,6 @@
 		&-name
 			color: #000000
 			font-size: 1.375em
-			margin-top: 30px
-			margin-left: 20px
 		&-controls
 			&_prev
 				position: absolute
@@ -684,6 +719,61 @@
 			color: #070909
 			font-family: "FuturaMedium"
 			font-size: 1.625em
+
+.featured__slider-img-hover
+	width: 100%
+	height: 100%
+	position: absolute
+	opacity: 0
+	z-index: 999
+	top: 0
+	left: 0
+	transition: all 0.2s ease-in-out
+	img
+		width: 351px
+		height: 458px
+		position: absolute
+		top: 40px
+		left: 20px
+
+.featured__slider-img-hover__view
+	position: absolute
+	opacity: 1
+	top: 15px
+	right: 50px
+	z-index: 3
+	width: 25px
+	height: 14px
+	img
+		width: 100%
+		height: 100%
+
+.featured__slider-item
+	&:hover .featured__slider-img-hover__view
+		transition: 0.3s ease-in-out
+		opacity: 1
+	&:hover
+		cursor: pointer
+	&:hover .featured__slider-img-hover
+		opacity: 1
+	&:hover .featured__slider__price
+		opacity: 1
+	&:hover .featured__slider__bag
+		opacity: 1
+
+.featured__slider__options
+	display: flex
+	justify-content: space-between
+	height: 90px
+	align-items: center
+	padding: 0 20px
+
+.featured__slider__price
+	margin-top: 20px
+	opacity: 0
+
+.featured__slider__bag
+	opacity: 0
 
 .follow
 	padding: 120px 0
@@ -866,7 +956,8 @@
 					font-size: 1em
 					font-family: "FuturaMedium"
 			&-icon
-				position: absolute
+				//position: absolute
+				//right: 0
 
 // ============================
 // blog
@@ -1059,6 +1150,7 @@
 	margin-left: -20px
 	margin-right: -20px
 
+
 .shop__goods__list
 	width: 1600px
 	display: flex
@@ -1071,10 +1163,11 @@
 	height: 590px
 	margin-bottom: 55px
 	cursor: pointer
+	&:hover .card__to__complete__items__add-to-bag,
 	&:hover .shop__goods__item__img__icon__view,
 	&:hover .shop__goods__item__price,
 	&:hover .shop__goods__item__name__like
-		transition: 0.3s ease-in-out
+		transition: 0.2s ease-in-out
 		opacity: 1
 	img
 		width: 360px
@@ -1108,6 +1201,19 @@
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 14px
 	opacity: 0
+
+.shop__goods__item__price__bag
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.shop__goods__item__bag
+	padding: 0 25px
+
+.card__to__complete__items__add-to-bag
+	img
+		width: 18px
+		height: 100%
 
 .shop__goods__item__name__like
 	padding: 0 25px
@@ -1175,7 +1281,7 @@
 	display: flex
 	justify-content: flex-end
 	border: 1px solid #cccccc
-	position: fixed
+	position: sticky
 	bottom: 0
 	background: #ffffff
 
@@ -1233,6 +1339,598 @@
 	&:hover
 		color: #000000
 		text-shadow: 0 0 1px #767474
+
+.goods-card
+	display: flex
+	justify-content: space-between
+	margin-top: 120px
+	padding: 0 110px
+
+.goods-card__slider
+	display: flex
+	width: 1030px
+	min-height: 994px
+	justify-content: space-between
+	align-items: center
+
+.slider-for
+	div
+		width: 760px
+		height: 940px
+		img
+			width: 100%
+			height: 100%
+
+.slider-nav
+	width: 160px
+	margin-bottom: 0!important
+	.slick-list
+		padding: 30px 0!important
+		height: 740px !important
+
+.slider-nav__item
+	width: 160px!important
+	height: 200px!important
+	margin-bottom: 40px
+
+.goods-card__characters
+	width: 500px
+
+.characters__name
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 100px
+	border-bottom: 1px solid #cccccc
+
+.characters__name__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 50px
+
+.characters__like-filled
+	display: none
+
+.characters__name__like
+	display: flex
+	position: relative
+	width: 28px
+	height: 26px
+	img
+		position: absolute
+		width: 100%
+		height: 100%
+
+.characters__price
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 100px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 50px
+
+.characters__description
+	margin-top: 15px
+
+.characters__description__title
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+	position: relative
+	transition: all 0.2s ease-in-out
+	&:hover
+		cursor: pointer
+
+.characters__description__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 18px
+	margin-top: 15px
+
+.characters__more-details__text
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 18px
+	margin-top: 15px
+
+.rotate-90
+	transform: rotate(-135deg)!important
+	transition: all 0.2s ease-in-out
+
+
+.card__arrow_down
+	position: absolute
+	display: block
+	width: 10px
+	height: 10px
+	border-bottom: 1px solid #767474
+	border-left: 1px solid #767474
+	transition: all 0.2s ease-in-out
+	transform: rotate(-45deg)
+	margin-left: 20px
+	top: 7px
+	left: 110px
+
+.characters__more-details
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+	position: relative
+	width: 150px
+
+.card__arrow_right
+	position: absolute
+	display: block
+	width: 10px
+	height: 10px
+	border-bottom: 1px solid #767474
+	border-left: 1px solid #767474
+	transform: rotate(-135deg)
+	margin-left: 20px
+	top: 8px
+	right: 0
+
+.characters__size
+	display: flex
+	justify-content: space-between
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+
+.characters__size__title
+	width: 70px
+	position: relative
+
+.characters__size__chart
+	font-weight: 600
+	text-decoration: underline
+	&:hover
+		cursor: pointer
+
+.characters__buy__amount
+	width: 180px
+	border: 1px solid #cccccc
+	height: 60px
+	margin-top: 90px
+	display: flex
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 30px
+
+.characters__buy__amount__minus
+	width: 60px
+	height: 60px
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		cursor: pointer
+
+.characters__buy__amount__number
+	width: 60px
+	height: 60px
+	display: flex
+	justify-content: center
+	align-items: center
+
+.characters__buy__amount__plus
+	width: 60px
+	height: 60px
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		cursor: pointer
+
+.characters__share
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 24px
+
+.characters__share__instagram
+	margin-left: 35px
+
+.characters__share__facebook
+	margin-left: 35px
+
+.characters__size__unavailable
+	margin-top: 50px
+	font-family: "FuturaMedium", "Arial", "sans-serif"
+	font-size: 18px
+
+.characters__size__contact__us
+	margin-top: 15px
+	span
+		margin-right: 20px
+
+.btn-add-to-bag
+	display: block
+	height: 50px
+	border: 1px solid #cccccc
+	width: 100%
+	background: inherit
+	text-transform: uppercase
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+	&:hover
+		cursor: pointer
+
+.btn-checkout
+	display: block
+	height: 50px
+	border: 1px solid #cccccc
+	width: 100%
+	text-transform: uppercase
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+	&:hover
+		cursor: pointer
+
+.characters__btn
+	margin-top: 57px
+
+.card__to__complete, .card__also__like, .viewed__recently
+	margin-top: 130px
+
+.card__to__complete__title, .card__also__like__title, .viewed__recently__title
+	text-transform: uppercase
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-align: center
+	padding: 25px 0
+	border-bottom: 1px solid #cccccc
+	width: 560px
+	margin: 0 auto
+
+.card__also__like__title, .viewed__recently__title
+	width: 400px
+
+.card__to__complete__items, .card__also__like__items
+	display: flex
+	justify-content: space-between
+	padding: 0 115px
+	margin-top: 85px
+
+.card__to__complete__item__img, .card__also__like__item__img
+	width: 495px
+	height: 700px
+	position: relative
+
+.card__to__complete__item
+	&:hover .card__to__complete__item__quickview
+		opacity: 1
+	&:hover .card__to__complete__items__add-to-bag
+		opacity: 1
+	&:hover .card__also__like__item__quickview
+		 opacity: 1
+
+.card__to__complete__item__quickview, .card__also__like__item__quickview, .viewed__recently__slider__item__quickview
+	position: absolute
+	top: 20px
+	right: 20px
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__also__like__item
+	&:hover .card__also__like__item__quickview
+		opacity: 1
+	&:hover .card__also__like__price
+		opacity: 1
+	&:hover .card__also__like__add-to-bag
+		opacity: 1
+
+.card__to__complete__item__option, .card__also__like__item__option, .viewed__recently__slider__item__option
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 100px
+
+.card__to__complete__items__add-to-bag
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__to__complete__item, .card__also__like__item
+	width: 495px
+	height: 800px
+	&:hover .card__to__complete__item__price
+		transition: all 0.2s ease-in-out
+		opacity: 1
+	&:hover .card__also__like__item__price
+		transition: all 0.2s ease-in-out
+		opacity: 1
+	img
+		width: 100%
+		height: auto
+
+.card__also__like__price
+	margin-top: 15px
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__also__like__add-to-bag
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__to__complete__item__name, .card__also__like__item__name
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 1.25em
+
+.card__to__complete__item__price, .card__also__like__item__price
+	margin-top: 15px
+	opacity: 0
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 1.25em
+
+.view__more
+	margin-top: 100px
+	display: flex
+	justify-content: flex-end
+
+.btn__view__more
+	width: 300px
+	height: 70px
+	margin-right: 115px
+	font-family: "FuturaMedium", "Arial", "sans-serif"
+	font-size: 1.625em
+	&:hover
+		cursor: pointer
+
+.viewed__recently__slider__item
+	height: 700px
+	margin: 0 20px
+	position: relative
+	&:hover .viewed__recently__slider__item__quickview
+		opacity: 1
+	&:hover .viewed__recently__slider__item__price
+		opacity: 1
+	&:hover .viewed__recently__slider__item__add-to-bag
+		opacity: 1
+	img
+		width: 100%
+		height: auto
+
+.viewed__recently__slider
+	margin: 50px auto 50px
+
+.viewed__recently__left
+	left: -2%
+
+.viewed__recently__right
+	right: -2%
+
+.viewed__recently__slider__name
+	font-family: "FuturaMedium", "Arial", "sans-serif"
+	font-size: 1.375em
+	height: 60px
+	display: flex
+	justify-content: center
+	align-items: flex-end
+
+.viewed__recently__slider__item__price
+	margin-top: 15px
+	transition: all 0.2s ease-in-out
+	opacity: 0
+
+.viewed__recently__slider__item__add-to-bag
+	transition: all 0.2s ease-in-out
+	opacity: 0
+
+.body__search
+	display: flex
+	margin: 50px 50px 0 0
+	justify-content: flex-end
+
+.register__center
+	width: 400px
+	min-height: 540px
+	margin: 90px auto 160px
+
+.search__width
+	width: 400px
+
+.register__title
+	text-transform: uppercase
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-align: center
+
+.register__description
+	margin-top: 30px
+	font-family:  "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+	text-align: center
+
+.register__form
+	input
+		width: 100%
+		margin-top: 65px
+		border: none
+		border-bottom: 1px solid #000000
+		padding: 5px
+		&::placeholder
+			font-family: "FuturaBook", "Arial", "sans-serif"
+
+.register__submit
+	width: 100%
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 70px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+	&:hover
+		cursor: pointer
+
+.login
+	height: calc(100vh - 310px)
+	display: flex
+	justify-content: center
+	align-items: center
+
+.login__center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.login__form
+	width: 580px
+	height: 470px
+
+.login__title
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 30px
+
+.login__text
+	text-align: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+
+.login__form__name
+	margin: 60px auto 0
+	width: 70%
+	input
+		width: 100%
+		font-family: "FuturaBook", "Arial", "sans-serif"
+		border: none
+		border-bottom: 1px solid #000000
+
+.login__form__password
+	margin: 60px auto 0
+	width: 70%
+	input
+		width: 100%
+		font-family: "FuturaBook", "Arial", "sans-serif"
+		border: none
+		border-bottom: 1px solid #000000
+
+.forgot__password
+	display: flex
+	justify-content: flex-end
+	width: 70%
+	margin: 10px auto 0
+	a
+		color: #000000
+		text-decoration: underline
+		font-family: "FuturaBook", "Arial", "sans-serif"
+
+.login__form__btn
+	display: block
+	width: 70%
+	height: 45px
+	margin: 40px auto 0
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.625em
+
+.create__account
+	width: 70%
+	margin: 30px auto 0
+	text-align: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.375em
+	a
+		color: #000000
+
+.article__content
+	margin: 160px auto 0
+	width: 1300px
+
+.article__content__title
+	text-align: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-transform: uppercase
+
+.article__content__img
+	margin: 100px auto
+
+.article__content__text
+    p
+      font-family: "FuturaLight", "Arial", "sans-serif"
+      font-size: 1.5625em
+      margin-top: 40px
+      color: #000000
+
+.article__content__share
+    margin-top: 100px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    height: 60px
+    border-bottom: 1px solid #cccccc
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-size: 1.25em
+    text-transform: uppercase
+
+.article__content__share__instagram
+    margin-left: 35px
+
+.article__content__share__facebook
+    margin-left: 35px
+
+.leave__reply
+    margin-top: 140px
+
+.leave__reply__title
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 1.5625em
+    text-transform: uppercase
+
+.leave__reply__text
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 1.25em
+    margin-top: 10px
+
+.leave__reply__form
+    margin-top: 40px
+
+.leave__reply__form
+    width: 60%
+
+.leave__reply__form__comment
+    border-bottom: 1px solid #DEDEDE
+    textarea
+        border: none
+        width: 100%
+        padding: 15px 0
+        &::placeholder
+            font-family: "FuturaBook", "Arial", "sans-serif"
+            font-size: 1.25em
+            text-transform: uppercase
+
+.leave__reply__form__data
+    display: flex
+    justify-content: space-between
+    margin-top: 80px
+
+.leave__reply__form__data__name, .leave__reply__form__data__email
+    width: 45%
+    input
+        width: 100%
+        padding: 10px 0 13px 0
+        font-family: "FuturaBook", "Arial", "sans-serif"
+        font-size: 1.25em
+        text-transform: uppercase
+        border: none
+        border-bottom: 1px solid #DEDEDE
+        &::placeholder
+            font-family: "FuturaBook", "Arial", "sans-serif"
+            font-size: 0.75em
+            text-transform: uppercase
+
+.leave__reply__form__btn
+    width: 300px
+    height: 60px
+    margin: 50px auto 0
+    background: #E7DFD2
+    text-transform: uppercase
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 1.375em
+    display: block
+    &:hover
+        cursor: pointer
+
+.article
+    margin-bottom: 100px
+
 
 // ============================
 // MEDIA
