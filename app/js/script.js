@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    let rtl = $('html').attr('dir');
+    let dir = false;
+    dir = rtl === 'rtl';
+
     $('.main__arrow').click(function(){
         $('html').animate({scrollTop:$('#about_us').position().top}, 1000, 'linear');
     });
@@ -11,6 +15,7 @@ $(document).ready(function () {
         fade: true,
         arrows: false,
         autoplay: true,
+        rtl: dir,
         slidesToShow: 1,
         autoplaySpeed: 5000,
     });
@@ -20,6 +25,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: true,
         dot: true,
+        rtl: dir,
         speed: 400,
         customPaging: 30,
         draggable: true,
@@ -32,12 +38,14 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        rtl: dir,
         fade: true,
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        rtl: dir,
         asNavFor: '.slider-for',
         arrows: true,
         centerMode: true,
@@ -51,6 +59,7 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 400,
+        rtl: dir,
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: true,
@@ -79,6 +88,7 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         speed: 400,
+        rtl: dir,
         slidesToShow: 4,
         slidesToScroll: 1,
         swipeToSlide: true,

@@ -1163,10 +1163,11 @@
 	height: 590px
 	margin-bottom: 55px
 	cursor: pointer
+	&:hover .card__to__complete__items__add-to-bag,
 	&:hover .shop__goods__item__img__icon__view,
 	&:hover .shop__goods__item__price,
 	&:hover .shop__goods__item__name__like
-		transition: 0.3s ease-in-out
+		transition: 0.2s ease-in-out
 		opacity: 1
 	img
 		width: 360px
@@ -1200,6 +1201,19 @@
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 14px
 	opacity: 0
+
+.shop__goods__item__price__bag
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.shop__goods__item__bag
+	padding: 0 25px
+
+.card__to__complete__items__add-to-bag
+	img
+		width: 18px
+		height: 100%
 
 .shop__goods__item__name__like
 	padding: 0 25px
@@ -1575,6 +1589,40 @@
 .card__to__complete__item__img, .card__also__like__item__img
 	width: 495px
 	height: 700px
+	position: relative
+
+.card__to__complete__item
+	&:hover .card__to__complete__item__quickview
+		opacity: 1
+	&:hover .card__to__complete__items__add-to-bag
+		opacity: 1
+	&:hover .card__also__like__item__quickview
+		 opacity: 1
+
+.card__to__complete__item__quickview, .card__also__like__item__quickview, .viewed__recently__slider__item__quickview
+	position: absolute
+	top: 20px
+	right: 20px
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__also__like__item
+	&:hover .card__also__like__item__quickview
+		opacity: 1
+	&:hover .card__also__like__price
+		opacity: 1
+	&:hover .card__also__like__add-to-bag
+		opacity: 1
+
+.card__to__complete__item__option, .card__also__like__item__option, .viewed__recently__slider__item__option
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 100px
+
+.card__to__complete__items__add-to-bag
+	opacity: 0
+	transition: all 0.2s ease-in-out
 
 .card__to__complete__item, .card__also__like__item
 	width: 495px
@@ -1589,13 +1637,21 @@
 		width: 100%
 		height: auto
 
+.card__also__like__price
+	margin-top: 15px
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
+.card__also__like__add-to-bag
+	opacity: 0
+	transition: all 0.2s ease-in-out
+
 .card__to__complete__item__name, .card__also__like__item__name
-	margin-top: 25px
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 1.25em
 
 .card__to__complete__item__price, .card__also__like__item__price
-	margin-top: 5px
+	margin-top: 15px
 	opacity: 0
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 1.25em
@@ -1615,9 +1671,15 @@
 		cursor: pointer
 
 .viewed__recently__slider__item
-	//width: 410px!important
-	height: 660px
+	height: 700px
 	margin: 0 20px
+	position: relative
+	&:hover .viewed__recently__slider__item__quickview
+		opacity: 1
+	&:hover .viewed__recently__slider__item__price
+		opacity: 1
+	&:hover .viewed__recently__slider__item__add-to-bag
+		opacity: 1
 	img
 		width: 100%
 		height: auto
@@ -1638,6 +1700,15 @@
 	display: flex
 	justify-content: center
 	align-items: flex-end
+
+.viewed__recently__slider__item__price
+	margin-top: 15px
+	transition: all 0.2s ease-in-out
+	opacity: 0
+
+.viewed__recently__slider__item__add-to-bag
+	transition: all 0.2s ease-in-out
+	opacity: 0
 
 .body__search
 	display: flex
