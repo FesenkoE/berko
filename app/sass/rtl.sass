@@ -88,7 +88,7 @@
       border: none
       border-bottom: 1px solid #0a0a0a
       font-size: 1.563em
-      margin-left: 75px
+      margin-left: 55px
       font-family: "FuturaBook"
   &__like
     position: relative
@@ -163,7 +163,7 @@
     @include flex($jc: flex-end, $ai: center)
 
 .menu-shop__categories-item + .menu-shop__categories-item
-  margin-left: 110px
+  margin-right: 110px
 
 // ============================
 
@@ -537,9 +537,13 @@
 .search__in__slider
   position: absolute
   top: 50px
-  right: 50px
+  left: 50px
   margin: 0!important
   z-index: 1
+
+.header__search
+  display: flex
+  flex-direction: row-reverse
 
 .main-slider__slider__item
   max-width: 1920px
@@ -1045,9 +1049,20 @@
     & i
       color: #e7dfd2
 
+.blog__article-item__published__author
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 1.5625em
+    color: #DEDEDE
+    margin-top: 65px
+    display: flex
+    justify-content: space-between
+
 // ============================
 // faq
 // ============================
+
+.faq
+    margin-bottom: 100px
 
 .faq
   &__title
@@ -1062,7 +1077,7 @@
     display: grid
     grid-template-columns: 2fr 3fr 1fr
   &__popular
-    margin-left: 80px
+    margin-right: 80px
     &-label
       color: #000000
       font-family: "FuturaBook"
@@ -1132,7 +1147,7 @@
   margin-bottom: 10px
 
 .shop__menu__list__item_active
-  margin-left: 15px
+  margin-right: 15px
   position: relative
   font-weight: bold
   &:after
@@ -1144,7 +1159,7 @@
     background-color: #000000
     position: absolute
     top: 8px
-    left: -12px
+    right: -12px
 
 .wrap
   margin-left: -20px
@@ -1179,7 +1194,7 @@
 .shop__goods__item__img__icon__view
   position: absolute
   top: 20px
-  right: 15px
+  left: 15px
   width: 25px
   height: 14px
   opacity: 0
@@ -1223,7 +1238,7 @@
 .like-empty
   position: absolute
   top: -5px
-  right: 25px
+  left: 25px
   display: block
   width: 17px
   height: 15px
@@ -1236,7 +1251,7 @@
 .like-filled
   position: absolute
   top: -5px
-  right: 25px
+  left: 25px
   width: 17px
   height: 15px
   display: none
@@ -1443,9 +1458,9 @@
   border-left: 1px solid #767474
   transition: all 0.2s ease-in-out
   transform: rotate(-45deg)
-  margin-left: 20px
+  margin-right: 20px
   top: 7px
-  left: 110px
+  right: 110px
 
 .characters__more-details
   margin-top: 30px
@@ -1602,7 +1617,7 @@
 .card__to__complete__item__quickview, .card__also__like__item__quickview, .viewed__recently__slider__item__quickview
   position: absolute
   top: 20px
-  right: 20px
+  left: 20px
   opacity: 0
   transition: all 0.2s ease-in-out
 
@@ -1664,7 +1679,7 @@
 .btn__view__more
   width: 300px
   height: 70px
-  margin-right: 115px
+  margin-left: 115px
   font-family: "FuturaMedium", "Arial", "sans-serif"
   font-size: 1.625em
   &:hover
@@ -1688,10 +1703,10 @@
   margin: 50px auto 50px
 
 .viewed__recently__left
-  left: -2%
+  right: -2%
 
 .viewed__recently__right
-  right: -2%
+  left: -2%
 
 .viewed__recently__slider__name
   font-family: "FuturaMedium", "Arial", "sans-serif"
@@ -1861,10 +1876,10 @@
   text-transform: uppercase
 
 .article__content__share__instagram
-  margin-left: 35px
+  margin-right: 35px
 
 .article__content__share__facebook
-  margin-left: 35px
+  margin-right: 35px
 
 .leave__reply
   margin-top: 140px
@@ -2409,7 +2424,7 @@
   font-size: 2.5em
 
 .checkout__sign__in__img
-  margin-right: 15px
+  margin-left: 15px
 
 .checkout__form
   padding: 0 130px
@@ -2485,7 +2500,7 @@
     height: 25px
     padding: 5px
     border: 2px solid #9A9898
-    margin-right: 20px
+    margin-left: 20px
     position: relative
     &:before
       content: ''
@@ -2570,7 +2585,7 @@
     height: 20px
     border-radius: 50%
     border: 2px solid #9A9898
-    margin-right: 10px
+    margin-left: 10px
     position: relative
     padding: 2px
     &:before
