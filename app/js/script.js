@@ -14,10 +14,31 @@ $(document).ready(function () {
     $('.main-slider__slider').slick({
         fade: true,
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         rtl: dir,
         slidesToShow: 1,
+        adaptiveHeight: true,
         autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $('.viewed__recently__slider').slick({
