@@ -529,10 +529,13 @@
 // ============================
 
 .main-slider
-	height: calc(100vh - 193px)
+	//height: calc(100vh - 193px)
 	position: relative
 	max-width: 1920px
 	margin: 0 auto
+
+.slick-list
+	height: auto!important
 
 .search__in__slider
 	position: absolute
@@ -543,7 +546,7 @@
 
 .main-slider__slider__item
 	max-width: 1920px
-	//height: calc(100vh - 193px)
+	height: calc(100vh - 193px)
 
 .main
 	position: relative
@@ -2006,6 +2009,9 @@
 
 @media (max-width: nth($mediaBp, 4))
 
+	.main-slider__slider__item
+		height: auto
+
 	.footer__icons
 		padding: 10px 0
 
@@ -2183,6 +2189,9 @@
 	.modal-size__img
 		margin: 0px 15%
 		padding: 0px 35px 0px 35px
+
+	.header__search img
+		display: none
 
 	.header__search input
 		display: none
@@ -2673,6 +2682,102 @@
 
 @media (max-width: nth($mediaBp, 7))
 
+	.follow__slider-controls_prev
+		left: -11%
+
+	.follow__slider-controls_next
+		right: -11%
+
+	.follow__slider
+		margin: 50px 30px
+
+	.follow__mail
+		font-size: 1.8em
+
+	.follow__title
+		padding-top: 50px
+		font-size: 2em
+
+	.follow
+		padding: 20px 0
+
+	.featured__button
+		padding-top: 30px
+
+	.featured__button a
+		font-size: 1.2em
+		padding: 10px
+		width: 190px
+		margin: 0 auto
+		text-align: center
+
+	.follow__slider-controls_next, .follow__slider-controls_prev
+		z-index: 2
+
+	.featured__slider-controls_prev
+		left: -7%
+		font-size: 3em
+		z-index: 2
+
+	.featured__slider-controls_next
+		right: -7%
+		font-size: 3em
+		z-index: 2
+
+	.featured__slider-img
+		position: relative
+		padding: 20px 15px 40px
+
+	.featured__slider
+		margin: 50px 0 0
+
+	.featured__title_sub
+		font-size: 1.8em
+
+	.featured__title_sub
+		padding-top: 25px
+
+	.featured__title
+		font-size: 1.8em
+
+	.help__description
+		font-size: 1.6em
+
+	.help__title
+		font-size: 1.8em
+
+	.categories__item-link
+		width: 190px
+		padding: 10px
+		font-size: 1.3em
+		display: block
+		margin: 0 auto
+
+	.categories__item-block
+		height: 30%
+		top: 35%
+
+	.categories__item-title
+		font-size: 1.8em
+		margin-bottom: 20px
+
+	.about-us__button a
+		padding: 15px 60px
+		font-size: 1.3em
+
+	.about-us__button
+		margin-top: 20px
+
+	.about-us__description
+		padding: 40px 0
+		font-size: 1.2em
+
+	.about-us__title
+		font-size: 2em
+
+	.banner__label
+		font-size: 1.12em
+
 	.footer__wrap
 		padding: 0 0
 
@@ -2683,5 +2788,5 @@
 		margin: 0 10px 0 10px
 
 	.modal-size__img
-		margin: 0px 10%
-		padding: 0px 10px 0px 10px
+		margin: 0 10%
+		padding: 0 10px
