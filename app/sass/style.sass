@@ -935,14 +935,13 @@
 			text-align: center
 			display: none
 	&__news
-		@include flex($ai: flex-end, $fd: column)
+		@include flex($fd: column)
 		&-title
 			color: #050000
-			font-family: "FuturaBook"
+			font-family: "FuturaBook", "Arial", "sans-serif"
 			font-size: 2.250em
 		&-text
 			padding-top: 50px
-			text-align: right
 			font-size: 1.375em
 		&-input
 			@include flex()
@@ -2682,6 +2681,33 @@
 
 @media (max-width: nth($mediaBp, 7))
 
+	.footer__info
+		font-size: 1em
+
+	.footer__help-title
+		font-size: 1em
+
+	.footer__icons
+		padding: 17px 0 14px 0
+
+	.subscribe
+		margin-bottom: 100px
+
+	.subscribe__button button
+		padding: 10px
+		width: 190px
+
+	.subscribe__wrap
+		padding: 0
+
+	.subscribe__input input
+		margin-top: 50px
+		&::placeholder
+			font-size: 1em
+
+	.subscribe__title
+		font-size: 1.6em
+
 	.follow__slider-controls_prev
 		left: -11%
 
@@ -2768,6 +2794,12 @@
 	.about-us__button
 		margin-top: 20px
 
+	.about-us__button a
+		padding: 10px
+		display: block
+		width: 190px
+		text-align: center
+
 	.about-us__description
 		padding: 40px 0
 		font-size: 1.2em
@@ -2790,3 +2822,11 @@
 	.modal-size__img
 		margin: 0 10%
 		padding: 0 10px
+
+	.footer__icons-contact
+		img
+			height: 30px
+
+	.footer__icons-links
+		img
+			height: 30px
