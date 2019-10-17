@@ -377,4 +377,12 @@ $(document).ready(function () {
         $('.characters__buy__amount__number').html(amount);
     });
 
+    $('.header__search__mob').click( function() {
+        $('.search__input__mob').slideToggle('fast');
+    });
+
+    $('.search__input__mob__close').click( function() {
+        $('.search__input__mob').slideToggle('fast');
+    })
+
 });

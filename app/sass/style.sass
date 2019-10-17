@@ -1120,6 +1120,7 @@
 
 .shop
 	display: flex
+	justify-content: space-between
 
 .shop__goods__title
 	text-align: center
@@ -1128,7 +1129,7 @@
 	padding: 40px 0
 
 .shop__menu
-	width: 249px
+	width: 250px
 	padding-left: 55px
 	p
 		font-family: "FuturaBook", "Arial", "sans-serif"
@@ -1136,6 +1137,7 @@
 		text-transform: uppercase
 
 .shop__menu__list
+	max-width: 100%
 	margin-top: 20px
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 1.250em
@@ -1162,11 +1164,14 @@
 	margin-left: -20px
 	margin-right: -20px
 
+.shop__goods
+	width: 86%
+
 
 .shop__goods__list
-	width: 1600px
 	display: flex
 	flex-wrap: wrap
+	width: 101%
 
 .shop__goods__card
 	margin-left: 20px
@@ -1182,8 +1187,8 @@
 		transition: 0.2s ease-in-out
 		opacity: 1
 	img
-		width: 360px
-		height: 520px
+		width: 100%
+		height: auto
 
 .shop__goods__item__img
 	position: relative
@@ -1946,6 +1951,41 @@
 .featured__slider-img__double__image
 	position: relative
 
+.img_header_cart_mob
+	display: none
+
+.search__input__mob
+	display: flex
+	width: 100%
+	height: 40px
+	box-shadow: 0 1px 30px 0 #cccccc
+
+.search__input__mob
+	display: none
+
+.search__input__mob__wrap
+	display: flex
+	align-items: center
+	height: 100%
+	padding: 0 15px
+
+.search__input__mob__wrap
+	position: relative
+	input
+		border: none
+		text-transform: uppercase
+		margin-left: 7px
+		letter-spacing: 3px
+
+.search__input__mob__close
+	transform: rotate(-45deg)
+	font-size: 3em
+	position: absolute
+	top: -5px
+	right: 10px
+
+.header__search__mob
+	display: none
 
 
 // ============================
@@ -1957,12 +1997,14 @@
 			max-width: calc(100% - 30px)
 
 @media (max-width: nth($mediaBp, 2))
+
+	.shop__goods__card
+		margin-left: 18px
+		margin-right: 18px
+
 	.main-slider__slider img
 		width: 100%
 		height: auto
-
-	.header__user img, .header__like img, .header__cart img
-
 
 	.header__search img
 		width: 36px
@@ -2041,8 +2083,8 @@
 	.main-slider
 		height: auto
 
-	.body__search
-		width: 300px
+	//.body__search
+	//	width: 300px
 
 	.header__cart__count
 		top: 11px
@@ -2135,6 +2177,10 @@
 		width: 65%
 
 @media (max-width: nth($mediaBp, 5))
+
+	.shop__goods__card
+		width: 330px
+		height: 550px
 	
 	.modal-content
 		margin: 5% 3%
@@ -2184,6 +2230,16 @@
 		width: 50%
 
 @media (max-width: nth($mediaBp, 6))
+
+	.shop__goods
+		width: 100%
+
+	.shop__menu
+		display: none
+
+	//.shop__goods__card
+	//	width: 230px
+	//	height: 370px
 
 	.modal-size__img
 		margin: 0px 15%
@@ -2830,3 +2886,66 @@
 	.footer__icons-links
 		img
 			height: 30px
+
+	.img_header_cart_laptop
+		display: none
+
+	.header__cart__count
+		display: none
+
+	.img_header_cart_mob
+		display: block
+
+	.img_header_cart_mob img
+		display: flex
+
+	.header__search__mob
+		display: block
+
+	.header__search__mob img
+		margin-top: 5px
+
+	.header__tools a
+		margin-left: 20px
+
+	.header__tools img
+		width: 20px
+		height: 20px
+
+	.shop__goods__card
+		width: 140px
+		height: 220px
+		margin-right: 5px
+		margin-left: 5px
+
+	.shop__goods__title
+		padding: 0 0 40px
+
+	.shop__goods__item__name
+		flex-direction: column
+
+	.shop__goods__item__name__text
+		font-size: 1em
+		text-align: center
+
+	.shop__goods__card
+		&:hover .shop__goods__item__name__like
+			display: none
+
+	.shop__goods__card
+		&:hover .shop__goods__item__bag
+			display: none
+
+	.shop__goods__item__price
+		opacity: 1
+
+	.shop__goods__item__name
+		padding: 5px 0 0
+
+	.shop__goods__item__price__bag
+		flex-direction: column
+
+	.shop__filter_btn
+		width: 50%
+
+
