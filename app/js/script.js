@@ -331,6 +331,18 @@ $(document).ready(function () {
         }
     });
 
+    let shoptList = $('.shop__menu_mob');
+
+    $('.shop_category_btn').on('click', function () {
+        let show = shoptList.css('display');
+
+        if (show === 'none') {
+            shoptList.fadeIn();
+        } else {
+            shoptList.fadeOut();
+        }
+    });
+
     function toggleHeader(){
         var scroll_status = $(document).scrollTop();
         if (scroll_status > 74) {
@@ -371,7 +383,7 @@ $(document).ready(function () {
     $('.characters__buy__amount__minus').click(function() {
         let amount = $('.characters__buy__amount__number').html();
         amount = parseInt(amount);
-        if (amount > 0) {
+        if (amount > 1) {
             amount -= 1;
         }
         $('.characters__buy__amount__number').html(amount);
@@ -384,5 +396,7 @@ $(document).ready(function () {
     $('.search__input__mob__close').click( function() {
         $('.search__input__mob').slideToggle('fast');
     })
+
+
 
 });
