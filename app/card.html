@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="rtl" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/slick/slick-theme.css">
-    <!--    <link rel="stylesheet" href="css/style.css">-->
-    <link rel="stylesheet" href="css/rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--    <link rel="stylesheet" href="css/rtl.css">-->
     <title>Berko</title>
 </head>
 <body>
 
+<div id="cart-overlay"></div>
 <div class="cart" id="cart">
     <div class="cart__wrap">
         <div class="cart__header">
@@ -103,6 +104,97 @@
         </div>
     </div>
 </div>
+<!-- mobile-menu start -->
+
+<div id="mobile-menu-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__wrap">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__title">menu</div>
+            <div id="mobile-menu__close" class="mobile-menu__close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="mobile-menu__body">
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">shop<i class="fas fa-chevron-right"></i></div>
+                <ul class="mobile-menu__list">
+                    <li>
+                        <div class="mobile-menu__elem-name">BRIDAL ATTIRE<i class="fas fa-chevron-right"></i></div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">All</a></li>
+                            <li><a href="">Dresses</a></li>
+                            <li><a href="">Headwear</a></li>
+                            <li><a href="">Swimsuit</a></li>
+                            <li><a href="">Jewelry</a></li>
+                            <li><a href="">lingerie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mobile-menu__elem-name">COLLECTIONS<i class="fas fa-chevron-right"></i></div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">D day</a></li>
+                            <li><a href="">Bachelorette</a></li>
+                            <li><a href="">HoneyMoon</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mobile-menu__elem-name">GIFTING ESSETIALS<i class="fas fa-chevron-right"></i>
+                        </div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">Box Sets</a></li>
+                            <li><a href="">Bachelorette</a></li>
+                            <li><a href="">Paper Goods</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">about us<i class="fas fa-chevron-right"></i></div>
+                <ul class="mobile-menu__list">
+                    <li><a href="">All</a></li>
+                    <li><a href="">Dresses</a></li>
+                    <li><a href="">Headwear</a></li>
+                    <li><a href="">Swimsuit</a></li>
+                    <li><a href="">Jewelry</a></li>
+                    <li><a href="">lingerie</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">real brides<i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-link">
+                    <a href="">log in</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu__footer">
+            <div class="mobile-menu__links">
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/call.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/email.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/inst.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/fb.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mobile-menu end -->
+
 
 <div class="banner">
     <div class="container">
@@ -121,23 +213,30 @@
                 <li id="about-us-label">about us</li>
                 <li>real brides</li>
             </ul>
-            <div class="header__logo">
+            <div class="header__navigation-button">
+                <div id="header__navigation-button-item">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div id="header__logo" class="header__logo">
                 <img src="./img/main/logo.png" alt="logo">
             </div>
             <div class="header__tools">
-                <div class="header__tools">
-                    <a href="#" class="header__user">
-                        <img src="./img/main/log_in.png" alt="">
-                    </a>
-                    <a href="#" class="header__like">
-                        <span class="header__like__count">1</span>
-                        <img src="./img/main/like.png" alt="">
-                    </a>
-                    <a href="#" id="header__cart-label" class="header__cart">
-                        <span class="header__cart__count">1</span>
-                        <img src="./img/main/cart.png" alt="">
-                    </a>
-                </div>
+                <a href="" class="header__user">
+                    <img src="./img/main/log_in.png" alt="">
+                </a>
+                <a href="" class="header__like">
+                    <span class="header__like__count">1</span>
+                    <img src="./img/main/like.png" alt="">
+                </a>
+                <button class="header__search__mob">
+                    <img src="./img/main/search-mob.png" alt="">
+                </button>
+                <a href="#" id="header__cart-label" class="header__cart">
+                    <span class="header__cart__count">1</span>
+                    <img src="./img/main/cart.png" class="img_header_cart_laptop" alt="">
+                    <img src="./img/main/cart-mob.png" class="img_header_cart_mob" alt="">
+                </a>
             </div>
         </div>
         <div class="menu-shop" id="shop">
@@ -210,15 +309,24 @@
             </div>
         </div>
     </div>
-</header>
-<div class="body__search">
-    <div class="header__search">
-        <input type="text" class="search__width">
-        <img src="./img/main/search.png" alt="">
+    <div class="search__input__mob__relative">
+        <div class="search__input__mob">
+            <div class="search__input__mob__wrap">
+                <span><img src="./img/main/search-mob.png" alt=""></span>
+                <input type="text" placeholder="search...">
+                <span class="search__input__mob__close">+</span>
+            </div>
+        </div>
     </div>
-</div>
+</header>
+
 <div class="container">
     <div class="goods-card">
+        <div class="goods-card__slider__mob">
+            <div class="goods-card__slider__mob__item"><img src="img/shopCard4.png" alt=""></div>
+            <div class="goods-card__slider__mob__item"><img src="img/shopCard2.png" alt=""></div>
+            <div class="goods-card__slider__mob__item"><img src="img/shopCard4.png" alt=""></div>
+        </div>
         <div class="goods-card__slider">
             <div class="slider-nav">
                 <div class="slider-nav__item"><img src="img/card/card-min-1.png" alt=""></div>
@@ -310,12 +418,80 @@
                     <button class="btn-add-to-bag">add to bag</button>
                     <button class="btn-checkout">checkout</button>
                 </div>
+                <div class="buy__apple__pay">
+                    <a href="">buy with applepay paypal & other payment options</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="card__to__complete">
         <div class="card__to__complete__title">
             to complete the silhouette
+        </div>
+        <div class="card__to__complete__slider">
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <a href="#" class="card__to__complete__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/to-complete-1.png" class="card__to__complete__item__img-img" alt="">
+                </div>
+                <div class="card__to__complete__item__option">
+                    <div class="card__to__complete__items__name__price">
+                        <div class="card__to__complete__item__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__to__complete__item__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__to__complete__items__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <a href="#" class="card__to__complete__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/to-complete-1.png" class="card__to__complete__item__img-img" alt="">
+                </div>
+                <div class="card__to__complete__item__option">
+                    <div class="card__to__complete__items__name__price">
+                        <div class="card__to__complete__item__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__to__complete__item__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__to__complete__items__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card__to__complete__item">
+                <div class="card__to__complete__item__img">
+                    <a href="#" class="card__to__complete__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/to-complete-1.png" class="card__to__complete__item__img-img" alt="">
+                </div>
+                <div class="card__to__complete__item__option">
+                    <div class="card__to__complete__items__name__price">
+                        <div class="card__to__complete__item__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__to__complete__item__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__to__complete__items__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="card__to__complete__items">
             <div class="card__to__complete__item">
@@ -391,6 +567,71 @@
     <div class="card__also__like">
         <div class="card__also__like__title">
             you may also like
+        </div>
+        <div class="card__also__like__items__slider">
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <a href="#" class="card__also__like__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/also-like-1.png" alt="">
+                </div>
+                <div class="card__also__like__item__option">
+                    <div class="card__also__like__name__price">
+                        <div class="card__also__like__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__also__like__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__also__like__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <a href="#" class="card__also__like__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/also-like-1.png" alt="">
+                </div>
+                <div class="card__also__like__item__option">
+                    <div class="card__also__like__name__price">
+                        <div class="card__also__like__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__also__like__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__also__like__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card__also__like__item">
+                <div class="card__also__like__item__img">
+                    <a href="#" class="card__also__like__item__quickview">
+                        <img src="img/viewIcon.png" alt="">
+                    </a>
+                    <img src="img/card/also-like-1.png" alt="">
+                </div>
+                <div class="card__also__like__item__option">
+                    <div class="card__also__like__name__price">
+                        <div class="card__also__like__name">
+                            Hollywood Bridal Dress
+                        </div>
+                        <div class="card__also__like__price">
+                            236.00$
+                        </div>
+                    </div>
+                    <a href="#" class="card__also__like__add-to-bag">
+                        <img src="img/main/cart.png" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="card__also__like__items">
             <div class="card__also__like__item">
@@ -470,7 +711,7 @@
         <div class="viewed__recently__slider">
             <div class="viewed__recently__slider__item">
                 <a href="#" class="viewed__recently__slider__item__quickview">
-                        <img src="img/viewIcon.png" alt="">
+                    <img src="img/viewIcon.png" alt="">
                 </a>
                 <img src="img/card/recently-slider-1.png" alt="">
                 <div class="viewed__recently__slider__item__option">
@@ -489,7 +730,7 @@
             </div>
             <div class="viewed__recently__slider__item">
                 <a href="#" class="viewed__recently__slider__item__quickview">
-                        <img src="img/viewIcon.png" alt="">
+                    <img src="img/viewIcon.png" alt="">
                 </a>
                 <img src="img/card/recently-slider-2.png" alt="">
                 <div class="viewed__recently__slider__item__option">
@@ -508,7 +749,7 @@
             </div>
             <div class="viewed__recently__slider__item">
                 <a href="#" class="viewed__recently__slider__item__quickview">
-                        <img src="img/viewIcon.png" alt="">
+                    <img src="img/viewIcon.png" alt="">
                 </a>
                 <img src="img/card/recently-slider-3.png" alt="">
                 <div class="viewed__recently__slider__item__option">
@@ -527,7 +768,7 @@
             </div>
             <div class="viewed__recently__slider__item">
                 <a href="#" class="viewed__recently__slider__item__quickview">
-                        <img src="img/viewIcon.png" alt="">
+                    <img src="img/viewIcon.png" alt="">
                 </a>
                 <img src="img/card/recently-slider-4.png" alt="">
                 <div class="viewed__recently__slider__item__option">
@@ -546,7 +787,7 @@
             </div>
             <div class="viewed__recently__slider__item">
                 <a href="#" class="viewed__recently__slider__item__quickview">
-                        <img src="img/viewIcon.png" alt="">
+                    <img src="img/viewIcon.png" alt="">
                 </a>
                 <img src="img/card/recently-slider-1.png" alt="">
                 <div class="viewed__recently__slider__item__option">

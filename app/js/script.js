@@ -8,7 +8,40 @@ $(document).ready(function () {
         $('html').animate({scrollTop:$('#about_us').position().top}, 1000, 'linear');
     });
 
-    $('.slider-for__item').zoom();
+    $('.goods-card__slider__mob__item').zoom();
+
+    $('.card__also__like__items__slider').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:true,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+    });
+
+    $('.card__to__complete__slider').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:true,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+    });
+
+    $('.goods-card__slider__mob').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:true,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+    });
 
 
     $('.main-slider__slider').slick({
@@ -19,26 +52,6 @@ $(document).ready(function () {
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplaySpeed: 5000,
-        responsive: [
-            {
-                // breakpoint: 768,
-                // settings: {
-                //     arrows: false,
-                //     centerMode: true,
-                //     centerPadding: '40px',
-                //     slidesToShow: 3
-                // }
-            },
-            {
-                // breakpoint: 480,
-                // settings: {
-                //     arrows: false,
-                //     centerMode: true,
-                //     centerPadding: '40px',
-                //     slidesToShow: 1
-                // }
-            }
-        ]
     });
 
     $('.viewed__recently__slider').slick({
@@ -52,7 +65,16 @@ $(document).ready(function () {
         draggable: true,
         infinite: true,
         prevArrow: '<div class="featured__slider-controls_prev viewed__recently__left"><i class="fas fa-chevron-left"></i></div>',
-        nextArrow: '<div class="featured__slider-controls_next viewed__recently__right"><i class="fas fa-chevron-right"></i></div>'
+        nextArrow: '<div class="featured__slider-controls_next viewed__recently__right"><i class="fas fa-chevron-right"></i></div>',
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.slider-for').slick({
