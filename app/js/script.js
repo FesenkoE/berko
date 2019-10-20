@@ -13,7 +13,7 @@ $(document).ready(function () {
     $('.card__also__like__items__slider').slick({
         centerMode:false,
         draggable:false,
-        arrows:true,
+        arrows:false,
         // autoplay:true,
         // autoplaySpeed:3000,
         slidesToShow:1,
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $('.card__to__complete__slider').slick({
         centerMode:false,
         draggable:false,
-        arrows:true,
+        arrows:false,
         // autoplay:true,
         // autoplaySpeed:3000,
         slidesToShow:1,
@@ -35,7 +35,7 @@ $(document).ready(function () {
     $('.goods-card__slider__mob').slick({
         centerMode:false,
         draggable:false,
-        arrows:true,
+        arrows:false,
         // autoplay:true,
         // autoplaySpeed:3000,
         slidesToShow:1,
