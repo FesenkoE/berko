@@ -19,6 +19,7 @@ $(document).ready(function () {
         slidesToShow:1,
         slidesToScroll:1,
         dots:true,
+        rtl: dir,
     });
 
     $('.card__to__complete__slider').slick({
@@ -30,6 +31,7 @@ $(document).ready(function () {
         slidesToShow:1,
         slidesToScroll:1,
         dots:true,
+        rtl: dir,
     });
 
     $('.goods-card__slider__mob').slick({
@@ -41,6 +43,7 @@ $(document).ready(function () {
         slidesToShow:1,
         slidesToScroll:1,
         dots:true,
+        rtl: dir,
     });
 
 
@@ -161,6 +164,18 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    let category = $('.blog__category__mob__list');
+
+    $('.blog__category__mob').click(function() {
+        let show = $('.blog__category__mob__list').css('display');
+
+        if (show === 'none') {
+            category.fadeIn();
+        } else {
+            category.fadeOut();
+        }
     });
 
 
