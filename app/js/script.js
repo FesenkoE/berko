@@ -10,6 +10,18 @@ $(document).ready(function () {
 
     $('.goods-card__slider__mob__item').zoom();
 
+    $('.recently__viewed__items__mob').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:2,
+        slidesToScroll:1,
+        dots:true,
+        rtl: dir,
+    });
+
     $('.card__also__like__items__slider').slick({
         centerMode:false,
         draggable:false,
