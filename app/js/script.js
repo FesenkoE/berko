@@ -9,6 +9,7 @@ $(document).ready(function () {
     });
 
     $('.goods-card__slider__mob__item').zoom();
+    $('.slider-for').zoom();
 
     $('.recently__viewed__items__mob').slick({
         centerMode:false,
@@ -110,7 +111,7 @@ $(document).ready(function () {
         focusOnSelect: true,
         vertical: true,
         verticalSwiping: true,
-        dots: true
+        dots: false
     });
 
     $('.featured__slider').slick({
@@ -252,13 +253,19 @@ $(document).ready(function () {
 
     });
 
+    console.log(rtl);
+
     $('#cart__close').click(function () {
         cart.removeClass('active-cart');
         cartOverlay.css('opacity', '0');
         cartOverlay.css('position', '');
-        cart.css('transform', 'translateX(100%)');
+        if (rtl === 'rtl') {
+            cart.css('transform', 'translateX(-100%)');
+        } else {
+            cart.css('transform', 'translateX(100%)');
+        }
         cartWrap.delay(100).animate({"opacity": '0'}, 100);
-    })
+    });
 
     var mobileMenu = $('#mobile-menu'),
         mobileMenuWrap = $('.mobile-menu__wrap'),
@@ -270,7 +277,11 @@ $(document).ready(function () {
             mobileMenu.removeClass('active-mobile-menu');
             mobileMenuOverlay.css('opacity', '0');
             mobileMenuOverlay.css('position', '');
-            mobileMenu.css('transform', 'translateX(-100%)');
+            if (rtl === 'rtl') {
+                mobileMenu.css('transform', 'translateX(100%)');
+            } else {
+                mobileMenu.css('transform', 'translateX(-100%)');
+            }
             mobileMenuWrap.delay(100).animate({"opacity": '0'}, 100);
         } else if (mobileMenu.not('active-mobile-menu')) {
             mobileMenuOverlay.css('opacity', '1');
@@ -286,7 +297,11 @@ $(document).ready(function () {
         mobileMenu.removeClass('active-mobile-menu');
         mobileMenuOverlay.css('opacity', '0');
         mobileMenuOverlay.css('position', '');
-        mobileMenu.css('transform', 'translateX(-100%)');
+        if (rtl === 'rtl') {
+            mobileMenu.css('transform', 'translateX(100%)');
+        } else {
+            mobileMenu.css('transform', 'translateX(-100%)');
+        }
         mobileMenuWrap.delay(100).animate({"opacity": '0'}, 100);
     });
 
