@@ -8,7 +8,56 @@ $(document).ready(function () {
         $('html').animate({scrollTop:$('#about_us').position().top}, 1000, 'linear');
     });
 
-    $('.slider-for__item').zoom();
+    $('.goods-card__slider__mob__item').zoom();
+    $('.slider-for').zoom();
+
+    $('.recently__viewed__items__mob').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:2,
+        slidesToScroll:1,
+        dots:true,
+        rtl: dir,
+    });
+
+    $('.card__also__like__items__slider').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+        rtl: dir,
+    });
+
+    $('.card__to__complete__slider').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+        rtl: dir,
+    });
+
+    $('.goods-card__slider__mob').slick({
+        centerMode:false,
+        draggable:false,
+        arrows:false,
+        // autoplay:true,
+        // autoplaySpeed:3000,
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:true,
+        rtl: dir,
+    });
 
 
     $('.main-slider__slider').slick({
@@ -19,26 +68,6 @@ $(document).ready(function () {
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
     });
 
     $('.viewed__recently__slider').slick({
@@ -52,7 +81,16 @@ $(document).ready(function () {
         draggable: true,
         infinite: true,
         prevArrow: '<div class="featured__slider-controls_prev viewed__recently__left"><i class="fas fa-chevron-left"></i></div>',
-        nextArrow: '<div class="featured__slider-controls_next viewed__recently__right"><i class="fas fa-chevron-right"></i></div>'
+        nextArrow: '<div class="featured__slider-controls_next viewed__recently__right"><i class="fas fa-chevron-right"></i></div>',
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.slider-for').slick({
@@ -73,7 +111,7 @@ $(document).ready(function () {
         focusOnSelect: true,
         vertical: true,
         verticalSwiping: true,
-        dots: true
+        dots: false
     });
 
     $('.featured__slider').slick({
@@ -141,6 +179,18 @@ $(document).ready(function () {
         ]
     });
 
+    let category = $('.blog__category__mob__list');
+
+    $('.blog__category__mob').click(function() {
+        let show = $('.blog__category__mob__list').css('display');
+
+        if (show === 'none') {
+            category.fadeIn();
+        } else {
+            category.fadeOut();
+        }
+    });
+
 
     $('#shop-label').on('click', function () {
 
@@ -203,13 +253,19 @@ $(document).ready(function () {
 
     });
 
+    console.log(rtl);
+
     $('#cart__close').click(function () {
         cart.removeClass('active-cart');
         cartOverlay.css('opacity', '0');
         cartOverlay.css('position', '');
-        cart.css('transform', 'translateX(100%)');
+        if (rtl === 'rtl') {
+            cart.css('transform', 'translateX(-100%)');
+        } else {
+            cart.css('transform', 'translateX(100%)');
+        }
         cartWrap.delay(100).animate({"opacity": '0'}, 100);
-    })
+    });
 
     var mobileMenu = $('#mobile-menu'),
         mobileMenuWrap = $('.mobile-menu__wrap'),
@@ -221,7 +277,11 @@ $(document).ready(function () {
             mobileMenu.removeClass('active-mobile-menu');
             mobileMenuOverlay.css('opacity', '0');
             mobileMenuOverlay.css('position', '');
-            mobileMenu.css('transform', 'translateX(-100%)');
+            if (rtl === 'rtl') {
+                mobileMenu.css('transform', 'translateX(100%)');
+            } else {
+                mobileMenu.css('transform', 'translateX(-100%)');
+            }
             mobileMenuWrap.delay(100).animate({"opacity": '0'}, 100);
         } else if (mobileMenu.not('active-mobile-menu')) {
             mobileMenuOverlay.css('opacity', '1');
@@ -237,7 +297,11 @@ $(document).ready(function () {
         mobileMenu.removeClass('active-mobile-menu');
         mobileMenuOverlay.css('opacity', '0');
         mobileMenuOverlay.css('position', '');
-        mobileMenu.css('transform', 'translateX(-100%)');
+        if (rtl === 'rtl') {
+            mobileMenu.css('transform', 'translateX(100%)');
+        } else {
+            mobileMenu.css('transform', 'translateX(-100%)');
+        }
         mobileMenuWrap.delay(100).animate({"opacity": '0'}, 100);
     });
 
@@ -331,6 +395,18 @@ $(document).ready(function () {
         }
     });
 
+    let shoptList = $('.shop__menu_mob');
+
+    $('.shop_category_btn').on('click', function () {
+        let show = shoptList.css('display');
+
+        if (show === 'none') {
+            shoptList.fadeIn();
+        } else {
+            shoptList.fadeOut();
+        }
+    });
+
     function toggleHeader(){
         var scroll_status = $(document).scrollTop();
         if (scroll_status > 74) {
@@ -371,10 +447,20 @@ $(document).ready(function () {
     $('.characters__buy__amount__minus').click(function() {
         let amount = $('.characters__buy__amount__number').html();
         amount = parseInt(amount);
-        if (amount > 0) {
+        if (amount > 1) {
             amount -= 1;
         }
         $('.characters__buy__amount__number').html(amount);
     });
+
+    $('.header__search__mob').click( function() {
+        $('.search__input__mob').slideToggle('fast');
+    });
+
+    $('.search__input__mob__close').click( function() {
+        $('.search__input__mob').slideToggle('fast');
+    })
+
+
 
 });

@@ -529,10 +529,13 @@
 // ============================
 
 .main-slider
-	height: calc(100vh - 193px)
+	//height: calc(100vh - 193px)
 	position: relative
 	max-width: 1920px
 	margin: 0 auto
+
+.slick-list
+	height: auto!important
 
 .search__in__slider
 	position: absolute
@@ -543,7 +546,7 @@
 
 .main-slider__slider__item
 	max-width: 1920px
-	//height: calc(100vh - 193px)
+	height: calc(100vh - 193px)
 
 .main
 	position: relative
@@ -932,14 +935,13 @@
 			text-align: center
 			display: none
 	&__news
-		@include flex($ai: flex-end, $fd: column)
+		@include flex($fd: column)
 		&-title
 			color: #050000
-			font-family: "FuturaBook"
+			font-family: "FuturaBook", "Arial", "sans-serif"
 			font-size: 2.250em
 		&-text
 			padding-top: 50px
-			text-align: right
 			font-size: 1.375em
 		&-input
 			@include flex()
@@ -1118,6 +1120,7 @@
 
 .shop
 	display: flex
+	justify-content: space-between
 
 .shop__goods__title
 	text-align: center
@@ -1126,7 +1129,7 @@
 	padding: 40px 0
 
 .shop__menu
-	width: 249px
+	width: 250px
 	padding-left: 55px
 	p
 		font-family: "FuturaBook", "Arial", "sans-serif"
@@ -1134,6 +1137,7 @@
 		text-transform: uppercase
 
 .shop__menu__list
+	max-width: 100%
 	margin-top: 20px
 	font-family: "FuturaLight", "Arial", "sans-serif"
 	font-size: 1.250em
@@ -1160,11 +1164,14 @@
 	margin-left: -20px
 	margin-right: -20px
 
+.shop__goods
+	width: 86%
+
 
 .shop__goods__list
-	width: 1600px
 	display: flex
 	flex-wrap: wrap
+	width: 101%
 
 .shop__goods__card
 	margin-left: 20px
@@ -1180,8 +1187,8 @@
 		transition: 0.2s ease-in-out
 		opacity: 1
 	img
-		width: 360px
-		height: 520px
+		width: 100%
+		height: auto
 
 .shop__goods__item__img
 	position: relative
@@ -1944,6 +1951,90 @@
 .featured__slider-img__double__image
 	position: relative
 
+.img_header_cart_mob
+	display: none
+
+.search__input__mob
+	display: flex
+	width: 100%
+	height: 40px
+	box-shadow: 0 1px 30px 0 #cccccc
+	position: absolute
+	z-index: 1
+	background: #ffffff
+
+.search__input__mob__relative
+	position: relative
+
+.search__input__mob
+	display: none
+
+.search__input__mob__wrap
+	display: flex
+	align-items: center
+	height: 100%
+	padding: 0 15px
+
+.search__input__mob__wrap
+	position: relative
+	input
+		border: none
+		text-transform: uppercase
+		margin-left: 7px
+		letter-spacing: 3px
+
+.search__input__mob__close
+	transform: rotate(-45deg)
+	font-size: 3em
+	position: absolute
+	top: -5px
+	right: 10px
+
+.header__search__mob
+	display: none
+
+.shop_category_btn
+	display: none
+	position: relative
+
+.content_mob
+	position: absolute
+	top: 0
+	left: 0
+
+.shop__menu_mob
+	display: none
+
+.recently__viewed__item img
+	width: 100%
+
+.recently__viewed__item
+	height: auto
+
+.cart__item-actions-remove
+	display: none
+
+.blog__category__mob
+	display: none
+
+.goods-card__slider__mob
+	display: none
+
+.card__to__complete__slider
+	display: none
+
+.buy__apple__pay
+	display: none
+
+.card__also__like__items__slider
+	display: none
+
+.wish__list__item__mob
+	display: none
+
+.recently__viewed__items__mob
+	display: none
+
 
 
 // ============================
@@ -1955,12 +2046,14 @@
 			max-width: calc(100% - 30px)
 
 @media (max-width: nth($mediaBp, 2))
+
+	.shop__goods__card
+		margin-left: 18px
+		margin-right: 18px
+
 	.main-slider__slider img
 		width: 100%
 		height: auto
-
-	.header__user img, .header__like img, .header__cart img
-
 
 	.header__search img
 		width: 36px
@@ -2006,6 +2099,9 @@
 
 @media (max-width: nth($mediaBp, 4))
 
+	.main-slider__slider__item
+		height: auto
+
 	.footer__icons
 		padding: 10px 0
 
@@ -2035,9 +2131,6 @@
 
 	.main-slider
 		height: auto
-
-	.body__search
-		width: 300px
 
 	.header__cart__count
 		top: 11px
@@ -2130,6 +2223,10 @@
 		width: 65%
 
 @media (max-width: nth($mediaBp, 5))
+
+	.shop__goods__card
+		width: 330px
+		height: 550px
 	
 	.modal-content
 		margin: 5% 3%
@@ -2180,9 +2277,18 @@
 
 @media (max-width: nth($mediaBp, 6))
 
+	.shop__goods
+		width: 100%
+
+	.shop__menu
+		display: none
+
 	.modal-size__img
 		margin: 0px 15%
 		padding: 0px 35px 0px 35px
+
+	.header__search img
+		display: none
 
 	.header__search input
 		display: none
@@ -2673,6 +2779,135 @@
 
 @media (max-width: nth($mediaBp, 7))
 
+	.footer__info
+		font-size: 1em
+
+	.footer__help-title
+		font-size: 1em
+
+	.footer__icons
+		padding: 17px 0 14px 0
+
+	.subscribe
+		margin-bottom: 100px
+
+	.subscribe__button button
+		padding: 10px
+		width: 190px
+
+	.subscribe__wrap
+		padding: 0
+
+	.subscribe__input input
+		margin-top: 50px
+		&::placeholder
+			font-size: 1em
+
+	.subscribe__title
+		font-size: 1.6em
+
+	.follow__slider-controls_prev
+		left: -11%
+
+	.follow__slider-controls_next
+		right: -11%
+
+	.follow__slider
+		margin: 50px 30px
+
+	.follow__mail
+		font-size: 1.8em
+
+	.follow__title
+		padding-top: 50px
+		font-size: 2em
+
+	.follow
+		padding: 20px 0
+
+	.featured__button
+		padding-top: 30px
+
+	.featured__button a
+		font-size: 1.2em
+		padding: 10px
+		width: 190px
+		margin: 0 auto
+		text-align: center
+
+	.follow__slider-controls_next, .follow__slider-controls_prev
+		z-index: 2
+
+	.featured__slider-controls_prev
+		left: -7%
+		font-size: 3em
+		z-index: 2
+
+	.featured__slider-controls_next
+		right: -7%
+		font-size: 3em
+		z-index: 2
+
+	.featured__slider-img
+		position: relative
+		padding: 20px 15px 40px
+
+	.featured__slider
+		margin: 50px 0 0
+
+	.featured__title_sub
+		font-size: 1.8em
+
+	.featured__title_sub
+		padding-top: 25px
+
+	.featured__title
+		font-size: 1.8em
+
+	.help__description
+		font-size: 1.6em
+
+	.help__title
+		font-size: 1.8em
+
+	.categories__item-link
+		width: 190px
+		padding: 10px
+		font-size: 1.3em
+		display: block
+		margin: 0 auto
+
+	.categories__item-block
+		height: 30%
+		top: 35%
+
+	.categories__item-title
+		font-size: 1.8em
+		margin-bottom: 20px
+
+	.about-us__button a
+		padding: 15px 60px
+		font-size: 1.3em
+
+	.about-us__button
+		margin-top: 20px
+
+	.about-us__button a
+		padding: 10px
+		display: block
+		width: 190px
+		text-align: center
+
+	.about-us__description
+		padding: 40px 0
+		font-size: 1.2em
+
+	.about-us__title
+		font-size: 2em
+
+	.banner__label
+		font-size: 1.12em
+
 	.footer__wrap
 		padding: 0 0
 
@@ -2683,5 +2918,657 @@
 		margin: 0 10px 0 10px
 
 	.modal-size__img
-		margin: 0px 10%
-		padding: 0px 10px 0px 10px
+		margin: 0 10%
+		padding: 0 10px
+
+	.footer__icons-contact
+		img
+			height: 30px
+
+	.footer__icons-links
+		img
+			height: 30px
+
+	.img_header_cart_laptop
+		display: none
+
+	.header__cart__count
+		display: none
+
+	.img_header_cart_mob
+		display: block
+
+	.img_header_cart_mob img
+		display: flex
+
+	.header__search__mob
+		display: block
+
+	.header__search__mob img
+		margin-top: 5px
+
+	.header__tools a
+		margin-left: 20px
+
+	.header__tools img
+		width: 20px
+		height: 20px
+
+	.shop__goods__card
+		width: 140px
+		height: 220px
+		margin-right: 5px
+		margin-left: 5px
+
+	.shop__goods__title
+		padding: 40px 0
+
+	.shop__goods__item__name
+		flex-direction: column
+
+	.shop__goods__item__name__text
+		font-size: 1em
+		text-align: center
+
+	.shop__goods__card
+		&:hover .shop__goods__item__name__like
+			display: none
+
+	.shop__goods__card
+		&:hover .shop__goods__item__bag
+			display: none
+
+	.shop__goods__item__price
+		opacity: 1
+
+	.shop__goods__item__name
+		padding: 5px 0 0
+
+	.shop__goods__item__price__bag
+		flex-direction: column
+
+	.shop__filter_btn
+		width: 50%
+
+	.shop_category_btn
+		display: flex
+		width: 50%
+		align-items: center
+		justify-content: center
+		font-family: "FuturaLight", "Arial", "sans-serif"
+		font-size: 1.125em
+		text-transform: uppercase
+
+	.shop__menu_mob
+		position: absolute
+		width: 270px
+		padding: 50px 40px
+		top: -498px
+		left: 0
+		background: #ffffff
+		clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
+
+	.shop__goods__list
+		justify-content: space-around
+
+	.goods-card__slider
+		display: none
+
+	.goods-card
+		padding: 0
+		flex-direction: column
+		margin-top: 15px
+
+	.container
+		padding: 0
+
+	.goods-card__slider__mob__item
+		height: auto
+		img
+			width: 100%
+			height: auto
+
+	.slick-dots li button:before
+		font-size: 10px
+
+	.goods-card__characters
+		width: 100%
+
+	.characters__name__text
+		font-size: 26px
+
+	.characters__name__like
+		height: 22px
+
+	.characters__name__like img
+		width: 80%
+		height: auto
+
+	.characters__name
+		border-bottom: none
+		height: 50px
+
+	.characters__price
+		font-size: 26px
+		height: 50px
+		border-bottom: 1px solid #cccccc
+
+	.characters__buy__amount
+		margin: 70px auto 50px
+
+	.characters__btn
+		margin-top: 40px
+
+	.buy__apple__pay
+		margin: 40px auto 0
+		width: 240px
+		text-align: center
+
+	.buy__apple__pay a
+		text-decoration: underline
+		font-size: 16px
+		font-family: "FuturaLight", "Arial", "sans-serif"
+		color: #2c2c2c
+
+	.card__to__complete
+		margin-top: 50px
+
+	.card__to__complete__title
+		width: 70%
+		font-size: 22px
+		padding: 10px 0
+
+	.card__to__complete__items
+		display: none
+
+	.view__more
+		width: 100%
+		margin-top: 50px
+
+	.btn__view__more
+		width: 100%
+		margin-right: 0
+
+	.card__to__complete__slider
+		margin-top: 30px
+
+	.card__to__complete__item__img
+		width: 100%
+		height: auto
+
+	.card__to__complete__item
+		height: auto
+
+	.card__to__complete__item__option
+		height: 120px
+
+	.card__also__like
+		margin-top: 50px
+
+	.card__also__like__title
+		font-size: 22px
+		width: 70%
+		margin: 0 auto
+		padding: 10px 0
+
+	.card__also__like__items
+		display: none
+
+	.card__also__like__item__img
+		width: 100%
+		height: auto
+
+	.card__also__like__item
+		height: auto
+
+	.card__also__like__items__slider
+		margin-top: 30px
+
+	.blog__wrap
+		padding: 0
+
+	.blog__title
+		margin-top: 30px
+
+	.viewed__recently
+		margin-top: 50px
+
+	.viewed__recently__title
+		padding: 10px 0
+		font-size: 22px
+		width: 70%
+
+	.viewed__recently__slider__item
+		height: auto
+
+	.featured__slider-controls_next
+		right: -4%
+
+	.featured__slider-controls_prev
+		left: -4%
+
+	.header__search__mob
+		background: white
+
+	.wrap
+		margin: 0
+
+	.shop__goods__card
+		width: 46%
+
+	.blog__grid
+		grid-template-columns: 1fr
+		margin-top: 0
+
+	.blog__article-item
+		margin-top: 60px
+
+	.blog__article-item__published__author
+		margin-top: 15px
+
+	.blog__article-item__published
+		font-size: 16px
+
+	.blog__article-item__author
+		font-size: 16px
+
+	.blog__article-title
+		margin-top: 30px
+		font-size: 18px
+		text-align: center
+
+	.blog__article-description
+		margin-top: 20px
+		margin-bottom: 30px
+
+	.blog__categories
+		display: none
+
+	.blog__category__mob
+		width: 100%
+		height: 50px
+		border: 1px solid #cccccc
+		display: flex
+		align-items: center
+		justify-content: center
+		position: sticky
+		bottom: 0
+		background: #ffffff
+		font-family: "FuturaLight", "Arial", "sans-serif"
+		text-transform: uppercase
+
+	.blog__category__mob__list__wrap
+		//position: relative
+
+	.blog__category__mob__list
+		display: none
+		position: absolute
+		width: 270px
+		min-height: 320px
+		padding: 50px 40px
+		clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
+		top: -350px
+		left: -175px
+		background: #ffffff
+
+	.mob
+		display: block
+		margin: 0
+
+	.faq__title
+		margin-top: 40px
+
+	.faq__grid
+		grid-template-columns: 1fr
+		margin-top: 60px
+
+	.faq__popular
+		display: none
+
+	.faq__info-list
+		padding-left: 35px
+		li
+			font-size: 22px
+			margin-bottom: 15px
+
+	.faq__info-label
+		margin-top: 60px
+		text-align: center
+		font-size: 18px
+
+	.faq__answer-list
+		margin-top: 40px
+		padding-left: 35px
+		font-size: 12px
+		li
+			p
+				margin-left: -30px
+				padding-top: 20px
+				font-size: 18px
+
+	.article__content
+		margin: 0
+		width: 100%
+
+	.article__content__title
+		font-size: 22px
+		margin-top: 40px
+
+	.article__content__img
+		margin: 40px 0 0
+
+	.article__content__text p
+		margin-top: 30px
+		font-size: 18px
+
+	.article__content__share
+		margin-top: 20px
+
+	.leave__reply
+		margin-top: 60px
+
+	.leave__reply__form
+		width: 100%
+
+	.article__content__img
+		img
+			width: 100%
+
+	.leave__reply__form__data
+		margin-top: 30px
+
+	.leave__reply__form__data
+		flex-direction: column
+
+	.leave__reply__form__data__name, .leave__reply__form__data__email
+		width: 100%
+
+	.leave__reply__form__data__email
+		margin-top: 30px
+
+	.leave__reply__form__comment
+		height: 47px
+
+	.leave__reply__form__data__name input, .leave__reply__form__data__email input
+		font-size: 22px
+
+	.leave__reply__form__btn
+		width: 100%
+
+	.article
+		margin-bottom: 60px
+
+	.checkout__title
+		margin-top: 40px
+		font-size: 22px
+
+	.checkout__sign__in
+		font-size: 22px
+
+	.checkout__sign__in__img img
+		width: 25px
+
+	.checkout__form__blank__title
+		margin-top: 80px
+		padding: 0
+		font-size: 22px
+
+	.checkout__form
+		flex-direction: column
+		padding: 0
+
+	.checkout__form__blank__form
+		flex-direction: column
+
+	.checkout__form__blank__form__for__input
+		width: 100%
+
+	.checkout__form__blank__form__fio
+		flex-direction: column
+		input
+			width: 100%
+
+	.checkout__form__blank__form__fio input
+		margin-bottom: 35px
+		height: 25px
+
+	.checkout__form__blank__form input
+		height: 25px
+
+	.checkout__form__blank__form__create__account label
+		display: flex
+		align-items: center
+
+	.checkout__form__view
+		padding: 0
+		width: 100%
+		border: none
+
+	.checkout__form__blank__form__create__additional_information
+		margin-bottom: 20px
+
+	.checkout__form__view__label
+		border: none
+
+	.checkout__form__view__item
+		border: none
+		padding: 25px 0
+
+	.checkout__form__view__subtotal
+		border-top: 1px solid #cccccc
+
+	.checkout__form__view__total
+		margin-top: 50px
+
+	.checkout__form__view__check__payment
+		margin-top: 50px
+
+	.checkout__form__view__btn__submit
+		width: 100%
+
+	.checkout
+		margin-bottom: 60px
+
+	.login
+		height: 100%
+
+	.login__title
+		margin-top: 40px
+		font-size: 22px
+
+	.login__text
+		font-size: 22px
+
+	.login__form__name
+		width: 100%
+		input
+			font-size: 16px
+
+	.login__form__password
+		width: 100%
+		input
+			font-size: 16px
+
+	.forgot__password
+		width: 100%
+
+	.login__form__btn
+		width: 100%
+
+	.login__form
+		height: 100%
+		margin-bottom: 60px
+
+	.register__center
+		width: 100%
+		margin: 60px 0
+		min-height: 100%
+
+	.register__title
+		font-size: 22px
+
+	.register__description
+		font-size: 20px
+
+	.register__form input
+		margin-top: 45px
+		font-size: 18px
+
+	.register__submit
+		height: 60px
+
+	.wish__list
+		padding: 60px 0
+
+	.wish__list__title
+		font-size: 22px
+
+	.wish__list__labels
+		display: none
+
+	.wish__lists__items
+		display: none
+
+	.wish__list__item__mob
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 30px
+
+	.wish__lists__item__img__mob
+		width: 35%
+
+	.wish__lists__item__delete
+		height: 110px
+		width: 20%
+
+	.wish__lists__item__characters__mob
+		width: 35%
+
+	.wish__lists__item__characters__mob__name
+		font-size: 20px
+		line-height: 20px
+		font-family: "FuturaLight", "Arial", "sans-serif"
+		font-weight: bold
+
+	.wish__lists__item__characters__mob__price
+		margin-top: 8px
+		font-size: 20px
+		line-height: 20px
+		font-family: "FuturaLight", "Arial", "sans-serif"
+		font-weight: bold
+
+	.wish__lists__item__characters__mob__status
+		font-size: 15px
+		color: #cccccc
+		margin-top: 8px
+
+	.wish__lists__item__checkout__mob
+		width: 70%
+		margin: 25px auto
+
+	.wish__lists__item__checkout__btn
+		width: 100%
+
+	.wish__lists__item__delimeter__mob
+		width: calc(100% + 30px)
+		height: 1px
+		border-bottom: 1px solid #cccccc
+		margin: 0 -15px
+
+	.recently__viewed__items
+		display: none
+
+	.recently__viewed
+		margin-top: 60px
+
+	.recently__viewed__title
+		font-size: 22px
+
+	.recently__viewed__item
+		height: auto
+
+	#mobile-menu
+		width: 85%
+
+	.mobile-menu__body
+		height: 100%
+
+
+	.mobile-menu__elem-name
+		font-size: 16px
+		font-family: "FuturaLight", "Arial", "sans-serif"
+
+	.mobile-menu__elem-name__1
+		font-size: 22px
+		font-family: "FuturaBook", "Arial", "sans-serif"
+
+	.mobile-menu-link
+		height: 25px
+		width: 35px
+		text-align: center
+		img
+			height: 25px
+
+	.cart__header-wrap
+		padding: 15px
+
+	.cart__body
+		padding: 15px
+
+	.cart__footer
+		padding: 15px
+
+	.cart__items-elem
+		padding: 0
+		flex-wrap: wrap
+
+	.cart__item-amount
+		display: none
+
+	.cart__item-img
+		width: 40%
+		img
+			width: 100%
+			height: auto
+
+	.cart__item-info
+		width: 60%
+
+	.cart__item-actions-remove
+		width: 100%
+		display: flex
+		border-bottom: 1px solid #cccccc
+		height: 40px
+		align-items: center
+		margin-bottom: 25px
+		a
+			color: inherit
+			margin-right: 30px
+
+	.cart__item-actions
+		margin-top: 45px
+
+
+	.blog__category__mob
+		display: flex
+
+	.goods-card__slider__mob
+		display: block
+
+	.card__to__complete__slider
+		display: block
+
+	.buy__apple__pay
+		display: block
+
+	.card__also__like__items__slider
+		display: block
+
+	.recently__viewed__items__mob
+		display: block
+
+
+
+
+

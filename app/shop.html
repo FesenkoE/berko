@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="rtl" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/slick/slick-theme.css">
-    <!--    <link rel="stylesheet" href="css/style.css">-->
-    <link rel="stylesheet" href="css/rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/rtl.css">-->
     <title>Berko</title>
 </head>
 <body>
+<div id="cart-overlay"></div>
 <div class="cart" id="cart">
     <div class="cart__wrap">
         <div class="cart__header">
@@ -39,9 +40,11 @@
                             </div>
                             <div class="cart__item-actions">
                                 <div class="cart__item-amount-x-price">1x <span>800$</span></div>
-                                <div class="cart__item-remove">remove</div>
-                                <div class="cart__item-change">change</div>
                             </div>
+                        </div>
+                        <div class="cart__item-actions-remove">
+                            <a href="" class="cart__item-remove">remove</a>
+                            <a href="" class="cart__item-change">change</a>
                         </div>
                     </div>
                     <div class="cart__items-elem">
@@ -59,9 +62,11 @@
                             </div>
                             <div class="cart__item-actions">
                                 <div class="cart__item-amount-x-price">1x <span>800$</span></div>
-                                <div class="cart__item-remove">remove</div>
-                                <div class="cart__item-change">change</div>
                             </div>
+                        </div>
+                        <div class="cart__item-actions-remove">
+                            <a href="" class="cart__item-remove">remove</a>
+                            <a href="" class="cart__item-change">change</a>
                         </div>
                     </div>
                     <div class="cart__items-elem">
@@ -79,9 +84,11 @@
                             </div>
                             <div class="cart__item-actions">
                                 <div class="cart__item-amount-x-price">1x <span>800$</span></div>
-                                <div class="cart__item-remove">remove</div>
-                                <div class="cart__item-change">change</div>
                             </div>
+                        </div>
+                        <div class="cart__item-actions-remove">
+                            <a href="" class="cart__item-remove">remove</a>
+                            <a href="" class="cart__item-change">change</a>
                         </div>
                     </div>
                 </div>
@@ -96,12 +103,102 @@
                 <div class="cart__button">
                     <div class="cart__button-title">Checkout</div>
                     <div class="cart__button-dot"><i class="fas fa-circle"></i></div>
-                    <div class="cart__button-price">1 600</div>
+                    <div class="cart__button-price">1600</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="mobile-menu-overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__wrap">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__title">menu</div>
+            <div id="mobile-menu__close" class="mobile-menu__close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="mobile-menu__body">
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">shop<i class="fas fa-chevron-right"></i></div>
+                <ul class="mobile-menu__list">
+                    <li>
+                        <div class="mobile-menu__elem-name">BRIDAL ATTIRE<i class="fas fa-chevron-right"></i></div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">All</a></li>
+                            <li><a href="">Dresses</a></li>
+                            <li><a href="">Headwear</a></li>
+                            <li><a href="">Swimsuit</a></li>
+                            <li><a href="">Jewelry</a></li>
+                            <li><a href="">lingerie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mobile-menu__elem-name">COLLECTIONS<i class="fas fa-chevron-right"></i></div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">D day</a></li>
+                            <li><a href="">Bachelorette</a></li>
+                            <li><a href="">HoneyMoon</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mobile-menu__elem-name">GIFTING ESSETIALS<i class="fas fa-chevron-right"></i>
+                        </div>
+                        <ul class="mobile-menu__list">
+                            <li><a href="">Box Sets</a></li>
+                            <li><a href="">Bachelorette</a></li>
+                            <li><a href="">Paper Goods</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">about us<i class="fas fa-chevron-right"></i></div>
+                <ul class="mobile-menu__list">
+                    <li><a href="">All</a></li>
+                    <li><a href="">Dresses</a></li>
+                    <li><a href="">Headwear</a></li>
+                    <li><a href="">Swimsuit</a></li>
+                    <li><a href="">Jewelry</a></li>
+                    <li><a href="">lingerie</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-name">real brides<i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="mobile-menu__elem">
+                <div class="mobile-menu__elem-link">
+                    <a href="">log in</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu__footer">
+            <div class="mobile-menu__links">
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/call.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/email.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/inst.png" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-link">
+                    <a href="#">
+                        <img src="./img/main/fb.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- mobile-menu end -->
+
 
 <div class="banner">
     <div class="container">
@@ -120,7 +217,12 @@
                 <li id="about-us-label">about us</li>
                 <li>real brides</li>
             </ul>
-            <div class="header__logo">
+            <div class="header__navigation-button">
+                <div id="header__navigation-button-item">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div id="header__logo" class="header__logo">
                 <img src="./img/main/logo.png" alt="logo">
             </div>
             <div class="header__tools">
@@ -131,9 +233,13 @@
                     <span class="header__like__count">1</span>
                     <img src="./img/main/like.png" alt="">
                 </a>
+                <a href="#" class="header__search__mob">
+                    <img src="./img/main/search-mob.png" alt="">
+                </a>
                 <a href="#" id="header__cart-label" class="header__cart">
                     <span class="header__cart__count">1</span>
-                    <img src="./img/main/cart.png" alt="">
+                    <img src="./img/main/cart.png" class="img_header_cart_laptop" alt="">
+                    <img src="./img/main/cart-mob.png" class="img_header_cart_mob" alt="">
                 </a>
             </div>
         </div>
@@ -207,14 +313,26 @@
             </div>
         </div>
     </div>
+    <div class="search__input__mob__relative">
+        <div class="search__input__mob">
+            <div class="search__input__mob__wrap">
+                <span><img src="./img/main/search-mob.png" alt=""></span>
+                <input type="text" placeholder="search...">
+                <span class="search__input__mob__close">+</span>
+            </div>
+        </div>
+    </div>
+    <div class="search__input__mob__relative">
+        <div class="search__input__mob">
+            <div class="search__input__mob__wrap">
+                <span><img src="./img/main/search-mob.png" alt=""></span>
+                <input type="text" placeholder="search...">
+                <span class="search__input__mob__close">+</span>
+            </div>
+        </div>
+    </div>
 </header>
 <!--</main>-->
-<div class="body__search">
-    <div class="header__search">
-        <input type="text" class="search__width">
-        <img src="./img/main/search.png" alt="">
-    </div>
-</div>
 
 <div class="container">
     <div class="shop__goods__title">All</div>
@@ -648,6 +766,28 @@
     </div>
 </div>
 <div class="shop__filter">
+    <div class="shop_category_btn">
+        <div class="content content_mob">
+            <div class="shop__menu shop__menu_mob">
+                <p>shop</p>
+                <ul class="shop__menu__list">
+                    <li class="shop__menu__list__item shop__menu__list__item_active">All</li>
+                    <li class="shop__menu__list__item">Dresses</li>
+                    <li class="shop__menu__list__item">Headwear</li>
+                    <li class="shop__menu__list__item">Swimsuit</li>
+                    <li class="shop__menu__list__item">Jewerly</li>
+                    <li class="shop__menu__list__item">Lingerie</li>
+                    <li class="shop__menu__list__item">D day</li>
+                    <li class="shop__menu__list__item">Bachelorette</li>
+                    <li class="shop__menu__list__item">HoneyMoon</li>
+                    <li class="shop__menu__list__item">Box Sets</li>
+                    <li class="shop__menu__list__item">Paper Goods</li>
+                </ul>
+            </div>
+        </div>
+        filter
+
+    </div>
     <div class="shop__filter_btn">
         sort
         <span class="arrow_down"></span>
@@ -666,57 +806,66 @@
 </div>
 <footer class="footer">
     <div class="container">
-        <div class="footer__icons">
-            <div class="footer__icons-contact">
-                <a href="#">
-                    <img src="./img/main/call.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="./img/main/email.png" alt="">
-                </a>
-            </div>
-            <div class="footer__icons-links">
-                <a href="#">
-                    <img src="./img/main/inst.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="./img/main/fb.png" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="footer__info">
-            <div class="footer__help">
-                <div class="footer__help-title">
-                    <p>
-                        Need Help? We Are At Your Service
-                    </p>
-                    <br>
-                    <p>
-                        Leave your details and our fashion consultant will get back to you as soon as possible
-                    </p>
+        <div class="footer__wrap">
+            <div class="footer__icons">
+                <div class="footer__icons-contact">
+                    <a href="#">
+                        <img src="./img/main/call.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./img/main/email.png" alt="">
+                    </a>
                 </div>
-                <div class="footer__help-label">
-                    <img src="./img/main/footer-logo.png" alt="">
+                <div class="footer__icons-links">
+                    <a href="#">
+                        <img src="./img/main/inst.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./img/main/fb.png" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="footer__faq">
-                <div class="footer__faq-title">faq</div>
-                <ul class="footer__faq-list">
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer__news">
-                <div class="footer__news-title">Join Our Newsletter</div>
-                <div class="footer__news-text">
-                    <p>Subscribe To Receive Updates, Access</p>
-                    <br>
-                    <p>To Exclusive Deals & More</p>
-                    <div class="footer__news-input">
-                        <input type="text" placeholder="Please enter Your Email Here">
-                        <i class="footer__news-input-icon fas fa-chevron-right"></i>
+            <div class="footer__info">
+                <div class="footer__help">
+                    <div class="footer__help-title">
+                        <p>
+                            Need Help? We Are At Your Service
+                        </p>
+                        <br>
+                        <p>
+                            Leave your details and our fashion consultant will get back to you as soon as possible
+                        </p>
                     </div>
+                    <div class="footer__help-label">
+                        <img src="./img/main/footer-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="footer__faq">
+                    <div class="footer__faq-title">faq</div>
+                    <ul class="footer__faq-list">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__news">
+                    <div class="footer__news-title">Join Our Newsletter</div>
+                    <div class="footer__news-text">
+                        <p>Subscribe To Receive Updates, Access To Exclusive Deals & More</p>
+                        <div class="footer__news-input">
+                            <input type="text" placeholder="Please enter Your Email Here">
+                            <a class="footer__button">
+                                <i class="footer__news-input-icon fas fa-chevron-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="footer__button_mob">
+                    send
+                </a>
+                <div class="footer__help-label_mob">
+                    <img src="./img/main/footer-logo.png" alt="">
                 </div>
             </div>
         </div>
