@@ -2038,6 +2038,14 @@
 .slider-for
 	width: calc(100% - 190px)
 
+.checkout__form__blank__form__for__input
+	width: 58%
+
+.checkout__form__view
+	width: 39%
+	min-height: 200px
+	border: 1px solid #9A9898
+
 // ============================
 // MEDIA
 // ============================
@@ -2102,6 +2110,8 @@
 		width: 34%
 
 @media (max-width: nth($mediaBp, 3))
+	.checkout__form
+		padding: 0
 
 	.slider-for
 		width: calc(100% - 190px)
@@ -2159,6 +2169,9 @@
 		grid-row-end: 2
 
 @media (max-width: nth($mediaBp, 4))
+
+	.checkout__form
+		flex-wrap: wrap
 
 	.card__to__complete__item, .card__also__like__item
 		margin: 0 20px
@@ -2344,6 +2357,17 @@
 		width: 65%
 
 @media (max-width: nth($mediaBp, 5))
+	.checkout__form__view
+		width: 100%
+		min-height: 200px
+		border: 1px solid #9A9898
+
+	.checkout__form__blank__form
+		flex-direction: column
+
+	.checkout__form__blank__form__for__input
+		width: 100%
+		margin-bottom: 20px
 
 	.card__to__complete__item, .card__also__like__item
 		margin: 0 20px
@@ -2957,7 +2981,7 @@
 	margin-right: 15px
 
 .checkout__form
-	padding: 0 130px
+	//padding: 0 130px
 	display: flex
 	justify-content: space-between
 
@@ -2968,7 +2992,7 @@
 		color: #9A9898
 
 .checkout__form__view
-	width: 39%
+	//width: 100%
 	min-height: 200px
 	border: 1px solid #9A9898
 
@@ -2992,8 +3016,8 @@
 		&::placeholder
 			color: #9A9898
 
-.checkout__form__blank__form__for__input
-	width: 58%
+//.checkout__form__blank__form__for__input
+//	width: 58%
 
 .checkout__form__blank__form__create__additional_information
 	margin-top: 50px
@@ -3156,6 +3180,11 @@
 		padding-top: 15px
 
 @media (max-width: nth($mediaBp, 7))
+
+	//.checkout__form__view
+	//	width: 100%
+	//	min-height: 200px
+	//	border: 1px solid #9A9898
 
 	.footer__info
 		font-size: 1em
