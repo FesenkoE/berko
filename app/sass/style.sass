@@ -529,7 +529,6 @@
 // ============================
 
 .main-slider
-	//height: calc(100vh - 193px)
 	position: relative
 	max-width: 1920px
 	margin: 0 auto
@@ -550,10 +549,8 @@
 
 .main
 	position: relative
-	//background: url(../img/main/main-bg.png) no-repeat
 	background-size: cover
 	background-position-x: center
-	//height: 100vh
 	&__arrow
 		position: absolute
 		bottom: 0
@@ -587,12 +584,11 @@
 	padding: 125px 0
 	&__title
 		color: #000000
-		font-family: "FuturaBook"
+		font-family: "FuturaBook", "Arial", "sans-serif"
 		font-size: 2.500em
 		text-transform: uppercase
 		@include flex($jc: center)
 	&__description
-		padding-top: 70px
 		padding: 70px 25% 0
 		text-align: center
 		font-size: 1.375em
@@ -606,7 +602,7 @@
 			padding: 25px 75px
 			background-color: $mainC1
 			color: #070909
-			font-family: "FuturaMedium"
+			font-family: "FuturaMedium", "Arial", "sans-serif"
 			font-size: 1.625em
 			font-weight: 500
 			text-transform: uppercase
@@ -1366,28 +1362,27 @@
 .goods-card__slider
 	display: flex
 	width: 1030px
-	min-height: 994px
+	//min-height: 994px
 	justify-content: space-between
 	align-items: center
 
 .slider-for
 	div
-		width: 760px
-		height: 940px
+		//width: 760px
+		//height: 940px
 		img
 			width: 100%
 			height: 100%
 
 .slider-nav
 	width: 160px
-	margin-bottom: 0!important
 	.slick-list
-		padding: 30px 0!important
-		height: 740px !important
+		padding: 38px 0!important
+		height: 760px !important
 
 .slider-nav__item
-	width: 160px!important
-	height: 200px!important
+	//width: 160px!important
+	//height: 200px!important
 	margin-bottom: 40px
 
 .goods-card__characters
@@ -2018,7 +2013,12 @@
 	display: none
 
 .goods-card__slider__mob
+	width: 100%
 	display: none
+
+.goods-card__slider__mob__item
+	img
+		width: 100%
 
 .card__to__complete__slider
 	display: none
@@ -2035,7 +2035,8 @@
 .recently__viewed__items__mob
 	display: none
 
-
+.slider-for
+	width: calc(100% - 190px)
 
 // ============================
 // MEDIA
@@ -2045,7 +2046,26 @@
 		.container
 			max-width: calc(100% - 30px)
 
+		.goods-card
+			padding: 0 60px
+
+		.slider-for
+			width: calc(100% - 190px)
+
+
 @media (max-width: nth($mediaBp, 2))
+
+	.card__also__like__items
+		padding: 0
+
+	.card__to__complete__items
+		padding: 0
+
+	.slider-for
+		width: calc(100% - 190px)
+
+	.goods-card
+		padding: 0
 
 	.shop__goods__card
 		margin-left: 18px
@@ -2073,7 +2093,7 @@
 
 
 	.modal-size__img
-		padding: 0 40px 0px 100px
+		padding: 0 40px 0 100px
 	
 	.modal-content
 		padding: 60px
@@ -2082,6 +2102,47 @@
 		width: 34%
 
 @media (max-width: nth($mediaBp, 3))
+
+	.slider-for
+		width: calc(100% - 190px)
+
+	.goods-card__characters
+		width: 35%
+
+	.slick-list
+		width: 100%
+
+	.goods-card__slider
+		width: 60%
+		height: auto
+
+	.goods-card
+		padding: 0
+		align-items: flex-start
+
+	.viewed__recently__slider__item
+		height: auto
+
+	.view__more
+		margin-top: 50px
+
+	.card__also__like__item
+		width: 30%
+		height: auto
+
+	.card__also__like__items
+		padding: 0
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		width: 100%
+		height: auto
+
+	.card__to__complete__item
+		width: 30%
+		height: auto
+
+	.card__to__complete__items
+		padding: 0
 
 	.header__navigation li
 		font-size: 1.563em
@@ -2098,6 +2159,66 @@
 		grid-row-end: 2
 
 @media (max-width: nth($mediaBp, 4))
+
+	.card__to__complete__item, .card__also__like__item
+		margin: 0 20px
+
+	.card__also__like__items
+		display: none
+
+	.card__to__complete__items
+		display: none
+
+	.viewed__recently__slider__item
+		height: auto
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		width: 100%
+
+	.card__also__like__items__slider
+		display: block
+		margin-top: 50px
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		height: auto
+
+	.card__to__complete__item, .card__also__like__item
+		height: auto
+
+	.btn__view__more
+		margin-right: 0
+		width: 100%
+
+	.view__more
+		margin-top: 50px
+		width: 100%
+
+	.card__to__complete__item__img
+		width: 100%
+
+	.card__to__complete__slider
+		display: block
+		margin-top: 50px
+
+	.characters__buy__amount
+		margin: 90px auto 0
+
+	.goods-card__characters
+		width: 100%
+
+
+	.characters__buy__amount
+		margin: 90px auto 0
+
+	.goods-card__characters
+		width: 100%
+
+	.goods-card__slider
+		width: 100%
+
+	.goods-card
+		padding: 0
+		flex-direction: column
 
 	.main-slider__slider__item
 		height: auto
@@ -2224,6 +2345,109 @@
 
 @media (max-width: nth($mediaBp, 5))
 
+	.card__to__complete__item, .card__also__like__item
+		margin: 0 20px
+
+	.header__user
+		display: none
+
+	.header__like
+		display: none
+
+	.img_header_cart_laptop
+		display: none
+
+	.header__cart__count
+		display: none
+
+	.img_header_cart_mob
+		display: block
+
+	.img_header_cart_mob img
+		display: flex
+
+	.header__search__mob
+		display: block
+		background: #ffffff
+
+	.header__search__mob img
+		margin-top: 5px
+
+	.header__tools a
+		margin-left: 20px
+
+	.header__tools img
+		width: 20px
+		height: 20px
+
+
+	.header__cart__count
+		top: 8px
+		left: 6px
+
+	.header__like__count
+		top: 5px
+		left: 8px
+
+	.viewed__recently__slider__item
+		height: auto
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		width: 100%
+
+	.card__also__like__items__slider
+		display: block
+		margin-top: 50px
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		height: auto
+
+	.card__to__complete__item, .card__also__like__item
+		height: auto
+
+	.btn__view__more
+		margin-right: 0
+		width: 100%
+
+	.view__more
+		margin-top: 50px
+		width: 100%
+
+	.card__to__complete__item__img
+		width: 100%
+
+	.card__to__complete__slider
+		display: block
+		margin-top: 50px
+
+	.characters__buy__amount
+		margin: 90px auto 0
+
+	.goods-card__characters
+		width: 100%
+
+	.goods-card
+		flex-direction: column
+		margin-top: 30px
+		padding: 0
+
+	.card__also__like__items
+		display: none
+
+	.card__to__complete__items
+		display: none
+
+	.goods-card__slider__mob__item
+		//img
+		//	width: 100%
+
+	.goods-card__slider__mob
+		display: block
+
+	.goods-card__slider
+		display: none
+
+
 	.shop__goods__card
 		width: 330px
 		height: 550px
@@ -2232,10 +2456,10 @@
 		margin: 5% 3%
 
 	.modal-size__img
-		margin: 0px 30%
+		margin: 0 30%
 
 	.modal-size__img
-		padding: 0 20px 0px 20px
+		padding: 0 20px 0 20px
 
 	.header__navigation
 		display: none
@@ -2276,6 +2500,64 @@
 		width: 50%
 
 @media (max-width: nth($mediaBp, 6))
+
+	.viewed__recently__slider__item
+		height: auto
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		width: 100%
+
+	.card__also__like__items__slider
+		display: block
+		margin-top: 50px
+
+	.card__to__complete__item__img, .card__also__like__item__img
+		height: auto
+
+	.card__to__complete__item, .card__also__like__item
+		height: auto
+
+	.btn__view__more
+		margin-right: 0
+		width: 100%
+
+	.view__more
+		margin-top: 50px
+		width: 100%
+
+	.card__to__complete__item__img
+		width: 100%
+
+	.card__to__complete__slider
+		display: block
+		margin-top: 50px
+
+	.characters__buy__amount
+		margin: 90px auto 0
+
+	.goods-card__characters
+		width: 100%
+
+	.goods-card
+		flex-direction: column
+		margin-top: 30px
+		padding: 0
+
+	.card__also__like__items
+		display: none
+
+	.card__to__complete__items
+		display: none
+
+	.goods-card__slider__mob__item
+		img
+			width: 100%
+
+	.goods-card__slider__mob
+		display: block
+
+	.goods-card__slider
+		display: none
 
 	.shop__goods__list
 		justify-content: space-around
@@ -3119,10 +3401,10 @@
 		padding: 0
 
 	.goods-card__slider__mob__item
-		height: auto
-		img
-			width: 100%
-			height: auto
+		//height: auto
+		//img
+		//	width: 100%
+		//	height: auto
 
 	.slick-dots li button:before
 		font-size: 10px
@@ -3648,6 +3930,11 @@
 
 	.goods-card__slider__mob
 		display: block
+		width: 100%
+
+	.goods-card__slider__mob__item
+		img
+			width: 100%
 
 	.card__to__complete__slider
 		display: block
