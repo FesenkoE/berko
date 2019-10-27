@@ -2046,6 +2046,372 @@
 	min-height: 200px
 	border: 1px solid #9A9898
 
+.wish__lists__item__delete__cross
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	border: 1px solid #cccccc
+	position: relative
+	&:hover
+		cursor: pointer
+	&:before
+		content: ''
+		width: 20px
+		border: 1px solid #cccccc
+		top: 13px
+		right: 4px
+		position: absolute
+		transform: rotate(-45deg)
+	&:after
+		content: ''
+		width: 20px
+		border: 1px solid #cccccc
+		top: 13px
+		right: 4px
+		position: absolute
+		transform: rotate(45deg)
+
+.wish__list__title
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 50px
+
+.wish__list
+	padding: 60px 0
+
+.wish__list__labels
+	display: flex
+	margin-top: 120px
+
+.wish__list__labels__delete
+	width: 100px
+
+.wish__list__labels__img
+	width: 160px
+
+.wish__list__labels__name
+	width: 530px
+	font-size: 1.125em
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	text-transform: uppercase
+	display: flex
+	align-items: center
+
+.wish__list__labels__price
+	width: 200px
+	font-size: 1.125em
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	text-transform: uppercase
+	display: flex
+	align-items: center
+
+.wish__list__labels__status
+	width: 200px
+	font-size: 1.125em
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	text-transform: uppercase
+	display: flex
+	align-items: center
+
+.wish__list__labels__checkout
+	width: 322px
+
+.wish__lists__items
+	width: 80%
+	margin: 0 auto
+
+.wish__lists__item
+	display: flex
+	height: 230px
+	align-items: center
+	border-bottom: 1px solid #cccccc
+
+.wish__lists__item__delete
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100px
+	height: auto
+
+.wish__lists__item__img
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 160px
+	height: 230px
+
+.wish__lists__item__name
+	display: flex
+	align-items: center
+	width: 530px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__price
+	display: flex
+	align-items: center
+	width: 200px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__status
+	display: flex
+	align-items: center
+	width: 200px
+	height: 230px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+
+.wish__lists__item__checkout
+	display: flex
+	width: 322px
+	justify-content: center
+	align-items: center
+	height: 230px
+
+.wish__lists__item__checkout__btn
+	display: flex
+	align-items: center
+	width: 70%
+	margin: 0 auto
+	height: 50px
+	justify-content: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+	text-transform: uppercase
+
+.recently__viewed__title
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 2.1875em
+	text-align: center
+	text-transform: uppercase
+
+.recently__viewed
+	margin-top: 100px
+
+.recently__viewed__item
+	margin: 10px
+
+.recently__viewed__items
+	width: 80%
+	margin: 120px auto 0
+
+.recently__viewed__items__wrap
+	margin: 0 -15px
+	display: flex
+
+.recently__viewed__item
+	width: 200px
+	height: auto
+	margin: 15px
+
+.checkout__form__blank__form
+	display: flex
+	justify-content: space-between
+	input
+		font-family: "FuturaMedium", "Arial", "sans-serif"
+		font-size: 1.25em
+		border: none
+		text-transform: uppercase
+		height: 65px
+		border-bottom: 2px solid #9A9898
+		&::placeholder
+			color: #9A9898
+
+.checkout__form__blank__form__create__additional_information
+	margin-top: 50px
+	input
+		width: 100%
+
+.checkout__form__blank__form__fio
+	display: flex
+	justify-content: space-between
+	input
+		width: 48%
+		margin-bottom: 35px
+
+.checkout__form__blank__form__other
+	input
+		width: 100%
+		margin-bottom: 35px
+
+.checkout__form__blank__form__create__account
+	label
+		font-family: "FuturaMedium", "Arial", "sans-serif"
+		font-size: 1.25em
+		text-transform: uppercase
+		color: #9A9898
+		display: inline-block
+	input
+		display: none
+		&:checked + i:before
+			transform: rotate(45deg) scale(1)
+			transition: all 0.2s ease-in-out
+	i
+		display: inline-block
+		width: 25px
+		height: 25px
+		padding: 5px
+		border: 2px solid #9A9898
+		margin-right: 20px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 7px
+			height: 12px
+			top: 4px
+			left: 7px
+			border-bottom: 2px solid #9A9898
+			border-right: 2px solid #9A9898
+			transform:  rotate(45deg) scale(0)
+			transition: all 0.2s ease-in-out
+
+.checkout__form__view
+	padding: 30px 65px
+
+.checkout__form__view__label
+	display: flex
+	justify-content: space-between
+	height: 80px
+	align-items: center
+	border-bottom: 2px solid #9A9898
+	font-family: "FuturaMedium", "Arial", "sans-serif"
+	font-size: 1.25em
+	text-transform: uppercase
+	font-weight: 800
+
+.checkout__form__view__label__product
+	width: 55%
+
+.checkout__form__view__item
+	display: flex
+	justify-content: space-between
+	padding: 35px 0
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 1.25em
+	text-transform: uppercase
+	border-bottom: 2px solid #9A9898
+	p + p
+		margin-top: 10px
+
+.checkout__form__view__item__name
+	width: 55%
+
+.checkout__form__view__subtotal
+	border-bottom: none
+
+.checkout__form__view__coupon
+	margin-top: 60px
+	a
+		color: #DEDEDE
+		font-family: "FuturaDemi", "Arial", "sans-serif"
+		font-size: 1.25em
+		text-transform: uppercase
+		text-decoration: underline
+
+.checkout__form__view__total
+	margin-top: 70px
+	text-align: right
+	font-family: "FuturaDemi", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+	text-transform: uppercase
+
+.checkout__form__view__check__payment
+	margin-top: 30px
+	label
+		font-family: "FuturaMedium", "Arial", "sans-serif"
+		font-size: 1.25em
+		text-transform: uppercase
+		color: #000000
+		display: flex
+		align-items: center
+	input
+		display: none
+		&:checked + i:before
+			transform: rotate(45deg) scale(1)
+			transition: all 0.2s ease-in-out
+	i
+		display: inline-block
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		border: 2px solid #9A9898
+		margin-right: 10px
+		position: relative
+		padding: 2px
+		&:before
+			content: ''
+			position: absolute
+			border-radius: 50%
+			width: 12px
+			height: 12px
+			background: #9A9898
+			transform:  rotate(45deg) scale(0)
+			transition: all 0.2s ease-in-out
+
+.checkout__form__view__check__tooltip
+	margin-top: 30px
+	font-family: "FuturaLight", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+
+.checkout__form__view__btn__submit
+	width: 230px
+	height: 55px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 1.5625em
+	color: #000000
+	text-transform: uppercase
+	margin-top: 70px
+	&:hover
+		cursor: pointer
+
+.checkout
+	margin-bottom: 140px
+
+.checkout__title
+	margin-top: 140px
+	text-align: center
+	font-size: 2.5em
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	text-transform: uppercase
+
+.checkout__sign__in
+	margin-top: 70px
+	text-align: center
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+
+.checkout__sign__in__img
+	margin-right: 15px
+
+.checkout__form
+	display: flex
+	justify-content: space-between
+
+.checkout__form__blank
+	margin-top: 30px
+	min-height: 200px
+	input
+		color: #9A9898
+
+.checkout__form__view
+	min-height: 200px
+	border: 1px solid #9A9898
+
+.checkout__form__blank__title
+	margin-top: 150px
+	padding: 0 130px
+	font-family: "FuturaBook", "Arial", "sans-serif"
+	font-size: 2.5em
+	text-transform: uppercase
+
 // ============================
 // MEDIA
 // ============================
@@ -2179,14 +2545,9 @@
 		grid-row-end: 2
 
 @media (max-width: nth($mediaBp, 4))
-	.wish__list__labels__delete
-		width: 3%
-
-	.wish__lists__item__name
-		width: 10%
-
-	.wish__lists__item__delete
-		width: 3%
+	.shop__goods__card
+		width: 40%
+		height: auto
 
 	.recently__viewed__item
 		height: auto
@@ -2391,6 +2752,39 @@
 		width: 65%
 
 @media (max-width: nth($mediaBp, 5))
+	.wish__list__labels
+		display: none
+
+	.wish__lists__item__delete__cross
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 1px solid #cccccc
+		position: relative
+
+	.wish__lists__item__checkout__mob
+		width: 100%
+		margin-top: 30px
+		margin-bottom: 50px
+
+	.wish__lists__item__delete
+		display: block
+
+	.wish__list__title
+		font-family: "FuturaBook", "Arial", "sans-serif"
+		font-size: 2.5em
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 50px
+
+
+	.recently__viewed
+		margin-top: 100px
+
+	.recently__viewed__item
+		margin: 15px
+
+
 	.recently__viewed__item
 		height: auto
 
@@ -2434,6 +2828,7 @@
 		width: 35%
 
 	.wish__lists__item__delete
+		display: flex
 		height: 110px
 		width: 20%
 
@@ -2624,8 +3019,8 @@
 
 
 	.shop__goods__card
-		width: 330px
-		height: 550px
+		width: 40%
+		height: auto
 	
 	.modal-content
 		margin: 5% 3%
@@ -3025,19 +3420,6 @@
 		text-align: center
 		text-transform: uppercase
 
-	.wish__list__labels
-		margin-top: 120px
-
-	.wish__lists__items
-		width: 1565px
-		margin: 0 auto
-
-	.wish__lists__item
-		display: flex
-		height: 230px
-		align-items: center
-		border-bottom: 1px solid #cccccc
-
 	.wish__lists__item__delete
 		display: flex
 		justify-content: center
@@ -3050,44 +3432,6 @@
 
 	.wish__lists__item__checkout__btn
 		width: 70%
-
-	.wish__lists__item__img
-		display: flex
-		justify-content: center
-		align-items: center
-		width: 160px
-		height: 230px
-
-	.wish__lists__item__name
-		display: flex
-		align-items: center
-		width: 530px
-		height: 230px
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 1.5625em
-
-	.wish__lists__item__price
-		display: flex
-		align-items: center
-		width: 200px
-		height: 230px
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 1.5625em
-
-	.wish__lists__item__status
-		display: flex
-		align-items: center
-		width: 200px
-		height: 230px
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 1.5625em
-
-	.wish__lists__item__checkout
-		display: flex
-		width: 322px
-		justify-content: center
-		align-items: center
-		height: 230px
 
 	.wish__lists__item__checkout__mob
 		width: 100%
@@ -3105,64 +3449,6 @@
 		&:hover
 			cursor: pointer
 
-	.wish__lists__item__delete__cross
-		width: 30px
-		height: 30px
-		border-radius: 50%
-		border: 1px solid #cccccc
-		position: relative
-		&:hover
-			cursor: pointer
-		&:before
-			content: ''
-			width: 20px
-			border: 1px solid #cccccc
-			top: 13px
-			right: 4px
-			position: absolute
-			transform: rotate(-45deg)
-		&:after
-			content: ''
-			width: 20px
-			border: 1px solid #cccccc
-			top: 13px
-			right: 4px
-			position: absolute
-			transform: rotate(45deg)
-
-	.wish__list__labels__delete
-		width: 100px
-
-	.wish__list__labels__img
-		width: 160px
-
-	.wish__list__labels__name
-		width: 530px
-		font-size: 1.125em
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		text-transform: uppercase
-		display: flex
-		align-items: center
-
-	.wish__list__labels__price
-		width: 200px
-		font-size: 1.125em
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		text-transform: uppercase
-		display: flex
-		align-items: center
-
-	.wish__list__labels__status
-		width: 200px
-		font-size: 1.125em
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		text-transform: uppercase
-		display: flex
-		align-items: center
-
-	.wish__list__labels__checkout
-		width: 322px
-
 	.recently__viewed
 		margin-top: 150px
 
@@ -3171,222 +3457,6 @@
 		font-size: 2.1875em
 		text-align: center
 		text-transform: uppercase
-
-	.recently__viewed__items
-		width: 1565px
-		margin: 120px auto 0
-
-	.recently__viewed__items__wrap
-		margin: 0 -15px
-		display: flex
-
-	.recently__viewed__item
-		width: 200px
-		height: auto
-		margin: 15px
-
-	.checkout
-		margin-bottom: 140px
-
-	.checkout__title
-    	margin-top: 140px
-    	text-align: center
-    	font-size: 2.5em
-    	font-family: "FuturaBook", "Arial", "sans-serif"
-    	text-transform: uppercase
-
-	.checkout__sign__in
-		margin-top: 70px
-		text-align: center
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 2.5em
-
-	.checkout__sign__in__img
-		margin-right: 15px
-
-	.checkout__form
-		display: flex
-		justify-content: space-between
-
-	.checkout__form__blank
-		margin-top: 30px
-		min-height: 200px
-		input
-			color: #9A9898
-
-	.checkout__form__view
-		min-height: 200px
-		border: 1px solid #9A9898
-
-	.checkout__form__blank__title
-		margin-top: 150px
-		padding: 0 130px
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 2.5em
-		text-transform: uppercase
-
-	.checkout__form__blank__form
-		display: flex
-		justify-content: space-between
-		input
-			font-family: "FuturaMedium", "Arial", "sans-serif"
-			font-size: 1.25em
-			border: none
-			text-transform: uppercase
-			height: 65px
-			border-bottom: 2px solid #9A9898
-			&::placeholder
-				color: #9A9898
-
-	.checkout__form__blank__form__create__additional_information
-		margin-top: 50px
-		input
-			width: 100%
-
-	.checkout__form__blank__form__fio
-		display: flex
-		justify-content: space-between
-		input
-			width: 48%
-			margin-bottom: 35px
-
-	.checkout__form__blank__form__other
-		input
-			width: 100%
-			margin-bottom: 35px
-
-	.checkout__form__blank__form__create__account
-		label
-			font-family: "FuturaMedium", "Arial", "sans-serif"
-			font-size: 1.25em
-			text-transform: uppercase
-			color: #9A9898
-			display: inline-block
-		input
-			display: none
-			&:checked + i:before
-				transform: rotate(45deg) scale(1)
-				transition: all 0.2s ease-in-out
-		i
-			display: inline-block
-			width: 25px
-			height: 25px
-			padding: 5px
-			border: 2px solid #9A9898
-			margin-right: 20px
-			position: relative
-			&:before
-				content: ''
-				position: absolute
-				width: 7px
-				height: 12px
-				top: 4px
-				left: 7px
-				border-bottom: 2px solid #9A9898
-				border-right: 2px solid #9A9898
-				transform:  rotate(45deg) scale(0)
-				transition: all 0.2s ease-in-out
-
-	.checkout__form__view
-		padding: 30px 65px
-
-	.checkout__form__view__label
-		display: flex
-		justify-content: space-between
-		height: 80px
-		align-items: center
-		border-bottom: 2px solid #9A9898
-		font-family: "FuturaMedium", "Arial", "sans-serif"
-		font-size: 1.25em
-		text-transform: uppercase
-		font-weight: 800
-
-	.checkout__form__view__label__product
-		width: 55%
-
-	.checkout__form__view__item
-		display: flex
-		justify-content: space-between
-		padding: 35px 0
-		font-family: "FuturaLight", "Arial", "sans-serif"
-		font-size: 1.25em
-		text-transform: uppercase
-		border-bottom: 2px solid #9A9898
-		p + p
-			margin-top: 10px
-
-	.checkout__form__view__item__name
-		width: 55%
-
-	.checkout__form__view__subtotal
-		border-bottom: none
-
-	.checkout__form__view__coupon
-		margin-top: 60px
-		a
-			color: #DEDEDE
-			font-family: "FuturaDemi", "Arial", "sans-serif"
-			font-size: 1.25em
-			text-transform: uppercase
-			text-decoration: underline
-
-	.checkout__form__view__total
-		margin-top: 70px
-		text-align: right
-		font-family: "FuturaDemi", "Arial", "sans-serif"
-		font-size: 1.5625em
-		color: #000000
-		text-transform: uppercase
-
-	.checkout__form__view__check__payment
-		margin-top: 30px
-		label
-			font-family: "FuturaMedium", "Arial", "sans-serif"
-			font-size: 1.25em
-			text-transform: uppercase
-			color: #000000
-			display: flex
-			align-items: center
-		input
-			display: none
-			&:checked + i:before
-				transform: rotate(45deg) scale(1)
-				transition: all 0.2s ease-in-out
-		i
-			display: inline-block
-			width: 20px
-			height: 20px
-			border-radius: 50%
-			border: 2px solid #9A9898
-			margin-right: 10px
-			position: relative
-			padding: 2px
-			&:before
-				content: ''
-				position: absolute
-				border-radius: 50%
-				width: 12px
-				height: 12px
-				background: #9A9898
-				transform:  rotate(45deg) scale(0)
-				transition: all 0.2s ease-in-out
-
-	.checkout__form__view__check__tooltip
-		margin-top: 30px
-		font-family: "FuturaLight", "Arial", "sans-serif"
-		font-size: 1.5625em
-		color: #000000
-
-	.checkout__form__view__btn__submit
-		width: 230px
-		height: 55px
-		font-family: "FuturaBook", "Arial", "sans-serif"
-		font-size: 1.5625em
-		color: #000000
-		text-transform: uppercase
-		margin-top: 70px
-		&:hover
-			cursor: pointer
 
 	.cart__body
 		padding: 20px 20px 0
