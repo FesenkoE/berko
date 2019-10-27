@@ -44,7 +44,7 @@
 
 .banner
   background-color: $mainC1
-  font-family: "FuturaLight"
+  font-family: "FuturaLight", "Arial", "sans-serif"
   &__label
     text-align: center
     padding: 20px 0
@@ -64,7 +64,7 @@
       margin-left: 50px
     li
       color: #0a0a0a
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 2.188em
       &:hover
         cursor: pointer
@@ -79,7 +79,7 @@
   &__tools
     a
       color: #000000
-      margin-left: 50px
+      margin-right: 50px
     @include flex($jc: flex-end, $ai: center)
   &__search
     @include flex()
@@ -89,7 +89,7 @@
       border-bottom: 1px solid #0a0a0a
       font-size: 1.563em
       margin-left: 75px
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
   &__like
     position: relative
   &__cart
@@ -125,7 +125,6 @@
   transition: .2s
 
 .fix
-  //@include flex($jc: space-between, $ai: center)
   position: fixed
   z-index: 99
   width: 100%
@@ -147,7 +146,7 @@
     &-item
     &-title
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.625em
       text-transform: uppercase
     &-list
@@ -155,7 +154,7 @@
       & li
         & a
           color: #000000
-          font-family: "FuturaBook"
+          font-family: "FuturaBook", "Arial", "sans-serif"
           font-size: 1.250em
       & li + li
         padding-top: 15px
@@ -163,7 +162,7 @@
     @include flex($jc: flex-end, $ai: center)
 
 .menu-shop__categories-item + .menu-shop__categories-item
-  margin-left: 110px
+  margin-right: 110px
 
 // ============================
 
@@ -179,7 +178,7 @@
     &-item
     &-title
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.625em
       text-transform: uppercase
     &-list
@@ -187,7 +186,7 @@
       & li
         & a
           color: #000000
-          font-family: "FuturaBook"
+          font-family: "FuturaBook", "Arial", "sans-serif"
           font-size: 1.250em
       & li + li
         padding-top: 15px
@@ -202,8 +201,8 @@
 
 #mobile-menu
   position: fixed
-  transform: translateX(-100%)
-  left: 0
+  transform: translateX(100%)
+  right: 0
   z-index: 999
   display: block
   transition: .5s
@@ -221,7 +220,7 @@
   height: 100%
   opacity: 0
   top: 0
-  left: 0
+  right: 0
   transition: .2s
 
 .mobile-menu
@@ -248,7 +247,7 @@
         width: auto
     &-name
       font-size: 1em
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       @include flex($ai: center)
       & i
         padding-left: 10px
@@ -267,8 +266,8 @@
 
 #cart
   position: fixed
-  transform: translateX(100%)
-  right: 0
+  transform: translateX(-100%)
+  left: 0
   z-index: 999
   display: block
   transition: .5s
@@ -286,7 +285,7 @@
   height: 100%
   opacity: 0
   top: 0
-  left: 0
+  right: 0
   transition: .2s
 
 .cart
@@ -302,7 +301,7 @@
       padding: 40px 50px 0
   &__title
     color: #000000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 2.500em
     text-transform: uppercase
   &__close
@@ -325,21 +324,21 @@
       width: 100%
     &-title
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.563em
     &-color
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.125em
     &-size
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.250em
       &_number
     &-amount
       margin: 40px 0 20px
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.250em
       @include flex($ai: center)
       &_minus
@@ -358,12 +357,12 @@
   &__order
     &-note
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.125em
     &-calc
       padding-top: 15px
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.125em
   &__button
     width: 100%
@@ -373,7 +372,7 @@
     @include flex($ai: center, $jc: center)
     &-title
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.563em
       text-transform: uppercase
     &-dot
@@ -381,7 +380,7 @@
       margin: 0 10px
     &-price
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.563em
 
 // ============================
@@ -396,7 +395,7 @@
   display: none
   position: fixed
   top: 0
-  left: 0
+  right: 0
   width: 100%
   height: 100%
   background: #000
@@ -431,7 +430,7 @@
   &__close
     position: absolute
     top: 0
-    right: 0
+    left: 0
     margin: 20px
     font-size: 1.563em
     color: #959594
@@ -441,7 +440,7 @@
       color: #000
   &__wrap
     color: #000000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 1em
     font-weight: 300
     display: grid
@@ -478,39 +477,39 @@
     &_a
       position: absolute
       bottom: -18px
-      left: 60px
+      right: 60px
     &_c
       position: absolute
       top: 190px
-      left: -50px
+      right: -50px
     &_d
       position: absolute
       top: 240px
-      left: -50px
+      right: -50px
     &_e
       position: absolute
       bottom: -18px
-      right: -30px
+      left: -30px
     &_f
       position: absolute
       top: 120px
-      left: -50px
+      right: -50px
     &_ff
       position: absolute
       top: 140px
-      left: -50px
+      right: -50px
     &_g
       position: absolute
       top: 155px
-      left: -50px
+      right: -50px
     &_h
       position: absolute
       bottom: -18px
-      right: 37px
+      left: 37px
     &_i
       position: absolute
       bottom: -18px
-      left: -12px
+      right: -12px
   &__description
     text-align: left
     &-label
@@ -539,7 +538,7 @@
 .search__in__slider
   position: absolute
   top: 50px
-  right: 50px
+  left: 50px
   margin: 0!important
   z-index: 1
 
@@ -625,14 +624,14 @@
       text-align: center
     &-title
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 2.500em
       margin-bottom: 50px
     &-link
       padding: 25px 35px
       background-color: $mainC1
       color: #070909
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.625em
 
 .new-collection
@@ -656,7 +655,7 @@
       height: 1px
       width: 13%
       top: 50%
-      left: 0
+      right: 0
     &::after
       position: absolute
       content: ''
@@ -664,7 +663,7 @@
       height: 1px
       width: 13%
       top: 50%
-      right: 0
+      left: 0
   &__description
     padding-top: 20px
     font-size: 1.875em
@@ -674,7 +673,7 @@
   padding: 120px 0
   &__title
     color: #000000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 2.250em
     text-transform: uppercase
     text-align: center
@@ -702,12 +701,12 @@
       &_prev
         position: absolute
         top: calc( 50% - 63px )
-        left: -5%
+        right: -5%
         font-size: 3.438em
       &_next
         position: absolute
         top: calc( 50% - 63px )
-        right: -5%
+        left: -5%
         font-size: 3.438em
   &__button
     padding-top: 110px
@@ -716,7 +715,7 @@
       background-color: $mainC1
       padding: 25px 100px
       color: #070909
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.625em
 
 .featured__slider-img-hover
@@ -726,7 +725,7 @@
   opacity: 0
   z-index: 999
   top: 0
-  left: 0
+  right: 0
   transition: all 0.2s ease-in-out
   img
     width: 100%
@@ -738,7 +737,7 @@
   position: absolute
   opacity: 1
   top: 15px
-  right: 20px
+  left: 20px
   z-index: 3
   width: 25px
   height: 14px
@@ -799,7 +798,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        left: 2%
+        right: 2%
         z-index: 200
         font-size: 3.438em
       &_next
@@ -812,7 +811,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        right: 2%
+        left: 2%
         z-index: 200
         font-size: 3.438em
     &-item
@@ -833,7 +832,7 @@
       position: absolute
       top: 0
       color: #fff
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.375em
       transition: .4s
     &-label
@@ -853,7 +852,7 @@
     color: #000
     font-size: 2.500em
     text-transform: uppercase
-    font-family: "FuturaMedium"
+    font-family: "FuturaMedium", "Arial", "sans-serif"
   &__input
     & input
       margin-top: 160px
@@ -862,12 +861,12 @@
       border: none
       color: #000
       font-size: 1.375em
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       border-bottom: 1px solid #000
       &::placeholder
         color: #000
         font-size: 1.375em
-        font-family: "FuturaMedium"
+        font-family: "FuturaMedium", "Arial", "sans-serif"
   &__button
     margin-top: 160px
     @include flex($jc: center)
@@ -876,7 +875,7 @@
       padding: 25px 100px
       background-color: $mainC1
       color: #070909
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.625em
       text-transform: uppercase
 
@@ -890,10 +889,10 @@
     padding: 40px 0
     &-contact
       & a
-        margin: 0 20px 0 45px
+        margin: 0 45px 0 20px
     &-links
       & a
-        margin: 0 20px 0 45px
+        margin: 0 45px 0 20px
   &__info
     padding: 40px 0 55px
     display: grid
@@ -901,7 +900,7 @@
     grid-template-rows: 1fr
   &__help
     color: #050000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 1.625em
     &-label
       padding-top: 70px
@@ -910,7 +909,7 @@
         display: none
   &__faq
     padding: 0 15%
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 1.375em
     &-title
       color: #000000
@@ -951,10 +950,7 @@
         &::placeholder
           color: #000
           font-size: 1em
-          font-family: "FuturaMedium"
-      &-icon
-//position: absolute
-//right: 0
+          font-family: "FuturaMedium", "Arial", "sans-serif"
 
 // ============================
 // blog
@@ -966,7 +962,7 @@
   &__title
     text-align: center
     color: #000000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 2.500em
     text-transform: uppercase
   &__grid
@@ -983,26 +979,26 @@
     &-title
       margin-top: 110px
       color: #0b0b0b
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 2.500em
     &-description
       margin-top: 60px
       color: #494949
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.250em
   &__categories
     margin-top: 135px
     &-item
       & p
         color: #000000
-        font-family: "FuturaMedium"
+        font-family: "FuturaMedium", "Arial", "sans-serif"
         font-size: 1.250em
         text-transform: uppercase
       & ul
         margin-top: 40px
       & li
         color: #000000
-        font-family: "FuturaBook"
+        font-family: "FuturaBook", "Arial", "sans-serif"
         font-size: 1.250em
       & li + li
         padding-top: 20px
@@ -1013,17 +1009,17 @@
       border-bottom: 1px solid #dddddd
       color: #a7a4a4
       font-size: 1.125em
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       width: 95%
       &::placeholder
         color: #a7a4a4
         font-size: 1.125em
-        font-family: "FuturaBook"
+        font-family: "FuturaBook", "Arial", "sans-serif"
   &__posts
     margin-top: 35px
     & p
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.250em
       text-transform: uppercase
     & li
@@ -1032,12 +1028,12 @@
       padding-top: 10px
       padding-left: 35px
       color: #dddddd
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 14px
       text-transform: uppercase
     & a
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.250em
     & i
       color: #e7dfd2
@@ -1061,7 +1057,7 @@
   &__title
     margin-top: 90px
     color: #000000
-    font-family: "FuturaBook"
+    font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 2.500em
     text-transform: uppercase
     text-align: center
@@ -1070,10 +1066,10 @@
     display: grid
     grid-template-columns: 2fr 3fr 1fr
   &__popular
-    margin-left: 80px
+    margin-right: 80px
     &-label
       color: #000000
-      font-family: "FuturaBook"
+      font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 1.250em
       font-weight: 300
       text-decoration: underline
@@ -1086,12 +1082,12 @@
       list-style-type: decimal-leading-zero
       & li
         color: #000000
-        font-family: "FuturaBook"
+        font-family: "FuturaBook", "Arial", "sans-serif"
         font-size: 1.563em
     &-label
       margin-top: 135px
       color: #000000
-      font-family: "FuturaMedium"
+      font-family: "FuturaMedium", "Arial", "sans-serif"
       font-size: 1.563em
       text-transform: uppercase
   &__answer
@@ -1102,12 +1098,12 @@
         padding-top: 40px
       & li
         color: #dedede
-        font-family: "FuturaDemi"
+        font-family: "FuturaDemi", "Arial", "sans-serif"
         font-size: 1.563em
         & p
           padding-top: 45px
           color: #000000
-          font-family: "FuturaBook"
+          font-family: "FuturaBook", "Arial", "sans-serif"
           font-size: 1.250em
 
 .navbar
@@ -1126,7 +1122,7 @@
 
 .shop__menu
   width: 250px
-  padding-left: 55px
+  padding-right: 55px
   p
     font-family: "FuturaBook", "Arial", "sans-serif"
     font-size: 1.625em
@@ -1142,7 +1138,7 @@
   margin-bottom: 10px
 
 .shop__menu__list__item_active
-  margin-left: 15px
+  margin-right: 15px
   position: relative
   font-weight: bold
   &:after
@@ -1154,7 +1150,7 @@
     background-color: #000000
     position: absolute
     top: 8px
-    left: -12px
+    right: -12px
 
 .wrap
   margin-left: -20px
@@ -1162,7 +1158,6 @@
 
 .shop__goods
   width: 86%
-
 
 .shop__goods__list
   display: flex
@@ -1192,7 +1187,7 @@
 .shop__goods__item__img__icon__view
   position: absolute
   top: 20px
-  right: 15px
+  left: 15px
   width: 25px
   height: 14px
   opacity: 0
@@ -1236,7 +1231,7 @@
 .like-empty
   position: absolute
   top: -5px
-  right: 25px
+  left: 25px
   display: block
   width: 17px
   height: 15px
@@ -1249,7 +1244,7 @@
 .like-filled
   position: absolute
   top: -5px
-  right: 25px
+  left: 25px
   width: 17px
   height: 15px
   display: none
@@ -1318,7 +1313,7 @@
   border-bottom: 1px solid #909090
   transform: rotate(-45deg)
   display: block
-  margin-left: 10px
+  margin-right: 10px
   margin-bottom: 10px
 
 .sort__list
@@ -1329,7 +1324,7 @@
   padding: 50px 40px
   clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
   top: -362px
-  right: -56px
+  left: -56px
   background: #ffffff
 
 .content
@@ -1362,14 +1357,11 @@
 .goods-card__slider
   display: flex
   width: 1030px
-  //min-height: 994px
   justify-content: space-between
   align-items: center
 
 .slider-for
   div
-    //width: 760px
-    //height: 940px
     img
       width: 100%
       height: 100%
@@ -1381,8 +1373,6 @@
     height: 760px !important
 
 .slider-nav__item
-  //width: 160px!important
-  //height: 200px!important
   margin-bottom: 40px
 
 .goods-card__characters
@@ -1445,19 +1435,18 @@
   transform: rotate(-135deg)!important
   transition: all 0.2s ease-in-out
 
-
 .card__arrow_down
   position: absolute
   display: block
   width: 10px
   height: 10px
   border-bottom: 1px solid #767474
-  border-left: 1px solid #767474
+  border-right: 1px solid #767474
   transition: all 0.2s ease-in-out
   transform: rotate(-45deg)
-  margin-left: 20px
+  margin-right: 20px
   top: 7px
-  left: 110px
+  right: 110px
 
 .characters__more-details
   margin-top: 30px
@@ -1472,11 +1461,11 @@
   width: 10px
   height: 10px
   border-bottom: 1px solid #767474
-  border-left: 1px solid #767474
+  border-right: 1px solid #767474
   transform: rotate(-135deg)
-  margin-left: 20px
+  margin-right: 20px
   top: 8px
-  right: 0
+  left: 0
 
 .characters__size
   display: flex
@@ -1535,10 +1524,10 @@
   font-size: 24px
 
 .characters__share__instagram
-  margin-left: 35px
+  margin-right: 35px
 
 .characters__share__facebook
-  margin-left: 35px
+  margin-right: 35px
 
 .characters__size__unavailable
   margin-top: 50px
@@ -1548,7 +1537,7 @@
 .characters__size__contact__us
   margin-top: 15px
   span
-    margin-right: 20px
+    margin-left: 20px
 
 .btn-add-to-bag
   display: block
@@ -1614,7 +1603,7 @@
 .card__to__complete__item__quickview, .card__also__like__item__quickview, .viewed__recently__slider__item__quickview
   position: absolute
   top: 20px
-  right: 20px
+  left: 20px
   opacity: 0
   transition: all 0.2s ease-in-out
 
@@ -1676,7 +1665,7 @@
 .btn__view__more
   width: 300px
   height: 70px
-  margin-right: 115px
+  margin-left: 115px
   font-family: "FuturaMedium", "Arial", "sans-serif"
   font-size: 1.625em
   &:hover
@@ -1724,7 +1713,7 @@
 
 .body__search
   display: flex
-  margin: 50px 50px 0 0
+  margin: 50px 0 0 50px
   justify-content: flex-end
 
 .register__center
@@ -1873,10 +1862,10 @@
   text-transform: uppercase
 
 .article__content__share__instagram
-  margin-left: 35px
+  margin-right: 35px
 
 .article__content__share__facebook
-  margin-left: 35px
+  margin-right: 35px
 
 .leave__reply
   margin-top: 140px
@@ -1975,7 +1964,7 @@
   input
     border: none
     text-transform: uppercase
-    margin-left: 7px
+    margin-right: 7px
     letter-spacing: 3px
 
 .search__input__mob__close
@@ -1983,7 +1972,7 @@
   font-size: 3em
   position: absolute
   top: -5px
-  right: 10px
+  left: 10px
 
 .header__search__mob
   display: none
@@ -1995,7 +1984,7 @@
 .content_mob
   position: absolute
   top: 0
-  left: 0
+  right: 0
 
 .shop__menu_mob
   display: none
@@ -2059,7 +2048,7 @@
     width: 20px
     border: 1px solid #cccccc
     top: 13px
-    right: 4px
+    left: 4px
     position: absolute
     transform: rotate(-45deg)
   &:after
@@ -2067,7 +2056,7 @@
     width: 20px
     border: 1px solid #cccccc
     top: 13px
-    right: 4px
+    left: 4px
     position: absolute
     transform: rotate(45deg)
 
@@ -2257,7 +2246,7 @@
     height: 25px
     padding: 5px
     border: 2px solid #9A9898
-    margin-right: 20px
+    margin-left: 20px
     position: relative
     &:before
       content: ''
@@ -2265,9 +2254,9 @@
       width: 7px
       height: 12px
       top: 4px
-      left: 7px
+      right: 7px
       border-bottom: 2px solid #9A9898
-      border-right: 2px solid #9A9898
+      border-left: 2px solid #9A9898
       transform:  rotate(45deg) scale(0)
       transition: all 0.2s ease-in-out
 
@@ -2342,7 +2331,7 @@
     height: 20px
     border-radius: 50%
     border: 2px solid #9A9898
-    margin-right: 10px
+    margin-left: 10px
     position: relative
     padding: 2px
     &:before
@@ -2389,7 +2378,7 @@
   font-size: 2.5em
 
 .checkout__sign__in__img
-  margin-right: 15px
+  margin-left: 15px
 
 .checkout__form
   display: flex
@@ -2457,17 +2446,17 @@
 
   .header__like::before
     top: 14%
-    left: 28%
+    right: 28%
     font-size: 1.1em
 
   .header__cart::before
     top: 20%
-    left: 25%
+    right: 25%
     font-size: 1.1em
 
 
   .modal-size__img
-    padding: 0 40px 0 100px
+    padding: 0 100px 0 40px
 
   .modal-content
     padding: 60px
@@ -2594,7 +2583,7 @@
     height: auto
 
   .btn__view__more
-    margin-right: 0
+    margin-left: 0
     width: 100%
 
   .view__more
@@ -2613,7 +2602,6 @@
 
   .goods-card__characters
     width: 100%
-
 
   .characters__buy__amount
     margin: 90px auto 0
@@ -2663,11 +2651,11 @@
 
   .header__cart__count
     top: 11px
-    left: 9px
+    right: 9px
 
   .header__like__count
     top: 7px
-    left: 11px
+    right: 11px
 
   .header__tools img
     width: 80%
@@ -2701,7 +2689,7 @@
     width: 80%
 
   .header__navigation li + li
-    margin-left: 25px
+    margin-right: 25px
 
   .header__navigation li
     font-size: 1.4em
@@ -2715,14 +2703,14 @@
     font-size: 2em
 
   .header__search input
-    margin-left: 5px
+    margin-right: 5px
     width: 100%
 
   .main
     &__arrow
       position: absolute
       bottom: -20px
-      left: calc( 50% - 20px )
+      right: calc( 50% - 20px )
       width: 40px
       height: 40px
       &::before
@@ -2777,13 +2765,11 @@
     text-transform: uppercase
     margin-bottom: 50px
 
-
   .recently__viewed
     margin-top: 100px
 
   .recently__viewed__item
     margin: 15px
-
 
   .recently__viewed__item
     height: auto
@@ -2865,7 +2851,7 @@
     grid-template-columns: 1fr 2fr
 
   .faq__popular
-    margin-left: 0
+    margin-right: 0
 
   .blog__categories
     display: block
@@ -2885,7 +2871,7 @@
     padding: 50px 40px
     clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
     top: -350px
-    left: 0
+    right: 0
     background: #ffffff
 
   .blog__category__mob
@@ -2948,7 +2934,7 @@
     margin-top: 5px
 
   .header__tools a
-    margin-left: 20px
+    margin-right: 20px
 
   .header__tools img
     width: 20px
@@ -2957,11 +2943,11 @@
 
   .header__cart__count
     top: 8px
-    left: 6px
+    right: 6px
 
   .header__like__count
     top: 5px
-    left: 8px
+    right: 8px
 
   .viewed__recently__slider__item
     height: auto
@@ -2980,7 +2966,7 @@
     height: auto
 
   .btn__view__more
-    margin-right: 0
+    margin-left: 0
     width: 100%
 
   .view__more
@@ -3036,7 +3022,6 @@
 
   .header__navigation-button
     display: flex
-
 
   .subscribe__wrap
     padding: 0 15%
@@ -3131,7 +3116,6 @@
     color: #cccccc
     margin-top: 8px
 
-
   .blog__grid
     grid-template-columns: 1fr
 
@@ -3158,7 +3142,7 @@
     height: auto
 
   .btn__view__more
-    margin-right: 0
+    margin-left: 0
     width: 100%
 
   .view__more
@@ -3207,7 +3191,7 @@
     width: 270px
     padding: 50px 40px
     top: -498px
-    left: 0
+    right: 0
     background: #ffffff
     clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
 
@@ -3256,7 +3240,7 @@
     margin-top: 5px
 
   .header__tools a
-    margin-left: 20px
+    margin-right: 20px
 
   .header__tools img
     width: 20px
@@ -3282,12 +3266,11 @@
     margin-top: 5px
 
   .header__tools a
-    margin-left: 30px
+    margin-right: 30px
 
   .header__tools img
     width: 20px
     height: 20px
-
 
   .header__search__mob
     display: block
@@ -3321,7 +3304,7 @@
     justify-content: flex-end
 
   .header__cart
-    margin-left: 20px
+    margin-right: 20px
 
   .header__cart::before
     top: 27%
@@ -3394,7 +3377,7 @@
     align-items: flex-start
 
   .footer__news-text
-    text-align: left
+    text-align: right
     padding-top: 20px
     width: 100%
 
@@ -3637,7 +3620,7 @@
     margin-top: 5px
 
   .header__tools a
-    margin-left: 20px
+    margin-right: 20px
 
   .header__tools img
     width: 20px
@@ -3693,7 +3676,7 @@
     width: 270px
     padding: 50px 40px
     top: -498px
-    left: 0
+    right: 0
     background: #ffffff
     clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
 
@@ -3770,7 +3753,7 @@
 
   .btn__view__more
     width: 100%
-    margin-right: 0
+    margin-left: 0
 
   .card__to__complete__slider
     margin-top: 30px
@@ -3888,7 +3871,7 @@
     padding: 50px 40px
     clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
     top: -350px
-    left: -175px
+    right: -175px
     background: #ffffff
 
   .mob
@@ -3906,7 +3889,7 @@
     display: none
 
   .faq__info-list
-    padding-left: 35px
+    padding-right: 35px
     li
       font-size: 22px
       margin-bottom: 15px
@@ -3918,11 +3901,11 @@
 
   .faq__answer-list
     margin-top: 40px
-    padding-left: 35px
+    padding-right: 35px
     font-size: 12px
     li
       p
-        margin-left: -30px
+        margin-right: -30px
         padding-top: 20px
         font-size: 18px
 
@@ -4224,7 +4207,7 @@
     margin-bottom: 25px
     a
       color: inherit
-      margin-right: 30px
+      margin-left: 30px
 
   .cart__item-actions
     margin-top: 45px
