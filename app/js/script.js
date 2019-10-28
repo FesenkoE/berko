@@ -21,6 +21,36 @@ $(document).ready(function () {
         slidesToScroll:1,
         dots:true,
         rtl: dir,
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.card__also__like__items__slider').slick({
@@ -33,6 +63,36 @@ $(document).ready(function () {
         slidesToScroll:1,
         dots:true,
         rtl: dir,
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.card__to__complete__slider').slick({
@@ -45,6 +105,36 @@ $(document).ready(function () {
         slidesToScroll:1,
         dots:true,
         rtl: dir,
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.goods-card__slider__mob').slick({
@@ -89,6 +179,27 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
             }
         ]
     });
@@ -104,9 +215,8 @@ $(document).ready(function () {
     $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        // rtl: dir,
         asNavFor: '.slider-for',
-        arrows: true,
+        arrows: false,
         centerMode: true,
         focusOnSelect: true,
         vertical: true,

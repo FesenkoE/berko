@@ -61,7 +61,7 @@
   &__navigation
     @include flex($jc: flex-start, $ai: center)
     li + li
-      margin-left: 50px
+      margin-right: 50px
     li
       color: #0a0a0a
       font-family: "FuturaBook", "Arial", "sans-serif"
@@ -75,6 +75,7 @@
   &__logo
     @include flex($jc: center, $ai: center)
     & img
+  //width: 100%
   &__tools
     a
       color: #000000
@@ -82,13 +83,14 @@
     @include flex($jc: flex-end, $ai: center)
   &__search
     @include flex()
+    flex-direction: row-reverse
     & input
       background-color: transparent
       border: none
       border-bottom: 1px solid #0a0a0a
       font-size: 1.563em
-      margin-left: 75px
-      font-family: "FuturaBook"
+      margin-right: 10px
+      font-family: "FuturaBook", "Arial", "sans-serif"
   &__like
     position: relative
   &__cart
@@ -97,12 +99,12 @@
 .header__like__count
   position: absolute
   top: 8px
-  right: 14px
+  left: 14px
 
 .header__cart__count
   position: absolute
   top: 13px
-  right: 12px
+  left: 12px
 
 .header .active
   background-color: #fff
@@ -124,7 +126,6 @@
   transition: .2s
 
 .fix
-  //@include flex($jc: space-between, $ai: center)
   position: fixed
   z-index: 99
   width: 100%
@@ -154,7 +155,7 @@
       & li
         & a
           color: #000000
-          font-family: "FuturaBook"
+          font-family: "FuturaBook", "Arial", "sans-serif"
           font-size: 1.250em
       & li + li
         padding-top: 15px
@@ -250,7 +251,7 @@
       font-family: "FuturaMedium", "Arial", "sans-serif"
       @include flex($ai: center)
       & i
-        padding-right: 10px
+        padding-left: 10px
   &__list
     color: #000
     & li
@@ -320,7 +321,7 @@
   &__item
     &-img
     &-info
-      padding-right: 20px
+      padding-left: 20px
       width: 100%
     &-title
       color: #000000
@@ -446,7 +447,7 @@
     display: grid
     grid-template-columns: 1fr 1fr 1fr
   &__info
-    text-align: right
+    text-align: left
     &-row
       width: 100%
       height: 1px
@@ -511,7 +512,7 @@
       bottom: -18px
       right: -12px
   &__description
-    text-align: right
+    text-align: left
     &-label
     &-list
       padding-top: 25px
@@ -567,7 +568,7 @@
       width: 5px
       background-color: #000000
       transform: rotate(-45deg)
-      right: 25px
+      left: 25px
       top: calc( 55% - 20px )
     &::after
       position: absolute
@@ -576,7 +577,7 @@
       width: 5px
       background-color: #000000
       transform: rotate(45deg)
-      left: 25px
+      right: 25px
       top: calc( 55% - 20px )
 
 .about-us
@@ -706,7 +707,7 @@
       &_next
         position: absolute
         top: calc( 50% - 63px )
-        left: -5%
+        right: -5%
         font-size: 3.438em
   &__button
     padding-top: 110px
@@ -760,7 +761,6 @@
 
 .featured__slider__options
   display: flex
-  flex-direction: row-reverse
   justify-content: space-between
   height: 90px
   align-items: center
@@ -799,7 +799,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        right: 2%
+        left: 2%
         z-index: 200
         font-size: 3.438em
       &_next
@@ -812,7 +812,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        left: 2%
+        right: 2%
         z-index: 200
         font-size: 3.438em
     &-item
@@ -1027,7 +1027,7 @@
       padding-top: 20px
     & li div
       padding-top: 10px
-      padding-right: 35px
+      padding-left: 35px
       color: #dddddd
       font-family: "FuturaBook", "Arial", "sans-serif"
       font-size: 14px
@@ -1046,7 +1046,6 @@
   margin-top: 65px
   display: flex
   justify-content: space-between
-  flex-direction: row-reverse
 
 // ============================
 // faq
@@ -1115,7 +1114,6 @@
 .shop
   display: flex
   justify-content: space-between
-  flex-direction: row-reverse
 
 .shop__goods__title
   text-align: center
@@ -1162,10 +1160,8 @@
 .shop__goods
   width: 86%
 
-
 .shop__goods__list
   display: flex
-  flex-direction: row-reverse
   flex-wrap: wrap
   width: 101%
 
@@ -1205,7 +1201,6 @@
   display: flex
   justify-content: space-between
   align-items: center
-  flex-direction: row-reverse
 
 .shop__goods__item__name__text
   font-family: "FuturaLight", "Arial", "sans-serif"
@@ -1220,7 +1215,6 @@
   display: flex
   align-items: center
   justify-content: space-between
-  flex-direction: row-reverse
 
 .shop__goods__item__bag
   padding: 0 25px
@@ -1294,7 +1288,6 @@
   width: 100%
   height: 60px
   display: flex
-  flex-direction: row-reverse
   justify-content: flex-end
   border: 1px solid #cccccc
   position: sticky
@@ -1305,13 +1298,12 @@
   position: relative
   width: 175px
   display: flex
-  flex-direction: row-reverse
   justify-content: center
   align-items: center
   font-family: "FuturaLight", "Arial", "sans-serif"
   font-size: 1.125em
   text-transform: uppercase
-  border-left: 1px solid #cccccc
+  border-right: 1px solid #cccccc
   &:hover
     cursor: pointer
 
@@ -1322,7 +1314,7 @@
   border-bottom: 1px solid #909090
   transform: rotate(-45deg)
   display: block
-  margin-left: 10px
+  margin-right: 10px
   margin-bottom: 10px
 
 .sort__list
@@ -1331,9 +1323,9 @@
   width: 270px
   height: 320px
   padding: 50px 40px
-  clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
+  clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 100%, 15% 95%, 100% 95%, 100% 0)
   top: -362px
-  right: -56px
+  left: -56px
   background: #ffffff
 
 .content
@@ -1359,37 +1351,29 @@
 
 .goods-card
   display: flex
-  flex-direction: row-reverse
   justify-content: space-between
   margin-top: 120px
   padding: 0 110px
 
 .goods-card__slider
   display: flex
-  flex-direction: row-reverse
   width: 1030px
-  min-height: 994px
   justify-content: space-between
   align-items: center
 
 .slider-for
   div
-    width: 760px
-    height: 940px
     img
       width: 100%
       height: 100%
 
 .slider-nav
   width: 160px
-  margin-bottom: 0!important
   .slick-list
-    padding: 30px 0!important
-    height: 740px !important
+    padding: 38px 0!important
+    height: 760px !important
 
 .slider-nav__item
-  width: 160px!important
-  height: 200px!important
   margin-bottom: 40px
 
 .goods-card__characters
@@ -1451,7 +1435,6 @@
 .rotate-90
   transform: rotate(-135deg)!important
   transition: all 0.2s ease-in-out
-
 
 .card__arrow_down
   position: absolute
@@ -2020,7 +2003,12 @@
   display: none
 
 .goods-card__slider__mob
+  width: 100%
   display: none
+
+.goods-card__slider__mob__item
+  img
+    width: 100%
 
 .card__to__complete__slider
   display: none
@@ -2037,377 +2025,92 @@
 .recently__viewed__items__mob
   display: none
 
+.slider-for
+  width: calc(100% - 190px)
 
+.checkout__form__blank__form__for__input
+  width: 58%
 
-// ============================
-// MEDIA
-// ============================
-@for $i from 1 to length($mediaBp)
-  @media (max-width: nth($mediaBp, $i))
-    .container
-      max-width: calc(100% - 30px)
+.checkout__form__view
+  width: 39%
+  min-height: 200px
+  border: 1px solid #9A9898
 
-@media (max-width: nth($mediaBp, 2))
-
-  .shop__goods__card
-    margin-left: 18px
-    margin-right: 18px
-
-  .main-slider__slider img
-    width: 100%
-    height: auto
-
-  .header__search img
-    width: 36px
-
-  .header__search input
-    font-size: 1em
-
-  .header__like::before
-    top: 14%
-    right: 28%
-    font-size: 1.1em
-
-  .header__cart::before
-    top: 20%
-    right: 25%
-    font-size: 1.1em
-
-
-  .modal-size__img
-    padding: 0 100px 0 40px
-
-  .modal-content
-    padding: 60px
-
-  #cart
-    width: 34%
-
-@media (max-width: nth($mediaBp, 3))
-
-  .header__navigation li
-    font-size: 1.563em
-
-  .modal-size__wrap
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: 1fr 1fr
-
-  .modal-size__description
-    padding-top: 35px
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 2
-    grid-row-end: 2
-
-@media (max-width: nth($mediaBp, 4))
-
-  .main-slider__slider__item
-    height: auto
-
-  .footer__icons
-    padding: 10px 0
-
-  .footer__wrap
-    padding: 0
-
-  .subscribe__title
-    font-size: 2em
-
-  .featured__slider-name
-    font-size: 1em
-
-  .featured__slider__bag img
+.wish__lists__item__delete__cross
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  border: 1px solid #cccccc
+  position: relative
+  &:hover
+    cursor: pointer
+  &:before
+    content: ''
     width: 20px
-
-  .featured__slider__options
-    height: 70px
-
-  .featured__slider__price
-    margin-top: 5px
-
-  .header__search
-    width: 300px
-
-  html
-    font-size: 12px
-
-  .main-slider
-    height: auto
-
-  .header__cart__count
-    top: 11px
-    right: 9px
-
-  .header__like__count
-    top: 7px
-    right: 11px
-
-  .header__tools img
-    width: 80%
-
-  .modal-size__wrap
-    grid-template-columns: 1fr
-    grid-template-rows: 0.5fr 1fr 1fr
-
-  .modal-size__img
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 2
-    grid-row-end: 2
-    margin: 0 18%
-
-  .modal-size__description
-    padding-top: 35px
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 3
-    grid-row-end: 3
-
-  html
-    font-size: 14px
-
-  .header__search img
-    height: 30px
-    width: 30px
-
-  .header__logo img
-    width: 80%
-
-  .header__navigation li + li
-    margin-right: 25px
-
-  .header__navigation li
-    font-size: 1.4em
-
-  .follow__slider-item
-    margin: 0 15px
-
-  .follow__slider-controls_next, .follow__slider-controls_prev
-    height: 40px
-    width: 40px
-    font-size: 2em
-
-  .header__search input
-    margin-right: 5px
-    width: 100%
-
-  .main
-    &__arrow
-      position: absolute
-      bottom: -20px
-      left: calc( 50% - 20px )
-      width: 40px
-      height: 40px
-      &::before
-        position: absolute
-        content: ""
-        height: 20px
-        width: 5px
-        background-color: #000000
-        transform: rotate(45deg)
-        left: 23px
-        top: calc( 55% - 10px )
-      &::after
-        position: absolute
-        content: ""
-        height: 20px
-        width: 5px
-        background-color: #000000
-        transform: rotate(-45deg)
-        left: 23px
-        top: calc( 55% - 10px )
-
-  .follow__slider-block
-    padding: 15px 20px
-    font-size: 1.1em
-
-  #cart
-    width: 65%
-
-@media (max-width: nth($mediaBp, 5))
-
-  .shop__goods__card
-    width: 330px
-    height: 550px
-
-  .modal-content
-    margin: 5% 3%
-
-  .modal-size__img
-    margin: 0 30%
-
-  .modal-size__img
-    padding: 0 20px 0 20px
-
-  .header__navigation
-    display: none
-
-  .header__navigation-button
-    display: flex
-
-  .subscribe__wrap
-    padding: 0 15%
-
-  .subscribe__button
-    margin-top: 80px
-
-  .about-us
-    padding: 50px 0
-
-  .about-us__button
-    margin-top: 60px
-
-  .follow
-    padding: 60px 0
-
-  .follow__slider
-    margin-top: 80px
-
-  .featured
-    padding: 60px 0
-
-  .subscribe__input input
-    margin-top: 80px
-
-  #cart
-    width: 90%
-
-  .footer__icons-contact, .footer__icons-links
-    @include flex($jc: space-around)
-    width: 50%
-
-@media (max-width: nth($mediaBp, 6))
-
-  .shop__goods
-    width: 100%
-
-  .shop__menu
-    display: none
-
-  .modal-size__img
-    margin: 0 15%
-    padding: 0 35px 0 35px
-
-  .header__search img
-    display: none
-
-  .header__search input
-    display: none
-
-  .header__user
-    display: none
-
-  .header__like
-    display: none
-
-  .header__tools
-    justify-content: flex-end
-
-  .header__cart
-    margin-right: 20px
-
-  .header__cart::before
-    top: 27%
-
-  .categories
-    flex-direction: column
-    margin-right: 10px
-    margin-left: 10px
-
-  .categories__item-title
-    padding: 0 30px
-
-  .main-row
-    display: block
-
-  .new-collection
-    margin-top: 0
-
-  .new-collection img
-    content: url("../img/main/new-mob.png")
-
-  .help__title
-    padding-bottom: 10px
-    &::before
-      height: 0
-    &::after
-      height: 0
-
-  .help__description
-    border-top: 1px solid #000
-
-  .featured__slider
-    margin: 50px 15% 0
-
-  .featured__button
-    padding-top: 50px
-
-  .subscribe__wrap
-    padding: 0 10%
-
-  .about-us__description
-    padding: 70px 15% 0
-
-  .subscribe__input input
-    margin-top: 80px
-
-  .footer__wrap
-    padding: 0 10%
-
-  .footer__info
-    grid-template-columns:  1fr
-    grid-template-rows: repeat(3, 1fr)
-
-  .footer__help-label
-    display: none
-
-  .footer__info
-    padding: 20px 0 20px
-
-  .footer__faq
-    padding: 0 0
-
-  .footer__faq-list
-    padding-top: 20px
-
-  .footer__news-title
-    padding-top: 20px
-
-  .footer__news
-    align-items: flex-start
-
-  .footer__news-text
-    text-align: right
-    padding-top: 20px
-    width: 100%
-
-  .footer__news-input input
-    font-size: 0.7em
-
-  .footer__button
-    display: none
-
-  .footer__button_mob
-    display: block
-
-  .footer__help-label_mob
-    display: block
-
-.wish__list
-  min-height: calc(100vh - 662px)
-  padding: 150px 0
+    border: 1px solid #cccccc
+    top: 13px
+    left: 4px
+    position: absolute
+    transform: rotate(-45deg)
+  &:after
+    content: ''
+    width: 20px
+    border: 1px solid #cccccc
+    top: 13px
+    left: 4px
+    position: absolute
+    transform: rotate(45deg)
 
 .wish__list__title
   font-family: "FuturaBook", "Arial", "sans-serif"
   font-size: 2.5em
   text-align: center
   text-transform: uppercase
+  margin-bottom: 50px
+
+.wish__list
+  padding: 60px 0
 
 .wish__list__labels
-  margin-top: 120px
+  width: 85%
+  margin: 120px auto 0
+  display: flex
+
+.wish__list__labels__delete
+  width: 100px
+
+.wish__list__labels__img
+  width: 160px
+
+.wish__list__labels__name
+  width: 530px
+  font-size: 1.125em
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+.wish__list__labels__price
+  width: 200px
+  font-size: 1.125em
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+.wish__list__labels__status
+  width: 200px
+  font-size: 1.125em
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  text-transform: uppercase
+  display: flex
+  align-items: center
+
+.wish__list__labels__checkout
+  width: 322px
 
 .wish__lists__items
-  width: 1565px
+  width: 80%
   margin: 0 auto
 
 .wish__lists__item
@@ -2421,7 +2124,7 @@
   justify-content: center
   align-items: center
   width: 100px
-  height: 230px
+  height: auto
 
 .wish__lists__item__img
   display: flex
@@ -2464,82 +2167,13 @@
 .wish__lists__item__checkout__btn
   display: flex
   align-items: center
+  width: 70%
+  margin: 0 auto
+  height: 50px
   justify-content: center
   font-family: "FuturaBook", "Arial", "sans-serif"
   font-size: 1.5625em
   text-transform: uppercase
-  width: 225px
-  height: 50px
-  &:hover
-    cursor: pointer
-
-.wish__lists__item__delete__cross
-  width: 30px
-  height: 30px
-  border-radius: 50%
-  border: 1px solid #cccccc
-  position: relative
-  &:hover
-    cursor: pointer
-  &:before
-    content: ''
-    width: 20px
-    border: 1px solid #cccccc
-    top: 13px
-    left: 4px
-    position: absolute
-    transform: rotate(-45deg)
-  &:after
-    content: ''
-    width: 20px
-    border: 1px solid #cccccc
-    top: 13px
-    left: 4px
-    position: absolute
-    transform: rotate(45deg)
-
-.wish__list__labels
-  height: 40px
-  display: flex
-  width: 1565px
-  margin: 100px auto 0
-  border-bottom: 1px solid #cccccc
-
-.wish__list__labels__delete
-  width: 100px
-
-.wish__list__labels__img
-  width: 160px
-
-.wish__list__labels__name
-  width: 530px
-  font-size: 1.125em
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  text-transform: uppercase
-  display: flex
-  align-items: center
-
-.wish__list__labels__price
-  width: 200px
-  font-size: 1.125em
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  text-transform: uppercase
-  display: flex
-  align-items: center
-
-.wish__list__labels__status
-  width: 200px
-  font-size: 1.125em
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  text-transform: uppercase
-  display: flex
-  align-items: center
-
-.wish__list__labels__checkout
-  width: 322px
-
-.recently__viewed
-  margin-top: 150px
 
 .recently__viewed__title
   font-family: "FuturaLight", "Arial", "sans-serif"
@@ -2547,8 +2181,14 @@
   text-align: center
   text-transform: uppercase
 
+.recently__viewed
+  margin-top: 100px
+
+.recently__viewed__item
+  margin: 10px
+
 .recently__viewed__items
-  width: 1565px
+  width: 80%
   margin: 120px auto 0
 
 .recently__viewed__items__wrap
@@ -2557,50 +2197,8 @@
 
 .recently__viewed__item
   width: 200px
-  height: 245px
+  height: auto
   margin: 15px
-
-.checkout
-  margin-bottom: 140px
-
-.checkout__title
-  margin-top: 140px
-  text-align: center
-  font-size: 2.5em
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  text-transform: uppercase
-
-.checkout__sign__in
-  margin-top: 70px
-  text-align: center
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  font-size: 2.5em
-
-.checkout__sign__in__img
-  margin-left: 15px
-
-.checkout__form
-  padding: 0 130px
-  display: flex
-  justify-content: space-between
-
-.checkout__form__blank
-  margin-top: 30px
-  min-height: 200px
-  input
-    color: #9A9898
-
-.checkout__form__view
-  width: 39%
-  min-height: 200px
-  border: 1px solid #9A9898
-
-.checkout__form__blank__title
-  margin-top: 150px
-  padding: 0 130px
-  font-family: "FuturaBook", "Arial", "sans-serif"
-  font-size: 2.5em
-  text-transform: uppercase
 
 .checkout__form__blank__form
   display: flex
@@ -2614,9 +2212,6 @@
     border-bottom: 2px solid #9A9898
     &::placeholder
       color: #9A9898
-
-.checkout__form__blank__form__for__input
-  width: 58%
 
 .checkout__form__blank__form__create__additional_information
   margin-top: 50px
@@ -2765,9 +2360,1091 @@
   color: #000000
   text-transform: uppercase
   margin-top: 70px
-
   &:hover
     cursor: pointer
+
+.checkout
+  margin-bottom: 140px
+
+.checkout__title
+  margin-top: 140px
+  text-align: center
+  font-size: 2.5em
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  text-transform: uppercase
+
+.checkout__sign__in
+  margin-top: 70px
+  text-align: center
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  font-size: 2.5em
+
+.checkout__sign__in__img
+  margin-left: 15px
+
+.checkout__form
+  display: flex
+  justify-content: space-between
+
+.checkout__form__blank
+  margin-top: 30px
+  min-height: 200px
+  input
+    color: #9A9898
+
+.checkout__form__view
+  min-height: 200px
+  border: 1px solid #9A9898
+
+.checkout__form__blank__title
+  margin-top: 150px
+  padding: 0 130px
+  font-family: "FuturaBook", "Arial", "sans-serif"
+  font-size: 2.5em
+  text-transform: uppercase
+
+// ============================
+// MEDIA
+// ============================
+@for $i from 1 to length($mediaBp)
+  @media (max-width: nth($mediaBp, $i))
+    .container
+      max-width: calc(100% - 30px)
+
+    .goods-card
+      padding: 0 60px
+
+    .slider-for
+      width: calc(100% - 190px)
+
+
+@media (max-width: nth($mediaBp, 2))
+
+  .card__also__like__items
+    padding: 0
+
+  .card__to__complete__items
+    padding: 0
+
+  .slider-for
+    width: calc(100% - 190px)
+
+  .goods-card
+    padding: 0
+
+  .shop__goods__card
+    margin-left: 18px
+    margin-right: 18px
+
+  .main-slider__slider img
+    width: 100%
+    height: auto
+
+  .header__search img
+    width: 36px
+
+  .header__search input
+    font-size: 1em
+
+  .header__like::before
+    top: 14%
+    right: 28%
+    font-size: 1.1em
+
+  .header__cart::before
+    top: 20%
+    right: 25%
+    font-size: 1.1em
+
+
+  .modal-size__img
+    padding: 0 100px 0 40px
+
+  .modal-content
+    padding: 60px
+
+  #cart
+    width: 34%
+
+@media (max-width: nth($mediaBp, 3))
+  .article__content__img
+    img
+      width: 100%
+
+  .article__content
+    width: 100%
+
+  .blog__wrap
+    padding: 100px 0
+
+  .checkout__form
+    padding: 0
+
+  .slider-for
+    width: calc(100% - 190px)
+
+  .goods-card__characters
+    width: 35%
+
+  .slick-list
+    width: 100%
+
+  .goods-card__slider
+    width: 60%
+    height: auto
+
+  .goods-card
+    padding: 0
+    align-items: flex-start
+
+  .viewed__recently__slider__item
+    height: auto
+
+  .view__more
+    margin-top: 50px
+
+  .card__also__like__item
+    width: 30%
+    height: auto
+
+  .card__also__like__items
+    padding: 0
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    width: 100%
+    height: auto
+
+  .card__to__complete__item
+    width: 30%
+    height: auto
+
+  .card__to__complete__items
+    padding: 0
+
+  .header__navigation li
+    font-size: 1.563em
+
+  .modal-size__wrap
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+
+  .modal-size__description
+    padding-top: 35px
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 2
+    grid-row-end: 2
+
+@media (max-width: nth($mediaBp, 4))
+  .shop__goods__card
+    width: 40%
+    height: auto
+
+  .recently__viewed__item
+    height: auto
+
+  .recently__viewed__items__mob
+    display: block
+
+  .recently__viewed__items
+    display: none
+
+  .article__content__img
+    img
+      width: 100%
+
+  .article__content
+    width: 100%
+
+  .checkout__form
+    flex-wrap: wrap
+
+  .card__to__complete__item, .card__also__like__item
+    margin: 0 20px
+
+  .card__also__like__items
+    display: none
+
+  .card__to__complete__items
+    display: none
+
+  .viewed__recently__slider__item
+    height: auto
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    width: 100%
+
+  .card__also__like__items__slider
+    display: block
+    margin-top: 50px
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    height: auto
+
+  .card__to__complete__item, .card__also__like__item
+    height: auto
+
+  .btn__view__more
+    margin-left: 0
+    width: 100%
+
+  .view__more
+    margin-top: 50px
+    width: 100%
+
+  .card__to__complete__item__img
+    width: 100%
+
+  .card__to__complete__slider
+    display: block
+    margin-top: 50px
+
+  .characters__buy__amount
+    margin: 90px auto 0
+
+  .goods-card__characters
+    width: 100%
+
+  .characters__buy__amount
+    margin: 90px auto 0
+
+  .goods-card__characters
+    width: 100%
+
+  .goods-card__slider
+    width: 100%
+
+  .goods-card
+    padding: 0
+    flex-direction: column
+
+  .main-slider__slider__item
+    height: auto
+
+  .footer__icons
+    padding: 10px 0
+
+  .footer__wrap
+    padding: 0
+
+  .subscribe__title
+    font-size: 2em
+
+  .featured__slider-name
+    font-size: 1em
+
+  .featured__slider__bag img
+    width: 20px
+
+  .featured__slider__options
+    height: 70px
+
+  .featured__slider__price
+    margin-top: 5px
+
+  .header__search
+    width: 300px
+
+  html
+    font-size: 12px
+
+  .main-slider
+    height: auto
+
+  .header__cart__count
+    top: 11px
+    right: 9px
+
+  .header__like__count
+    top: 7px
+    right: 11px
+
+  .header__tools img
+    width: 80%
+
+  .modal-size__wrap
+    grid-template-columns: 1fr
+    grid-template-rows: 0.5fr 1fr 1fr
+
+  .modal-size__img
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 2
+    grid-row-end: 2
+    margin: 0 18%
+
+  .modal-size__description
+    padding-top: 35px
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 3
+    grid-row-end: 3
+
+  html
+    font-size: 14px
+
+  .header__search img
+    height: 30px
+    width: 30px
+
+  .header__logo img
+    width: 80%
+
+  .header__navigation li + li
+    margin-right: 25px
+
+  .header__navigation li
+    font-size: 1.4em
+
+  .follow__slider-item
+    margin: 0 15px
+
+  .follow__slider-controls_next, .follow__slider-controls_prev
+    height: 40px
+    width: 40px
+    font-size: 2em
+
+  .header__search input
+    margin-right: 5px
+    width: 100%
+
+  .main
+    &__arrow
+      position: absolute
+      bottom: -20px
+      right: calc( 50% - 20px )
+      width: 40px
+      height: 40px
+      &::before
+        position: absolute
+        content: ""
+        height: 20px
+        width: 5px
+        background-color: #000000
+        transform: rotate(45deg)
+        left: 23px
+        top: calc( 55% - 10px )
+      &::after
+        position: absolute
+        content: ""
+        height: 20px
+        width: 5px
+        background-color: #000000
+        transform: rotate(-45deg)
+        right: 23px
+        top: calc( 55% - 10px )
+
+  .follow__slider-block
+    padding: 15px 20px
+    font-size: 1.1em
+
+  #cart
+    width: 65%
+
+@media (max-width: nth($mediaBp, 5))
+  .search__in__slider
+    display: none
+
+  .wish__list__labels
+    display: none
+
+  .wish__lists__item__delete__cross
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    border: 1px solid #cccccc
+    position: relative
+
+  .wish__lists__item__checkout__mob
+    width: 100%
+    margin-top: 30px
+    margin-bottom: 50px
+
+  .wish__lists__item__delete
+    display: block
+
+  .wish__list__title
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 2.5em
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 50px
+
+  .recently__viewed
+    margin-top: 100px
+
+  .recently__viewed__item
+    margin: 15px
+
+  .recently__viewed__item
+    height: auto
+
+  .recently__viewed__items__mob
+    display: block
+
+  .recently__viewed__items
+    display: none
+
+  .recently__viewed__item
+    height: auto
+
+  .recently__viewed__items__mob
+    display: block
+
+  .recently__viewed__items
+    display: none
+
+  .wish__lists__item__delete
+    height: auto
+
+  .wish__list
+    padding: 60px 0
+
+  .wish__list__title
+    font-size: 22px
+
+  .wish__list__labels
+    display: none
+
+  .wish__lists__items
+    display: none
+
+  .wish__list__item__mob
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 30px
+
+  .wish__lists__item__img__mob
+    width: 35%
+
+  .wish__lists__item__delete
+    display: flex
+    height: 110px
+    width: 20%
+
+  .wish__lists__item__characters__mob
+    width: 35%
+
+  .wish__lists__item__characters__mob__name
+    font-size: 20px
+    line-height: 20px
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-weight: bold
+
+  .wish__lists__item__characters__mob__price
+    margin-top: 8px
+    font-size: 20px
+    line-height: 20px
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-weight: bold
+
+  .wish__lists__item__characters__mob__status
+    font-size: 15px
+    color: #cccccc
+    margin-top: 8px
+
+
+  .article__content__img
+    img
+      width: 100%
+
+  .article__content
+    width: 100%
+
+  .faq__grid
+    grid-template-columns: 1fr 2fr
+
+  .faq__popular
+    margin-right: 0
+
+  .blog__categories
+    display: block
+
+  .mob
+    display: block
+    margin: 0
+
+  .blog__categories
+    display: none
+
+  .blog__category__mob__list
+    display: none
+    position: absolute
+    width: 270px
+    min-height: 320px
+    padding: 50px 40px
+    clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
+    top: -350px
+    right: 0
+    background: #ffffff
+
+  .blog__category__mob
+    width: 100%
+    height: 50px
+    border: 1px solid #cccccc
+    display: flex
+    align-items: center
+    justify-content: center
+    position: sticky
+    bottom: 0
+    background: #ffffff
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    text-transform: uppercase
+
+  .blog__grid
+    grid-template-columns: 1fr
+
+  .blog__article-item
+    margin-top: 30px
+
+  .checkout__form__view
+    width: 100%
+    min-height: 200px
+    border: 1px solid #9A9898
+
+  .checkout__form__blank__form
+    flex-direction: column
+
+  .checkout__form__blank__form__for__input
+    width: 100%
+    margin-bottom: 20px
+
+  .card__to__complete__item, .card__also__like__item
+    margin: 0 20px
+
+  .header__user
+    display: none
+
+  .header__like
+    display: none
+
+  .img_header_cart_laptop
+    display: none
+
+  .header__cart__count
+    display: none
+
+  .img_header_cart_mob
+    display: block
+
+  .img_header_cart_mob img
+    display: flex
+
+  .header__search__mob
+    display: block
+    background: #ffffff
+
+  .header__search__mob img
+    margin-top: 5px
+
+  .header__tools a
+    margin-right: 20px
+
+  .header__tools img
+    width: 20px
+    height: 20px
+
+
+  .header__cart__count
+    top: 8px
+    right: 6px
+
+  .header__like__count
+    top: 5px
+    right: 8px
+
+  .viewed__recently__slider__item
+    height: auto
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    width: 100%
+
+  .card__also__like__items__slider
+    display: block
+    margin-top: 50px
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    height: auto
+
+  .card__to__complete__item, .card__also__like__item
+    height: auto
+
+  .btn__view__more
+    margin-left: 0
+    width: 100%
+
+  .view__more
+    margin-top: 50px
+    width: 100%
+
+  .card__to__complete__item__img
+    width: 100%
+
+  .card__to__complete__slider
+    display: block
+    margin-top: 50px
+
+  .characters__buy__amount
+    margin: 90px auto 0
+
+  .goods-card__characters
+    width: 100%
+
+  .goods-card
+    flex-direction: column
+    margin-top: 30px
+    padding: 0
+
+  .card__also__like__items
+    display: none
+
+  .card__to__complete__items
+    display: none
+
+  .goods-card__slider__mob
+    display: block
+
+  .goods-card__slider
+    display: none
+
+
+  .shop__goods__card
+    width: 40%
+    height: auto
+
+  .modal-content
+    margin: 5% 3%
+
+  .modal-size__img
+    margin: 0 30%
+
+  .modal-size__img
+    padding: 0 20px 0 20px
+
+  .header__navigation
+    display: none
+
+  .header__navigation-button
+    display: flex
+
+  .subscribe__wrap
+    padding: 0 15%
+
+  .subscribe__button
+    margin-top: 80px
+
+  .about-us
+    padding: 50px 0
+
+  .about-us__button
+    margin-top: 60px
+
+  .follow
+    padding: 60px 0
+
+  .follow__slider
+    margin-top: 80px
+
+  .featured
+    padding: 60px 0
+
+  .subscribe__input input
+    margin-top: 80px
+
+  #cart
+    width: 90%
+
+  .footer__icons-contact, .footer__icons-links
+    @include flex($jc: space-around)
+    width: 50%
+
+@media (max-width: nth($mediaBp, 6))
+  .wish__list__labels
+    display: none
+
+  .recently__viewed__item
+    height: auto
+
+  .recently__viewed__items__mob
+    display: block
+
+  .recently__viewed__items
+    display: none
+
+  .wish__lists__item__delete
+    height: auto
+
+  .wish__list
+    padding: 60px 0
+
+  .wish__list__title
+    font-size: 22px
+
+  .wish__list__labels
+    display: none
+
+  .wish__lists__items
+    display: none
+
+  .wish__list__item__mob
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 30px
+
+  .wish__lists__item__img__mob
+    width: 35%
+
+  .wish__lists__item__delete
+    height: 110px
+    width: 20%
+
+  .wish__lists__item__characters__mob
+    width: 35%
+
+  .wish__lists__item__characters__mob__name
+    font-size: 20px
+    line-height: 20px
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-weight: bold
+
+  .wish__lists__item__characters__mob__price
+    margin-top: 8px
+    font-size: 20px
+    line-height: 20px
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-weight: bold
+
+  .wish__lists__item__characters__mob__status
+    font-size: 15px
+    color: #cccccc
+    margin-top: 8px
+
+  .blog__grid
+    grid-template-columns: 1fr
+
+  .blog__article-item
+    margin-top: 30px
+
+  .blog__categories
+    display: none
+
+  .viewed__recently__slider__item
+    height: auto
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    width: 100%
+
+  .card__also__like__items__slider
+    display: block
+    margin-top: 50px
+
+  .card__to__complete__item__img, .card__also__like__item__img
+    height: auto
+
+  .card__to__complete__item, .card__also__like__item
+    height: auto
+
+  .btn__view__more
+    margin-left: 0
+    width: 100%
+
+  .view__more
+    margin-top: 50px
+    width: 100%
+
+  .card__to__complete__item__img
+    width: 100%
+
+  .card__to__complete__slider
+    display: block
+    margin-top: 50px
+
+  .characters__buy__amount
+    margin: 90px auto 0
+
+  .goods-card__characters
+    width: 100%
+
+  .goods-card
+    flex-direction: column
+    margin-top: 30px
+    padding: 0
+
+  .card__also__like__items
+    display: none
+
+  .card__to__complete__items
+    display: none
+
+  .goods-card__slider__mob__item
+    img
+      width: 100%
+
+  .goods-card__slider__mob
+    display: block
+
+  .goods-card__slider
+    display: none
+
+  .shop__goods__list
+    justify-content: space-around
+
+  .shop__menu_mob
+    position: absolute
+    width: 270px
+    padding: 50px 40px
+    top: -498px
+    right: 0
+    background: #ffffff
+    clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
+
+  .shop__filter_btn
+    width: 50%
+
+  .shop_category_btn
+    display: flex
+    width: 50%
+    align-items: center
+    justify-content: center
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-size: 1.125em
+    text-transform: uppercase
+
+  .mobile-menu-link
+    height: 30px
+    width: 40px
+    text-align: center
+    img
+      height: 30px
+
+  .mobile-menu__elem-name
+    font-size: 20px
+    font-family: "FuturaLight", "Arial", "sans-serif"
+
+  .mobile-menu__body
+    height: 100%
+
+  .img_header_cart_laptop
+    display: none
+
+  .header__cart__count
+    display: none
+
+  .img_header_cart_mob
+    display: block
+
+  .img_header_cart_mob img
+    display: flex
+
+  .header__search__mob
+    display: block
+
+  .header__search__mob img
+    margin-top: 5px
+
+  .header__tools a
+    margin-right: 20px
+
+  .header__tools img
+    width: 20px
+    height: 20px
+
+  .img_header_cart_laptop
+    display: none
+
+  .header__cart__count
+    display: none
+
+  .img_header_cart_mob
+    display: block
+
+  .img_header_cart_mob img
+    display: flex
+
+  .header__search__mob
+    display: block
+    background: #ffffff
+
+  .header__search__mob img
+    margin-top: 5px
+
+  .header__tools a
+    margin-right: 30px
+
+  .header__tools img
+    width: 20px
+    height: 20px
+
+  .header__search__mob
+    display: block
+
+  .img_header_cart_laptop
+    display: none
+
+  .shop__goods
+    width: 100%
+
+  .shop__menu
+    display: none
+
+  .modal-size__img
+    margin: 0 15%
+    padding: 0 35px 0 35px
+
+  .header__search img
+    display: none
+
+  .header__search input
+    display: none
+
+  .header__user
+    display: none
+
+  .header__like
+    display: none
+
+  .header__tools
+    justify-content: flex-end
+
+  .header__cart
+    margin-right: 20px
+
+  .header__cart::before
+    top: 27%
+
+  .categories
+    flex-direction: column
+    margin-right: 10px
+    margin-left: 10px
+
+  .categories__item-title
+    padding: 0 30px
+
+  .main-row
+    display: block
+
+  .new-collection
+    margin-top: 0
+
+  .new-collection img
+    content: url("../img/main/new-mob.png")
+
+  .help__title
+    padding-bottom: 10px
+    &::before
+      height: 0
+    &::after
+      height: 0
+
+  .help__description
+    border-top: 1px solid #000
+
+  .featured__slider
+    margin: 50px 15% 0
+
+  .featured__button
+    padding-top: 50px
+
+  .subscribe__wrap
+    padding: 0 10%
+
+  .about-us__description
+    padding: 70px 15% 0
+
+  .subscribe__input input
+    margin-top: 80px
+
+  .footer__wrap
+    padding: 0 10%
+
+  .footer__info
+    grid-template-columns:  1fr
+    grid-template-rows: repeat(3, 1fr)
+
+  .footer__help-label
+    display: none
+
+  .footer__info
+    padding: 20px 0 20px
+
+  .footer__faq
+    padding: 0 0
+
+  .footer__faq-list
+    padding-top: 20px
+
+  .footer__news-title
+    padding-top: 20px
+
+  .footer__news
+    align-items: flex-start
+
+  .footer__news-text
+    text-align: right
+    padding-top: 20px
+    width: 100%
+
+  .footer__news-input input
+    font-size: 0.7em
+
+  .footer__button
+    display: none
+
+  .footer__button_mob
+    display: block
+
+  .footer__help-label_mob
+    display: block
+
+  .wish__list
+    min-height: calc(100vh - 662px)
+    padding: 150px 0
+
+  .wish__list__title
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 2.5em
+    text-align: center
+    text-transform: uppercase
+
+  .wish__lists__item__delete
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100px
+    height: auto
+
+  .wish__lists__item__checkout__mob
+    margin: 30px auto
+
+  .wish__lists__item__checkout__btn
+    width: 70%
+
+  .wish__lists__item__checkout__mob
+    width: 100%
+
+  .wish__lists__item__checkout__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: "FuturaBook", "Arial", "sans-serif"
+    font-size: 1.5625em
+    text-transform: uppercase
+    width: 70%
+    margin: 0 auto
+    height: 50px
+    &:hover
+      cursor: pointer
+
+  .recently__viewed
+    margin-top: 150px
+
+  .recently__viewed__title
+    font-family: "FuturaLight", "Arial", "sans-serif"
+    font-size: 2.1875em
+    text-align: center
+    text-transform: uppercase
 
   .cart__body
     padding: 20px 20px 0
@@ -2779,7 +3456,6 @@
     padding-top: 15px
 
 @media (max-width: nth($mediaBp, 7))
-
   .footer__info
     font-size: 1em
 
@@ -2808,10 +3484,10 @@
     font-size: 1.6em
 
   .follow__slider-controls_prev
-    right: -11%
+    left: -25px
 
   .follow__slider-controls_next
-    left: -11%
+    right: -25px
 
   .follow__slider
     margin: 50px 30px
@@ -2840,12 +3516,12 @@
     z-index: 2
 
   .featured__slider-controls_prev
-    left: -2%
+    left: -7%
     font-size: 3em
     z-index: 2
 
   .featured__slider-controls_next
-    left: -7%
+    right: -7%
     font-size: 3em
     z-index: 2
 
@@ -3005,9 +3681,9 @@
     width: 270px
     padding: 50px 40px
     top: -498px
-    right: -115px
+    right: 0
     background: #ffffff
-    clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
+    clip-path: polygon(0 0, 0 95%, 85% 95%, 90% 98%, 95% 95%, 100% 95%, 100% 0)
 
   .shop__goods__list
     justify-content: space-around
@@ -3022,12 +3698,6 @@
 
   .container
     padding: 0
-
-  .goods-card__slider__mob__item
-    height: auto
-    img
-      width: 100%
-      height: auto
 
   .slick-dots li button:before
     font-size: 10px
@@ -3143,7 +3813,7 @@
     height: auto
 
   .featured__slider-controls_next
-    left: -4%
+    right: -4%
 
   .featured__slider-controls_prev
     left: -4%
@@ -3206,7 +3876,7 @@
     padding: 50px 40px
     clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
     top: -350px
-    left: -175px
+    right: -175px
     background: #ffffff
 
   .mob
@@ -3542,7 +4212,7 @@
     margin-bottom: 25px
     a
       color: inherit
-      margin-right: 30px
+      margin-left: 30px
 
   .cart__item-actions
     margin-top: 45px
@@ -3553,6 +4223,11 @@
 
   .goods-card__slider__mob
     display: block
+    width: 100%
+
+  .goods-card__slider__mob__item
+    img
+      width: 100%
 
   .card__to__complete__slider
     display: block
@@ -3566,10 +4241,13 @@
   .recently__viewed__items__mob
     display: block
 
-  .featured__slider-controls_prev
-    left: -2% !important
+  .featured__slider
+    width: 90%
+    margin: 0 auto
 
-
+  .shop__goods__card
+    height: auto
+    margin-bottom: 15px
 
 
 
