@@ -61,7 +61,7 @@
   &__navigation
     @include flex($jc: flex-start, $ai: center)
     li + li
-      margin-left: 50px
+      margin-right: 50px
     li
       color: #0a0a0a
       font-family: "FuturaBook", "Arial", "sans-serif"
@@ -83,12 +83,13 @@
     @include flex($jc: flex-end, $ai: center)
   &__search
     @include flex()
+    flex-direction: row-reverse
     & input
       background-color: transparent
       border: none
       border-bottom: 1px solid #0a0a0a
       font-size: 1.563em
-      margin-left: 75px
+      margin-right: 10px
       font-family: "FuturaBook", "Arial", "sans-serif"
   &__like
     position: relative
@@ -701,12 +702,12 @@
       &_prev
         position: absolute
         top: calc( 50% - 63px )
-        right: -5%
+        left: -5%
         font-size: 3.438em
       &_next
         position: absolute
         top: calc( 50% - 63px )
-        left: -5%
+        right: -5%
         font-size: 3.438em
   &__button
     padding-top: 110px
@@ -798,7 +799,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        right: 2%
+        left: 2%
         z-index: 200
         font-size: 3.438em
       &_next
@@ -811,7 +812,7 @@
         background-color: rgba(255,255,255, 0.2)
         position: absolute
         top: calc( 50% - 32px )
-        left: 2%
+        right: 2%
         z-index: 200
         font-size: 3.438em
     &-item
@@ -1302,7 +1303,7 @@
   font-family: "FuturaLight", "Arial", "sans-serif"
   font-size: 1.125em
   text-transform: uppercase
-  border-left: 1px solid #cccccc
+  border-right: 1px solid #cccccc
   &:hover
     cursor: pointer
 
@@ -1322,7 +1323,7 @@
   width: 270px
   height: 320px
   padding: 50px 40px
-  clip-path: polygon(0 0, 0 95%, 80% 95%, 85% 100%, 90% 95%, 100% 95%, 100% 0)
+  clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 100%, 15% 95%, 100% 95%, 100% 0)
   top: -362px
   left: -56px
   background: #ffffff
@@ -2071,8 +2072,9 @@
   padding: 60px 0
 
 .wish__list__labels
+  width: 85%
+  margin: 120px auto 0
   display: flex
-  margin-top: 120px
 
 .wish__list__labels__delete
   width: 100px
@@ -2740,6 +2742,9 @@
     width: 65%
 
 @media (max-width: nth($mediaBp, 5))
+  .search__in__slider
+    display: none
+
   .wish__list__labels
     display: none
 
@@ -3678,7 +3683,7 @@
     top: -498px
     right: 0
     background: #ffffff
-    clip-path: polygon(0 0, 0 95%, 5% 95%, 10% 98%, 15% 95%, 100% 95%, 100% 0)
+    clip-path: polygon(0 0, 0 95%, 85% 95%, 90% 98%, 95% 95%, 100% 95%, 100% 0)
 
   .shop__goods__list
     justify-content: space-around
